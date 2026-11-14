@@ -1,16 +1,41 @@
-## Hi there 👋
+# Hi there, I'm Sudha Mondal 👋
 
-<!--
-**SudhaMondal/SudhaMondal** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+<p align="center">
+  <em>B.Tech Biomedical Engineering Student | Researcher | Interdisciplinary Creator</em>
+</p>
 
-Here are some ideas to get you started:
+---
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+### 🔭 What I'm Currently Working On
+* **Paper Microfluidics:** Developing portable, low-cost paper microfluidic platforms for rapid food quality screening and multiplexed detection without expensive lab infrastructure.
+* **Biomechanics & Modeling:** Exploring soft and hard tissue biomechanics, computational modeling, and fluid-structure interaction in prosthetic heart valves.
+* **Academic Quiz Design:** Coordinating inter-school literary quiz tournament frameworks (*Clash of Domains*) and building progressive tournament mechanics.
+
+### 🌱 What I'm Exploring & Learning
+* Advanced numerical simulations and symbolic programming using **MATLAB** (`laplace`, `ilaplace`) and **C programming**.
+* Digital electronics prototyping (assembling logic gates, adders, multiplexers, and decoders on breadboards).
+* Nature journaling, atmospheric storytelling, and creative writing through narrative world-building.
+
+### 💡 Core Research & Academic Interests
+* **Biomedical Innovations:** Biomaterials, biosensors, regenerative medicine, and computational biomechanics.
+* **Interdisciplinary Synthesis:** Bridging the gap between engineering methodologies and biological application.
+* **Creative Writing & Narrative Design:** Exploring emotional resonance and atmospheric short fiction.
+
+### 🛠️ Tech Stack & Lab Methodologies
+* **Programming & Tools:** C, MATLAB, Git & GitHub.
+* **Engineering Labs:** Circuit prototyping, clinical laboratory methodologies (slide agglutination blood typing, bleeding time assays), and control systems.
+* **Documentation:** LaTeX & structured scientific reporting (Aim, Principle, Requirements, Observation, Discussion framework).
+
+### 📫 How to Reach Me
+* **LinkedIn:** [linkedin.com/in/i-am-sudha-mondal](https://www.linkedin.com/in/i-am-sudha-mondal/)
+* **GitHub:** [SudhaMondal](https://github.com/SudhaMondal)
+
+### 😄 **Pronouns:** She/Her
+
+### ⚡ **Fun fact:** Outside of biomedical labs and MATLAB simulations, I design progressive literary quiz tournaments, write atmospheric short fiction, practice nature journaling, and train in target shooting!
+
+---
+
+<p align="center">
+  <em>"Bridging engineering precision with biological systems and creative expression."</em>
+</p>
