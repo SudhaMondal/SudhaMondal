@@ -9,17 +9,14 @@
 ### 🔭 What I'm Currently Working On
 * **Paper Microfluidics:** Developing portable, low-cost paper microfluidic platforms for rapid food quality screening and multiplexed detection without expensive lab infrastructure.
 * **Biomechanics & Modeling:** Exploring soft and hard tissue biomechanics, computational modeling, and fluid-structure interaction in prosthetic heart valves.
-* **Academic Quiz Design:** Coordinating inter-school literary quiz tournament frameworks (*Clash of Domains*) and building progressive tournament mechanics.
 
 ### 🌱 What I'm Exploring & Learning
 * Advanced numerical simulations and symbolic programming using **MATLAB** (`laplace`, `ilaplace`) and **C programming**.
 * Digital electronics prototyping (assembling logic gates, adders, multiplexers, and decoders on breadboards).
-* Nature journaling, atmospheric storytelling, and creative writing through narrative world-building.
 
 ### 💡 Core Research & Academic Interests
 * **Biomedical Innovations:** Biomaterials, biosensors, regenerative medicine, and computational biomechanics.
 * **Interdisciplinary Synthesis:** Bridging the gap between engineering methodologies and biological application.
-* **Creative Writing & Narrative Design:** Exploring emotional resonance and atmospheric short fiction.
 
 ### 🛠️ Tech Stack & Lab Methodologies
 * **Programming & Tools:** C, MATLAB, Git & GitHub.
