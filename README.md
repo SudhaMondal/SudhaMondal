@@ -13,6 +13,8 @@
 
 <img src="https://raw.githubusercontent.com/SudhaMondal/SudhaMondal/main/assets/divider.svg" width="100%"/>
 
+**Translating MedTech into meaning people feel.**
+
 <img src="https://raw.githubusercontent.com/SudhaMondal/SudhaMondal/main/assets/divider.svg" width="100%"/>
 
 ## 🔭 What I'm Currently Working On
