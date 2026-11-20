@@ -13,7 +13,8 @@
 
 <img src="https://raw.githubusercontent.com/SudhaMondal/SudhaMondal/main/assets/divider.svg" width="100%"/>
 
-**Translating MedTech into meaning people feel.**
+## 👋 Hi, I'm Sudha Mondal | Translating MedTech into meaning people feel 🌸
+**A Multi-Hyphenate | Driven by the challenge of bridging the gap between technical complexity and human-centric design**
 
 <img src="https://raw.githubusercontent.com/SudhaMondal/SudhaMondal/main/assets/divider.svg" width="100%"/>
 
