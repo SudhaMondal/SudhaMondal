@@ -13,9 +13,6 @@
 
 <img src="https://raw.githubusercontent.com/SudhaMondal/SudhaMondal/main/assets/divider.svg" width="100%"/>
 
-## 👋 Hi there, I'm Sudha Mondal 🌸
-**B.Tech Biomedical Engineering Student | Researcher | Interdisciplinary Creator**
-
 <img src="https://raw.githubusercontent.com/SudhaMondal/SudhaMondal/main/assets/divider.svg" width="100%"/>
 
 ## 🔭 What I'm Currently Working On
