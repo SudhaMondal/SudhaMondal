@@ -145,7 +145,6 @@ When I'm not in the lab or buried in MATLAB simulations, I'm usually playing the
 <a href="https://linkedin.com/in/i-am-sudha-mondal"><img src="https://img.shields.io/badge/LinkedIn-i--am--sudha--mondal-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"/></a>
 <a href="https://github.com/SudhaMondal"><img src="https://img.shields.io/badge/GitHub-SudhaMondal-ff8fb1?style=for-the-badge&logo=github&logoColor=white"/></a>
 <a href="https://x.com/__SudhaMondal__"><img src="https://img.shields.io/badge/X-@__SudhaMondal__-000000?style=for-the-badge&logo=x&logoColor=white"/></a>
-<a href="mailto:i.am.sudha.mondal@gmail.com"><img src="https://img.shields.io/badge/Email-i.am.sudha.mondal%40gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white"/></a>
 <a href="https://orcid.org/0009-0006-2752-1684"><img src="https://img.shields.io/badge/ORCID-0009--0006--2752--1684-A6CE39?style=for-the-badge&logo=orcid&logoColor=white"/></a>
 
 </div>
