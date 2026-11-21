@@ -43,12 +43,6 @@
 **B.Tech in Biomedical Engineering** — *Adamas University, Kolkata, India* (2025 – 2029, Expected)
 School of Engineering & Technology · Residential Student
 
-**Higher Secondary Certificate (HSC), Science** — *Milestone College, Dhaka, Bangladesh* (2024)
-GPA: 4.92 / 5.00
-
-**Secondary School Certificate (SSC), Science** — *Mohammadpur Preparatory School & College, Dhaka* (2022)
-GPA: 5.00 / 5.00
-
 ## 💼 Experience
 
 **Student Intern** — BD TRADE INFO / Infintex BD TRADE · Dhaka, Bangladesh (Hybrid) · *Jun 2026 – Jul 2026*
