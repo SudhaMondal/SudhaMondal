@@ -41,7 +41,6 @@
 ## 🎓 Education
 
 **B.Tech in Biomedical Engineering** — *Adamas University, Kolkata, India* (2025 – 2029, Expected)
-School of Engineering & Technology · Residential Student
 
 ## 💼 Experience
 
