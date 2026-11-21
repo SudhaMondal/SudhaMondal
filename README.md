@@ -101,10 +101,6 @@
 
 </div>
 
-### 📰 Recent GitHub Activity
-<!--START_SECTION:activity-->
-<!--END_SECTION:activity-->
-
 <img src="https://raw.githubusercontent.com/SudhaMondal/SudhaMondal/main/assets/divider.svg" width="100%"/>
 
 ## 🗣️ Languages
