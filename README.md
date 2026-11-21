@@ -108,8 +108,6 @@ GPA: 5.00 / 5.00
 
 <img src="https://github-profile-trophy.vercel.app/?username=SudhaMondal&theme=onedark&no-frame=true&row=1&margin-w=10" />
 
-<img src="https://raw.githubusercontent.com/SudhaMondal/SudhaMondal/output/github-snake-dark.svg" alt="contribution snake" width="90%"/>
-
 </div>
 
 ### 📰 Recent GitHub Activity
