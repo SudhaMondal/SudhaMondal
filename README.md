@@ -139,7 +139,7 @@ She/Her
 
 <div align="center">
 
-> *"From artificial hearts to the architecture of thought - engineering tomorrow's MedTech."*
+ *"From artificial hearts to the architecture of thought - engineering tomorrow's MedTech."*
 
 <img src="https://raw.githubusercontent.com/SudhaMondal/SudhaMondal/main/assets/divider.svg" width="100%"/>
 
