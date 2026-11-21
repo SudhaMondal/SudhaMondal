@@ -44,15 +44,15 @@
 
 ## 💼 Experience
 
-**Student Intern** — BD TRADE INFO / Infintex BD TRADE · Dhaka, Bangladesh (Hybrid) · *Jun 2026 – Jul 2026*
+**Student Intern** — BD TRADE INFO / Infintex BD TRADE · (Hybrid) · *Jun 2026 – Jul 2026*
 - Supported cross-functional tasks for the core team, demonstrating professionalism and adaptability in a hybrid work environment.
 
-**HR Volunteer** — BASTOB, Initiative for People's Self-Development · Dhaka, Bangladesh · *Jan 2025 – Mar 2025*
+**HR Volunteer** — BASTOB, Initiative for People's Self-Development · *Jan 2025 – Mar 2025*
 - Collaborated with the HR team on organizational development and institutional policy initiatives (Gender Policy & Safeguarding Policy).
 - Advocated for third-gender-inclusive documentation practices in formal institutional processes.
 - Led fieldwork, team coordination, and event photography for community-focused programs.
 
-**Journalist Intern** — Somoy TV (Somoy Media Limited) · Dhaka, Bangladesh · *Sep 2024 – Dec 2024*
+**Journalist Intern** — Somoy TV (Somoy Media Limited) · *Sep 2024 – Dec 2024*
 - Verified information and edited news copy for accuracy, clarity, and journalistic quality in time-sensitive newsroom workflows.
 - Published an independent byline column: *"Planning to study in US after HSC? Here's what you should know."*
 
