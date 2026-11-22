@@ -16,7 +16,7 @@
 <img src="https://raw.githubusercontent.com/SudhaMondal/SudhaMondal/main/assets/divider.svg" width="100%"/>
 
 ## 👋 Hi, I'm Sudha Mondal | Engineering Hearts, Decoding Minds 🌸
-**B.Tech Biomedical Engineering student, Adamas University** — driven by two questions: *can we rebuild the human heart, and can we understand the human mind?* An aspiring MedTech innovator bridging technical rigor with human-centered design — researcher, writer, photographer, and classical dancer in the margins.
+B.Tech Biomedical Engineering student at Adamas University, driven by two questions: *can we rebuild the human heart, and can we understand the human mind?* I build small, real things (see below) while chasing bigger ones in biomechanics and neural engineering.
 
 <img src="https://raw.githubusercontent.com/SudhaMondal/SudhaMondal/main/assets/divider.svg" width="100%"/>
 
@@ -31,49 +31,14 @@
 - **Paper Microfluidics:** Portable, low-cost paper microfluidic platforms for rapid food quality screening and multiplexed detection without expensive lab infrastructure.
 
 ## 🌱 What I'm Exploring & Learning
-- Secure, compliant AI/ML-driven software development and conversational AI governance.
-- CI/CD fundamentals with Jenkins.
 - Advanced numerical simulations and symbolic programming using MATLAB (`laplace`, `ilaplace`) and C programming.
 - Digital electronics prototyping (logic gates, adders, multiplexers, decoders).
-
-<img src="https://raw.githubusercontent.com/SudhaMondal/SudhaMondal/main/assets/divider.svg" width="100%"/>
-
-## 🎓 Education
-
-**B.Tech in Biomedical Engineering** — *Adamas University, Kolkata, India* (2025 – 2029, Expected)
-
-## 💼 Experience
-
-**Student Intern** — BD TRADE INFO / Infintex BD TRADE · (Hybrid) · *Jun 2026 – Jul 2026*
-- Supported cross-functional tasks for the core team, demonstrating professionalism and adaptability in a hybrid work environment.
-
-**HR Volunteer** — BASTOB, Initiative for People's Self-Development · *Jan 2025 – Mar 2025*
-- Collaborated with the HR team on organizational development and institutional policy initiatives (Gender Policy & Safeguarding Policy).
-- Advocated for third-gender-inclusive documentation practices in formal institutional processes.
-- Led fieldwork, team coordination, and event photography for community-focused programs.
-
-**Journalist Intern** — Somoy TV (Somoy Media Limited) · *Sep 2024 – Dec 2024*
-- Verified information and edited news copy for accuracy, clarity, and journalistic quality in time-sensitive newsroom workflows.
-- Published an independent byline column: *"Planning to study in US after HSC? Here's what you should know."*
-
-## 📜 Certifications
-
-<div align="center">
-
-<img src="https://img.shields.io/badge/IBM-Enterprise%20Design%20Thinking%20Practitioner-052FAD?style=for-the-badge&logo=ibm&logoColor=white"/>
-<img src="https://img.shields.io/badge/Linux%20Foundation-Jenkins%20%7C%20Conversational%20AI%20%7C%20Secure%20AI%2FML-FFC107?style=for-the-badge"/>
-
-</div>
-
-- **Enterprise Design Thinking Practitioner** — IBM *(Jan 2026)*
-- **LFS167: Introduction to Jenkins** — The Linux Foundation *(Jan 2026)*
-- **LFS120: Conversational AI – Ensuring Compliance and Mitigating Risks** — The Linux Foundation *(Jan 2026)*
-- **LFEL1012: Secure AI/ML-Driven Software Development** — The Linux Foundation *(Dec 2025)*
+- CI/CD fundamentals (Jenkins) and secure, compliant AI/ML-driven development practices.
 
 <img src="https://raw.githubusercontent.com/SudhaMondal/SudhaMondal/main/assets/divider.svg" width="100%"/>
 
 ## 🛠️ Tech Stack & Lab Methodologies
-- **Programming & Tools:** C, MATLAB, Git & GitHub, Jenkins (CI/CD fundamentals).
+- **Programming & Tools:** C, MATLAB, Git & GitHub, Jenkins.
 - **Engineering Labs:** Circuit prototyping, clinical laboratory methodologies (slide agglutination blood typing, bleeding time assays), and control systems.
 - **Documentation:** LaTeX & structured scientific reporting (Aim, Principle, Requirements, Observation, Discussion framework).
 
@@ -81,6 +46,8 @@
 
 <img src="https://img.shields.io/badge/C-A8B9CC?style=for-the-badge&logo=c&logoColor=black"/>
 <img src="https://img.shields.io/badge/MATLAB-FF6F61?style=for-the-badge&logo=mathworks&logoColor=white"/>
+<img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white"/>
+<img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"/>
 <img src="https://img.shields.io/badge/Jenkins-D24939?style=for-the-badge&logo=jenkins&logoColor=white"/>
 <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white"/>
 <img src="https://img.shields.io/badge/GitHub-24292e?style=for-the-badge&logo=github&logoColor=white"/>
@@ -89,6 +56,13 @@
 </div>
 
 <img src="https://raw.githubusercontent.com/SudhaMondal/SudhaMondal/main/assets/divider.svg" width="100%"/>
+
+## 📌 Featured Projects
+
+- 🖨️ **[LabReady A4](https://github.com/SudhaMondal/LabReady-A4)** — Drop in lab photos, plots, or sketches and it arranges them on a true-to-scale, print-ready A4 sheet. No install, fully offline. Built to fix a problem I actually have as a biomedical engineering student. → [Live demo](https://sudhamondal.github.io/LabReady-A4/)
+- 🐍 **[Python Snake Game](https://github.com/SudhaMondal/Python-Snake-Game)** — The classic, rebuilt twice: a Python/Pygame desktop version and an HTML5 Canvas browser port, both with a BFS-pathfinding AI opponent, local 2-player mode, and procedurally generated sound. → [Play it](https://sudhamondal.github.io/Python-Snake-Game/)
+- 🌐 **[Social OS (Infinity OS)](https://github.com/SudhaMondal/Social_OS_-Infinity_OS-_-_-)** — A glassmorphic "operating system" concept that wraps Facebook, Instagram, and X into one unified desktop, designed to cut the cognitive cost of app-switching.
+- 🌿 **[Bloomcraft Garden](https://github.com/SudhaMondal/Bloomcraft_Garden)** — Not just a garden, but a *garden*. ❤️
 
 ## 📊 GitHub Stats
 
@@ -99,27 +73,27 @@
 
 <img src="https://streak-stats.demolab.com?user=SudhaMondal&hide_border=true&background=0f0c29&ring=ff8fb1&fire=ffd166&currStreakLabel=ffd6e4&sideLabels=9ad7ff&currStreakNum=ffffff&sideNums=ffffff&dates=c9b6ff" />
 
+<img src="https://github-profile-trophy.vercel.app/?username=SudhaMondal&theme=onedark&no-frame=true&row=1&margin-w=10" />
+
+<img src="https://raw.githubusercontent.com/SudhaMondal/SudhaMondal/output/github-snake-dark.svg" alt="contribution snake" width="90%"/>
+
 </div>
 
-<img src="https://raw.githubusercontent.com/SudhaMondal/SudhaMondal/main/assets/divider.svg" width="100%"/>
+### 📰 Recent GitHub Activity
+<!--START_SECTION:activity-->
+<!--END_SECTION:activity-->
 
-## 🗣️ Languages
-- 🇧🇩 **Bengali** — Native / Bilingual proficiency
-- 🇬🇧 **English** — Professional working proficiency (IELTS 6.5)
-- 🇫🇷 **French** — Elementary proficiency
-- 🇷🇺 **Russian** — Elementary proficiency
+<img src="https://raw.githubusercontent.com/SudhaMondal/SudhaMondal/main/assets/divider.svg" width="100%"/>
 
 ## 🎨 Beyond the Lab
 When I'm not in the lab or buried in MATLAB simulations, I'm usually playing the violin, dancing Bharatanatyam, mixing colors in abstract acrylic paintings, writing atmospheric short fiction and poetry, designing progressive literary quiz tournaments, nature journaling, or training in Taekwondo (Yellow Belt) and rifle shooting sports. 🎻 🩰 🎨 ✍️ 🎯
 
 ## 🧭 Roadmap
-- [x] Begin B.Tech in Biomedical Engineering at Adamas University
-- [x] Complete IBM Enterprise Design Thinking Practitioner certification
-- [x] Complete Linux Foundation certifications in Jenkins, Conversational AI compliance, and Secure AI/ML development
-- [ ] Go deeper into Total Artificial Heart (TAH) design and mechanical circulatory support
-- [ ] Study Cognitive Neuroscience & neural engineering in more depth
-- [ ] Publish my first open-source biomedical engineering project
-- [ ] Present research at an undergraduate symposium
+- [x] Ship LabReady A4 and Python Snake Game as live, playable demos
+- [ ] Build a small simulation or visualization related to Total Artificial Heart hemodynamics
+- [ ] Contribute to an open-source health-tech or neuroscience-adjacent repository
+- [ ] Publish a project using MATLAB or Python for biomedical signal processing
+- [ ] Add real descriptions/topics to every public repo (even the small ones deserve a one-liner!)
 
 <img src="https://raw.githubusercontent.com/SudhaMondal/SudhaMondal/main/assets/divider.svg" width="100%"/>
 
@@ -130,6 +104,7 @@ When I'm not in the lab or buried in MATLAB simulations, I'm usually playing the
 <a href="https://linkedin.com/in/i-am-sudha-mondal"><img src="https://img.shields.io/badge/LinkedIn-i--am--sudha--mondal-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"/></a>
 <a href="https://github.com/SudhaMondal"><img src="https://img.shields.io/badge/GitHub-SudhaMondal-ff8fb1?style=for-the-badge&logo=github&logoColor=white"/></a>
 <a href="https://x.com/__SudhaMondal__"><img src="https://img.shields.io/badge/X-@__SudhaMondal__-000000?style=for-the-badge&logo=x&logoColor=white"/></a>
+<a href="mailto:i.am.sudha.mondal@gmail.com"><img src="https://img.shields.io/badge/Email-i.am.sudha.mondal%40gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white"/></a>
 <a href="https://orcid.org/0009-0006-2752-1684"><img src="https://img.shields.io/badge/ORCID-0009--0006--2752--1684-A6CE39?style=for-the-badge&logo=orcid&logoColor=white"/></a>
 
 </div>
@@ -139,11 +114,11 @@ She/Her
 
 <div align="center">
 
- *"From artificial hearts to the architecture of thought - engineering tomorrow's MedTech."*
+> *"From artificial hearts to the architecture of thought - engineering tomorrow's MedTech."*
 
 <img src="https://raw.githubusercontent.com/SudhaMondal/SudhaMondal/main/assets/divider.svg" width="100%"/>
 
-⭐ **If any of this resonates with you - research, MedTech - say hi!**
+⭐ **If any of this resonates with you - research, MedTech, or just the saree-wearing mascot above - say hi!**
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=12,14,18,24,30&height=120&section=footer&animation=twinkling" width="100%"/>
 
