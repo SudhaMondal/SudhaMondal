@@ -113,7 +113,7 @@ She/Her
 
 <img src="https://raw.githubusercontent.com/SudhaMondal/SudhaMondal/main/assets/divider.svg" width="100%"/>
 
-⭐ **If any of this resonates with you - research, MedTech, or just the saree-wearing mascot above - say hi!**
+⭐ **If any of this resonates with you - research, MedTech, or just the mascot above - say hi!**
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=12,14,18,24,30&height=120&section=footer&animation=twinkling" width="100%"/>
 
