@@ -73,10 +73,6 @@ B.Tech Biomedical Engineering student at Adamas University, driven by two questi
 
 <img src="https://streak-stats.demolab.com?user=SudhaMondal&hide_border=true&background=0f0c29&ring=ff8fb1&fire=ffd166&currStreakLabel=ffd6e4&sideLabels=9ad7ff&currStreakNum=ffffff&sideNums=ffffff&dates=c9b6ff" />
 
-<img src="https://github-profile-trophy.vercel.app/?username=SudhaMondal&theme=onedark&no-frame=true&row=1&margin-w=10" />
-
-<img src="https://raw.githubusercontent.com/SudhaMondal/SudhaMondal/output/github-snake-dark.svg" alt="contribution snake" width="90%"/>
-
 </div>
 
 ### 📰 Recent GitHub Activity
