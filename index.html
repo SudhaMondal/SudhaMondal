@@ -286,7 +286,12 @@
     .album-photo-empty{grid-column:1/-1;padding:13px;border-radius:12px;background:#fff9;color:#927fa0;text-align:center;font-size:.73rem}
     @media(max-width:430px){.album-photo-gallery{grid-template-columns:repeat(2,minmax(0,1fr))}}
 
-  </style>
+      .album-photo-slot{aspect-ratio:1;border:2px dashed #dfcce9;border-radius:13px;background:linear-gradient(145deg,#fffaff,#f5effb);display:grid;place-items:center;color:#c4acd8;font-size:1.5rem;min-width:0}
+    #personal-photo-album{width:100%}
+    #personal-photo-album .album-photo-tools{margin-top:0}
+    #personal-photo-album .album-photo-gallery{grid-template-columns:repeat(3,minmax(0,1fr))}
+    @media(max-width:430px){#personal-photo-album .album-photo-gallery{grid-template-columns:repeat(2,minmax(0,1fr))}}
+\n  </style>
 </head>
 <body>
 
@@ -372,14 +377,8 @@
       <section id="beyond"><div class="section-head"><div><div class="eyebrow">Outside the lab</div><h2>Creative life & pursuits</h2></div><p>Creative disciplines and physical pursuits that shape how I observe, practise and make things.</p></div><div class="tags"><span class="tag">🎻 Violin</span><span class="tag">🩰 Bharatanatyam</span><span class="tag">🎨 Abstract acrylic painting</span><span class="tag">✍️ Short fiction & poetry</span><span class="tag">📚 Literary quiz design</span><span class="tag">🌿 Nature journaling</span><span class="tag">🥋 Taekwondo · Yellow Belt</span><span class="tag">🎯 Rifle shooting sports</span></div></section>
 
       <section id="album">
-        <div class="section-head"><div><div class="eyebrow">A visual diary</div><h2>Albums & little moments</h2></div><p>Four collections for the things that make a life beyond a résumé: music, movement, art, nature and the joy of making.</p></div>
-        <div class="album-grid">
-          <details class="album-card"><summary><div class="album-cover music"><span class="album-number">COLLECTION 01</span><span class="album-icon">🎻</span><span class="album-cover-title">Rhythm & Riyaaz</span></div><div class="album-meta"><strong>Music & movement</strong><span>Violin · Bharatanatyam · practice</span><p class="album-open-hint">Open collection +</p></div></summary><div class="album-detail"><p>A space for violin practice, musical learning, dance, rehearsals and the discipline of returning to an art over time.</p><p>Connected to Sanjit Karmakar Academy, Murchana Sangit Biddayatan and Arthy Ahmed Dance Academy.</p></div></details>
-          <details class="album-card"><summary><div class="album-cover art"><span class="album-number">COLLECTION 02</span><span class="album-icon">🎨</span><span class="album-cover-title">The Art Room</span></div><div class="album-meta"><strong>Art & imagination</strong><span>Abstract acrylic · writing · design</span><p class="album-open-hint">Open collection +</p></div></summary><div class="album-detail"><p>Abstract acrylic painting, visual experiments, graphic design, short fiction, poetry and small ideas taking shape.</p></div></details>
-          <details class="album-card"><summary><div class="album-cover nature"><span class="album-number">COLLECTION 03</span><span class="album-icon">🌿</span><span class="album-cover-title">Field Notes</span></div><div class="album-meta"><strong>Nature & observation</strong><span>Photography · journaling · details</span><p class="album-open-hint">Open collection +</p></div></summary><div class="album-detail"><p>Nature journaling and photography — noticing patterns, textures, light and the details that are easy to overlook.</p></div></details>
-          <details class="album-card"><summary><div class="album-cover making"><span class="album-number">COLLECTION 04</span><span class="album-icon">✦</span><span class="album-cover-title">Making Things</span></div><div class="album-meta"><strong>Projects & experiments</strong><span>Code · prototypes · creative builds</span><p class="album-open-hint">Open collection +</p></div></summary><div class="album-detail"><p>A visual log for digital projects, small experiments, interface ideas, prototypes and works-in-progress — from practical tools to playful worlds.</p></div></details>
-        </div>
-        <div class="album-note">These are original album-cover designs and collection descriptions, not photographs of you. Your own photos, artwork, performance pictures and project screenshots can be added to turn this into a full photo gallery.</div>
+        <div class="section-head"><div><div class="eyebrow">A visual diary</div><h2>Photo Album</h2></div></div>
+        <div class="album-grid"><div class="album-detail" id="personal-photo-album"></div></div>
       </section>
       <section id="learning"><div class="section-head"><div><div class="eyebrow">Practice, discipline & community</div><h2>Learning journey & affiliations</h2></div><p>Institutions and academies connected to my musical, dance and sporting pursuits.</p></div><div class="grid cards">
         <article class="card"><div class="symbol">🎻</div><h3>Sanjit Karmakar Academy</h3><p>Violinist</p><span class="project-status">November 2025 – Present</span></article>
@@ -455,73 +454,51 @@
     $("vibeCollapse").addEventListener("click",()=>{vibePlayer.classList.remove("open");$("musicLauncher").setAttribute("aria-expanded","false");});
 
   
-    // Personal albums: photos are saved privately in this browser using IndexedDB.
+    // Simple photo-only album. Images stay in this browser via IndexedDB.
     (function initPersonalAlbums(){
-      const cards=[...document.querySelectorAll("#album .album-card")];
-      if(!cards.length)return;
-      const DB_NAME="sudha-personal-albums",STORE="photos";
-      let db=null;
-      const urls=new Map();
+      const host=document.querySelector("#personal-photo-album");if(!host)return;
+      const DB_NAME="sudha-personal-albums",STORE="photos";let db=null;const urls=new Map();
       const openDB=()=>new Promise((resolve,reject)=>{
-        if(!("indexedDB" in window)){reject(new Error("This browser does not support local photo storage."));return;}
+        if(!("indexedDB" in window)){reject(new Error("Photo storage is unavailable."));return;}
         const req=indexedDB.open(DB_NAME,1);
-        req.onupgradeneeded=()=>{const d=req.result;if(!d.objectStoreNames.contains(STORE))d.createObjectStore(STORE,{keyPath:"id"});};
-        req.onsuccess=()=>resolve(req.result);req.onerror=()=>reject(req.error||new Error("Could not open photo storage."));
+        req.onupgradeneeded=()=>{if(!req.result.objectStoreNames.contains(STORE))req.result.createObjectStore(STORE,{keyPath:"id"});};
+        req.onsuccess=()=>resolve(req.result);req.onerror=()=>reject(req.error);
       });
-      const allPhotos=()=>new Promise((resolve,reject)=>{const req=db.transaction(STORE,"readonly").objectStore(STORE).getAll();req.onsuccess=()=>resolve(req.result||[]);req.onerror=()=>reject(req.error);});
+      const allPhotos=()=>new Promise((resolve,reject)=>{const q=db.transaction(STORE,"readonly").objectStore(STORE).getAll();q.onsuccess=()=>resolve(q.result||[]);q.onerror=()=>reject(q.error);});
       const savePhoto=photo=>new Promise((resolve,reject)=>{const tx=db.transaction(STORE,"readwrite");tx.objectStore(STORE).put(photo);tx.oncomplete=resolve;tx.onerror=()=>reject(tx.error);});
       const deletePhoto=id=>new Promise((resolve,reject)=>{const tx=db.transaction(STORE,"readwrite");tx.objectStore(STORE).delete(id);tx.oncomplete=resolve;tx.onerror=()=>reject(tx.error);});
-      function revoke(id){if(urls.has(id)){URL.revokeObjectURL(urls.get(id));urls.delete(id);}}
+      const revoke=id=>{if(urls.has(id)){URL.revokeObjectURL(urls.get(id));urls.delete(id);}};
+      const panel=document.createElement("div");panel.className="album-photo-tools";
+      const actions=document.createElement("div");actions.className="album-photo-actions";
+      const label=document.createElement("label");label.className="album-upload-label";label.textContent="＋ Add photos";
+      const input=document.createElement("input");input.className="album-upload-input";input.type="file";input.accept="image/*";input.multiple=true;input.setAttribute("aria-label","Add photos to album");label.append(input);
+      const status=document.createElement("p");status.className="album-photo-status";status.setAttribute("role","status");
+      const gallery=document.createElement("div");gallery.className="album-photo-gallery";
+      actions.append(label);panel.append(actions,status,gallery);host.append(panel);
       async function render(){
-        const photos=await allPhotos();
-        cards.forEach((card,index)=>{
-          const album=String(index+1),gallery=card.querySelector(".album-photo-gallery"),count=card.querySelector(".album-photo-count");
-          const items=photos.filter(p=>p.album===album).sort((a,b)=>b.createdAt-a.createdAt);
-          count.textContent=items.length+" saved";
-          gallery.replaceChildren();
-          if(!items.length){const empty=document.createElement("div");empty.className="album-photo-empty";empty.textContent="Your little memories will appear here ♡";gallery.append(empty);return;}
-          items.forEach(photo=>{
-            const tile=document.createElement("div");tile.className="album-photo-tile";
-            const img=document.createElement("img");img.alt=photo.title||"Album photo";img.loading="lazy";
-            const url=URL.createObjectURL(photo.blob);urls.set(photo.id,url);img.src=url;
-            const del=document.createElement("button");del.type="button";del.className="album-photo-delete";del.textContent="×";del.title="Remove photo";del.setAttribute("aria-label","Remove "+(photo.title||"photo"));
-            del.addEventListener("click",async()=>{del.disabled=true;try{await deletePhoto(photo.id);revoke(photo.id);await render();}catch(e){del.disabled=false;alert("Could not remove this photo. Please try again.");}});
-            tile.append(img,del);gallery.append(tile);
-          });
+        const photos=(await allPhotos()).sort((a,b)=>(b.createdAt||0)-(a.createdAt||0));gallery.replaceChildren();
+        photos.forEach(photo=>{
+          const tile=document.createElement("div");tile.className="album-photo-tile";
+          const img=document.createElement("img");img.alt="";img.loading="lazy";
+          const url=URL.createObjectURL(photo.blob);urls.set(photo.id,url);img.src=url;
+          const del=document.createElement("button");del.type="button";del.className="album-photo-delete";del.textContent="×";del.title="Remove photo";del.setAttribute("aria-label","Remove photo");
+          del.addEventListener("click",async()=>{del.disabled=true;try{await deletePhoto(photo.id);revoke(photo.id);await render();}catch(e){del.disabled=false;status.textContent="Could not remove photo. Please try again.";}});tile.append(img,del);gallery.append(tile);
         });
+        const slots=Math.max(0,6-photos.length);
+        for(let i=0;i<slots;i++){const slot=document.createElement("div");slot.className="album-photo-slot";slot.setAttribute("aria-hidden","true");slot.textContent="＋";gallery.append(slot);}
       }
-      cards.forEach((card,index)=>{
-        const detail=card.querySelector(".album-detail");if(!detail)return;
-        const album=String(index+1),panel=document.createElement("div");panel.className="album-photo-tools";
-        const heading=document.createElement("h4");heading.textContent="♡ Add your photos";
-        const help=document.createElement("p");help.textContent="Choose one or more pictures. They save automatically in this album.";
-        const actions=document.createElement("div");actions.className="album-photo-actions";
-        const label=document.createElement("label");label.className="album-upload-label";label.textContent="＋ Add photos";
-        const input=document.createElement("input");input.className="album-upload-input";input.type="file";input.accept="image/*";input.multiple=true;input.setAttribute("aria-label","Choose photos for "+heading.textContent);
-        label.append(input);
-        const count=document.createElement("span");count.className="album-photo-count";count.textContent="Loading…";
-        const status=document.createElement("p");status.className="album-photo-status";status.setAttribute("role","status");
-        const gallery=document.createElement("div");gallery.className="album-photo-gallery";
-        input.addEventListener("change",async()=>{
-          const files=[...input.files];input.value="";if(!files.length)return;
-          const invalid=files.filter(f=>!f.type.startsWith("image/")||f.size>12*1024*1024);
-          if(invalid.length){status.textContent="Please use image files smaller than 12 MB each.";return;}
-          label.style.opacity=".6";input.disabled=true;status.textContent="Saving your photos…";
-          try{
-            for(const file of files){await savePhoto({id:(crypto.randomUUID?crypto.randomUUID():Date.now()+"-"+Math.random()),album,title:file.name,createdAt:Date.now(),blob:file});}
-            status.textContent=files.length+" photo"+(files.length===1?"":"s")+" saved in this browser ♡";await render();
-          }catch(e){status.textContent="Storage is full or unavailable. Try fewer or smaller photos.";console.error(e);}
-          finally{input.disabled=false;label.style.opacity="1";}
-        });
-        actions.append(label,count);panel.append(heading,help,actions,status,gallery);detail.append(panel);
+      input.addEventListener("change",async()=>{
+        const files=[...input.files];input.value="";if(!files.length)return;
+        if(files.some(f=>!f.type.startsWith("image/")||f.size>12*1024*1024)){status.textContent="Choose image files smaller than 12 MB each.";return;}
+        input.disabled=true;label.style.opacity=".6";status.textContent="Saving…";
+        try{for(const file of files)await savePhoto({id:(crypto.randomUUID?crypto.randomUUID():Date.now()+"-"+Math.random()),createdAt:Date.now(),blob:file});status.textContent="";await render();}
+        catch(e){status.textContent="Storage is full or unavailable. Try smaller photos.";console.error(e);}
+        finally{input.disabled=false;label.style.opacity="1";}
       });
-      openDB().then(async opened=>{db=opened;await render();}).catch(error=>{
-        cards.forEach(card=>{const status=card.querySelector(".album-photo-status");if(status)status.textContent="Photo storage is unavailable in this browser.";});
-        console.error(error);
-      });
-      window.addEventListener("pagehide",()=>{urls.forEach(url=>URL.revokeObjectURL(url));urls.clear();});
+      openDB().then(async opened=>{db=opened;await render();}).catch(e=>{status.textContent="Photo storage is unavailable in this browser.";console.error(e);});
+      window.addEventListener("pagehide",()=>{urls.forEach(URL.revokeObjectURL);urls.clear();});
     })();
 
-  </script>
+</script>
 </body>
 </html>
