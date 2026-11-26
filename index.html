@@ -639,30 +639,43 @@
       const panel=document.createElement("div");panel.className="album-photo-tools";
       const actions=document.createElement("div");actions.className="album-photo-actions";
       const label=document.createElement("label");label.className="album-upload-label";label.textContent="＋ Add album photo";
-      const input=document.createElement("input");input.className="album-upload-input";input.type="file";input.accept="image/*";input.multiple=false;input.setAttribute("aria-label","Add one photo to a new album");label.append(input);
+      const input=document.createElement("input");input.className="album-upload-input";input.type="file";input.accept="image/*";input.multiple=true;input.setAttribute("aria-label","Add photos to the 10 photo album slots");label.append(input);
       const status=document.createElement("p");status.className="album-photo-status";status.setAttribute("role","status");
       const gallery=document.createElement("div");gallery.className="album-photo-gallery";gallery.setAttribute("aria-label","Photo album");
       const empty=document.createElement("div");empty.className="album-gallery-empty";empty.textContent="Your first photo album will appear here ♡";
       actions.append(label);panel.append(actions,status,gallery,empty);host.append(panel);
       async function render(){
-        const photos=(await allPhotos()).sort((a,b)=>(a.createdAt||0)-(b.createdAt||0));
+        const photos=(await allPhotos()).sort((a,b)=>(a.createdAt||0)-(b.createdAt||0)).slice(0,10);
         const keep=new Set(photos.map(p=>p.id));for(const [id,url] of urls){if(!keep.has(id)){URL.revokeObjectURL(url);urls.delete(id);}}
-        gallery.replaceChildren();empty.hidden=photos.length>0;
-        photos.forEach(photo=>{
+        gallery.replaceChildren();empty.hidden=true;
+        for(let index=0;index<10;index++){
+          const photo=photos[index];
           const tile=document.createElement("figure");tile.className="album-photo-tile";
-          const img=document.createElement("img");img.className="album-photo-image";img.src=photoUrl(photo);img.alt="";img.loading="lazy";img.draggable=false;
-          const remove=document.createElement("button");remove.type="button";remove.className="album-photo-delete";remove.textContent="×";remove.title="Remove photo";remove.setAttribute("aria-label","Remove photo");
-          remove.addEventListener("click",async()=>{remove.disabled=true;try{await deletePhoto(photo.id);if(urls.has(photo.id)){URL.revokeObjectURL(urls.get(photo.id));urls.delete(photo.id);}await render();}catch(e){status.textContent="Could not remove photo. Please try again.";remove.disabled=false;}});
-          tile.append(img,remove);gallery.append(tile);
-        });
+          if(photo){
+            const img=document.createElement("img");img.className="album-photo-image";img.src=photoUrl(photo);img.alt="";img.loading="lazy";img.draggable=false;
+            const remove=document.createElement("button");remove.type="button";remove.className="album-photo-delete";remove.textContent="×";remove.title="Remove photo";remove.setAttribute("aria-label","Remove photo");
+            remove.addEventListener("click",async()=>{remove.disabled=true;try{await deletePhoto(photo.id);if(urls.has(photo.id)){URL.revokeObjectURL(urls.get(photo.id));urls.delete(photo.id);}await render();status.textContent="Photo slot cleared ♡";}catch(e){status.textContent="Could not remove photo. Please try again.";remove.disabled=false;}});
+            tile.append(img,remove);
+          }else{
+            tile.classList.add("album-photo-slot-empty");tile.setAttribute("aria-hidden","true");
+            const plus=document.createElement("span");plus.textContent="＋";tile.append(plus);
+          }
+          gallery.append(tile);
+        }
+        const remaining=10-photos.length;
+        label.style.opacity=remaining?"1":".5";input.disabled=remaining===0;
+        label.title=remaining?remaining+" photo slot"+(remaining===1?"":"s")+" available":"All 10 photo slots are full";
+        status.textContent=photos.length+" / 10 photo slots filled";
       }
       input.addEventListener("change",async()=>{
         const files=[...input.files];input.value="";if(!files.length)return;
-        if(files.some(f=>!f.type.startsWith("image/")||f.size>12*1024*1024)){status.textContent="Choose one image smaller than 12 MB.";return;}
-        input.disabled=true;label.style.opacity=".6";status.textContent="Saving…";
-        try{for(const file of files)await savePhoto({id:(crypto.randomUUID?crypto.randomUUID():Date.now()+"-"+Math.random()),createdAt:Date.now(),blob:file});status.textContent="New photo album added ♡";await render();}
+        const existing=(await allPhotos()).length;
+        if(files.some(f=>!f.type.startsWith("image/")||f.size>12*1024*1024)){status.textContent="Each file must be an image smaller than 12 MB.";return;}
+        if(existing+files.length>10){status.textContent="Only "+(10-existing)+" more photo slot"+(10-existing===1?"":"s")+" available. Select no more than 10 photos in total.";return;}
+        input.disabled=true;label.style.opacity=".6";status.textContent="Saving photos…";
+        try{for(const file of files)await savePhoto({id:(crypto.randomUUID?crypto.randomUUID():Date.now()+"-"+Math.random()),createdAt:Date.now(),blob:file});await render();}
         catch(e){status.textContent="Storage is full or unavailable. Try smaller photos.";console.error(e);}
-        finally{input.disabled=false;label.style.opacity="1";}
+        finally{input.disabled=false;}
       });
       openDB().then(async opened=>{db=opened;await render();}).catch(e=>{status.textContent="Photo storage is unavailable in this browser.";console.error(e);});
       window.addEventListener("pagehide",()=>{urls.forEach(url=>URL.revokeObjectURL(url));urls.clear();});
@@ -711,3 +724,22 @@
   </script>
 </body>
 </html>
+
+    /* Ten fixed landscape photo slots: one image per 4:3 frame. */
+    #personal-photo-album .album-photo-tools{width:100%;min-width:0;min-height:0;height:auto;padding:16px;border:0;border-radius:0;background:transparent;box-shadow:none}
+    #personal-photo-album .album-photo-actions{justify-content:flex-end;margin-bottom:10px}
+    #personal-photo-album .album-photo-gallery{display:grid;width:100%;grid-template-columns:repeat(5,minmax(0,1fr));gap:16px;overflow:visible;padding:10px 2px 18px;box-sizing:border-box}
+    #personal-photo-album .album-photo-tile{position:relative;display:grid;place-items:center;width:100%;aspect-ratio:4 / 3;height:auto;min-width:0;margin:0;padding:6px;overflow:hidden;box-sizing:border-box;border:4px solid #e5d2ee;border-radius:16px;background:linear-gradient(145deg,#fffdfd 0%,#fbf5ff 52%,#f2e8fa 100%);box-shadow:inset 0 0 0 2px rgba(255,255,255,.9),0 8px 20px rgba(86,61,107,.12)}
+    #personal-photo-album .album-photo-image{display:block;width:100%;height:100%;aspect-ratio:auto;object-fit:cover;border-radius:9px;transition:transform .35s ease}
+    #personal-photo-album .album-photo-tile:hover .album-photo-image{transform:scale(1.025)}
+    #personal-photo-album .album-photo-tile:nth-child(even){transform:none}
+    #personal-photo-album .album-photo-slot-empty{border:2px dashed #d9c5e8;background:linear-gradient(145deg,#fffaff,#f3ebfa);box-shadow:inset 0 0 0 1px #fff}
+    #personal-photo-album .album-photo-slot-empty span{color:#c3a9d7;font-size:clamp(1.4rem,3vw,2.3rem);font-weight:400;line-height:1}
+    #personal-photo-album .album-photo-delete{top:10px;right:10px;opacity:1;width:30px;height:30px}
+    @media(max-width:760px){
+      #personal-photo-album .album-photo-tools{padding:10px}
+      #personal-photo-album .album-photo-gallery{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;padding:8px 2px 14px}
+      #personal-photo-album .album-photo-tile{padding:5px;border-width:3px;border-radius:13px}
+      #personal-photo-album .album-photo-image{border-radius:7px}
+      #personal-photo-album .album-photo-delete{top:8px;right:8px;width:28px;height:28px}
+    }
