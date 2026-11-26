@@ -1,67 +1,81 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="360" viewBox="0 0 1000 360" role="img" aria-labelledby="title desc">
-  <title id="title">Sudha Mondal — Kawaii waving anime mascot</title>
-  <desc id="desc">A cheerful kawaii anime girl with wavy dark hair, round glasses, a lavender bow and cardigan, smiling and waving her hand against a soft lavender and blush-pink background.</desc>
-  <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#FBF4FF"/><stop offset=".58" stop-color="#F7E8F3"/><stop offset="1" stop-color="#E8DDF8"/></linearGradient>
-    <linearGradient id="hair" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#59405F"/><stop offset=".55" stop-color="#302338"/><stop offset="1" stop-color="#765779"/></linearGradient>
-    <linearGradient id="cardi" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#F0E7FF"/><stop offset="1" stop-color="#CBB7EC"/></linearGradient>
-    <linearGradient id="skin" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#FFE0CE"/><stop offset="1" stop-color="#EFB9A9"/></linearGradient>
-    <filter id="shadow" x="-30%" y="-30%" width="160%" height="170%"><feDropShadow dx="0" dy="7" stdDeviation="7" flood-color="#735A83" flood-opacity=".2"/></filter>
-  </defs>
-  <rect width="1000" height="360" rx="26" fill="url(#bg)"/>
-  <circle cx="875" cy="76" r="125" fill="#F4C9D9" opacity=".38"/><circle cx="760" cy="305" r="145" fill="#CBB7EC" opacity=".25"/>
-  <g fill="#B58ACB" opacity=".7"><path d="M710 55l5 13 13 5-13 5-5 13-5-13-13-5 13-5z"/><path d="M954 245l4 10 10 4-10 4-4 10-4-10-10-4 10-4z"/><circle cx="680" cy="130" r="4"/><circle cx="940" cy="65" r="4"/></g>
-  <g font-family="Segoe UI,Arial,sans-serif">
-    <text x="52" y="145" font-size="48" font-weight="700" fill="#403052">Sudha Mondal</text>
-    <text x="55" y="190" font-size="23" font-weight="600" fill="#765D8D">Biomedical Engineering Student</text>
-    <text x="55" y="230" font-size="18" fill="#594866">Artificial heart systems · Cognitive neuroscience</text>
-    <text x="55" y="261" font-size="17" fill="#765D8D">Bridging engineering precision with biological insight.</text>
-    <path d="M55 286h285" stroke="#D98EAF" stroke-width="5" stroke-linecap="round"/>
-    <text x="55" y="324" font-size="14" fill="#9B78B8">✦ Research · Creativity · Curiosity ✦</text>
-  </g>
-  <g transform="translate(790 0)" filter="url(#shadow)">
-    <!-- hair behind the character -->
-    <path d="M-104 153C-119 76-72 25-5 28 64 21 113 79 98 157l-4 105-37 47h-119l-40-54z" fill="url(#hair)"/>
-    <!-- cardigan and shoulders -->
-    <path d="M-126 354c3-83 30-112 83-119h52c58 8 82 39 88 119z" fill="url(#cardi)" stroke="#B79AD5" stroke-width="3"/>
-    <path d="M-43 237l18 36 19-36 22 117h-82z" fill="#FFF8FF" stroke="#D9C4F2" stroke-width="2"/>
-    <path d="M-20 276l-5 12 12 8 12-8-5-12" fill="none" stroke="#A984C4" stroke-width="3"/>
-    <!-- neck -->
-    <rect x="-19" y="205" width="38" height="43" rx="15" fill="url(#skin)"/>
-    <!-- face -->
-    <path d="M-72 103c0-48 31-74 72-74s72 26 72 74v68c0 43-31 73-72 73s-72-30-72-73z" fill="url(#skin)"/>
-    <!-- fringe and side locks -->
-    <path d="M-78 125C-91 64-49 17 3 25c56-1 88 44 73 106-9-24-22-37-42-48-22 20-58 22-91 8-4 18-9 30-21 43z" fill="url(#hair)"/>
-    <path d="M-73 117c-12 55-2 112 22 139-31-4-52-40-48-84 2-23 10-43 26-55zM73 112c15 51 7 110-19 143 34-7 52-44 47-88-3-23-12-42-28-55z" fill="url(#hair)"/>
-    <path d="M-48 65c19-26 51-34 79-22 15 6 27 17 35 32-33-12-64-9-93 7-8 4-15 9-22 16z" fill="#3B2A42"/>
-    <!-- blush -->
-    <ellipse cx="-43" cy="165" rx="15" ry="7" fill="#E88FA5" opacity=".34"/><ellipse cx="43" cy="165" rx="15" ry="7" fill="#E88FA5" opacity=".34"/>
-    <!-- eyes -->
-    <ellipse cx="-29" cy="143" rx="8" ry="12" fill="#51345C"/><ellipse cx="29" cy="143" rx="8" ry="12" fill="#51345C"/>
-    <circle cx="-26" cy="139" r="3" fill="#FFF"/><circle cx="32" cy="139" r="3" fill="#FFF"/>
-    <!-- glasses -->
-    <g fill="none" stroke="#594866" stroke-width="3"><circle cx="-29" cy="144" r="20"/><circle cx="29" cy="144" r="20"/><path d="M-9 142q9-7 18 0"/></g>
-    <!-- smile -->
-    <path d="M-12 183q12 13 24 0" fill="none" stroke="#A85F72" stroke-width="3" stroke-linecap="round"/>
-    <!-- bow in hair -->
-    <path d="M-75 75q-42-29-41 4 4 25 42 10-32 32-3 39 25 1 27-34z" fill="#D9C4F2" stroke="#A984C4" stroke-width="3"/>
-    <circle cx="-68" cy="93" r="8" fill="#B58ACB"/>
-    <!-- little cardigan details -->
-    <path d="M-73 278l23 20-9 9-22-20zM73 278l-23 20 9 9 22-20z" fill="#F8F0FF" stroke="#B79AD5" stroke-width="2"/>
-    <path d="M-5 313l5 6 5-6" fill="none" stroke="#A984C4" stroke-width="2"/>
-    <!-- waving arm: shoulder fixed, forearm and hand pivot at elbow -->
-    <path d="M68 275q22-28 33-50" fill="none" stroke="#CBB7EC" stroke-width="30" stroke-linecap="round"/>
-    <g transform="translate(101 226)">
-      <animateTransform attributeName="transform" type="rotate" values="-28 0 48;24 0 48;-28 0 48" keyTimes="0;0.5;1" dur="0.72s" repeatCount="indefinite"/>
-      <path d="M0 52Q-9 32-8 12l-1-30q0-9 8-9t9 9l2 25 5-39q1-9 9-8t8 10l-3 40 9-31q3-9 11-5t4 12l-8 35 12-20q5-8 12-2t-1 14L43 70Q30 91 8 82z" fill="url(#skin)" stroke="#D99F91" stroke-width="3" stroke-linejoin="round"/>
-      <path d="M-4 55q17 12 35 0" fill="none" stroke="#E8A99E" stroke-width="2" opacity=".6"/>
-    </g>
-    <g fill="none" stroke="#D98EAF" stroke-width="3.5" stroke-linecap="round">
-      <path d="M126 183q18-18 2-37"><animate attributeName="opacity" values=".15;1;.15" dur=".72s" repeatCount="indefinite"/></path>
-      <path d="M140 195q23-24 3-49"><animate attributeName="opacity" values="1;.2;1" dur=".72s" repeatCount="indefinite"/></path>
-      <path d="M112 171l-4-12"><animate attributeName="opacity" values=".2;1;.2" dur=".72s" repeatCount="indefinite"/></path>
-    </g>
-    <path d="M88 165q-8-12-15 0 7 13 15 0z" fill="#D98EAF"/>
-  </g>
-  <g transform="translate(912 305)" fill="#D98EAF" opacity=".8"><path d="M0 0c-17-15-29 5 0 24 29-19 17-39 0-24z"/></g>
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="420" viewBox="0 0 1000 420" role="img" aria-labelledby="title desc">
+<title id="title">Kawaii anime girl waving hello</title>
+<desc id="desc">A cheerful anime chibi girl with long wavy dark hair, sparkling violet eyes, round glasses, a large lavender bow and a lilac cardigan waves hello beside a sleepy white cat, against a dreamy lavender and pink floral background.</desc>
+<defs>
+ <linearGradient id="bg" x2="1" y2="1"><stop stop-color="#fff5fb"/><stop offset=".52" stop-color="#f5e8fb"/><stop offset="1" stop-color="#e7dafa"/></linearGradient>
+ <radialGradient id="glow"><stop stop-color="#fff" stop-opacity=".95"/><stop offset="1" stop-color="#efc9e8" stop-opacity="0"/></radialGradient>
+ <linearGradient id="hair" x2=".8" y2="1"><stop stop-color="#76566f"/><stop offset=".42" stop-color="#302338"/><stop offset=".78" stop-color="#49334d"/><stop offset="1" stop-color="#9a7394"/></linearGradient>
+ <linearGradient id="skin" x2="0" y2="1"><stop stop-color="#ffe9dc"/><stop offset="1" stop-color="#edb9aa"/></linearGradient>
+ <linearGradient id="dress" x2="1" y2="1"><stop stop-color="#fffaff"/><stop offset="1" stop-color="#d9c4f2"/></linearGradient>
+ <radialGradient id="eye"><stop stop-color="#fff"/><stop offset=".25" stop-color="#d7b9f4"/><stop offset=".7" stop-color="#8c62b1"/><stop offset="1" stop-color="#49335d"/></radialGradient>
+ <filter id="shadow" x="-30%" y="-30%" width="160%" height="170%"><feDropShadow dx="0" dy="9" stdDeviation="9" flood-color="#735a83" flood-opacity=".2"/></filter>
+ <g id="flower"><circle r="5" cy="-9" fill="#fff4fc"/><circle r="5" cy="9" fill="#fff4fc"/><circle r="5" cx="-9" fill="#fff4fc"/><circle r="5" cx="9" fill="#fff4fc"/><circle r="4" fill="#e8a9ca"/></g>
+</defs>
+<rect width="1000" height="420" rx="28" fill="url(#bg)"/>
+<circle cx="820" cy="170" r="230" fill="url(#glow)"/>
+<circle cx="890" cy="90" r="120" fill="#f4c7df" opacity=".27"/>
+<circle cx="760" cy="360" r="155" fill="#cbb7ec" opacity=".25"/>
+<g opacity=".8"><use href="#flower" x="690" y="75" transform="translate(690 75) scale(1.2)"/><use href="#flower" x="965" y="300" transform="translate(965 300) scale(.8)"/><use href="#flower" x="650" y="335" transform="translate(650 335) scale(.65)"/></g>
+<g fill="none" stroke="#c49bdc" stroke-width="3" stroke-linecap="round" opacity=".7">
+ <path d="M720 55q-13-18-26 0 13 21 26 0z"/><path d="M950 125q-13-18-26 0 13 21 26 0z"/>
+ <path d="M680 225l5 13 13 5-13 5-5 13-5-13-13-5 13-5z"/><path d="M960 215l4 10 10 4-10 4-4 10-4-10-10-4 10-4z"/>
+</g>
+<g font-family="Segoe UI,Arial,sans-serif">
+ <text x="55" y="150" font-size="49" font-weight="700" fill="#493454">Sudha Mondal</text>
+ <text x="58" y="198" font-size="23" font-weight="600" fill="#806398">Biomedical Engineering Student</text>
+ <text x="58" y="241" font-size="18" fill="#685273">Artificial heart systems · Cognitive neuroscience</text>
+ <text x="58" y="276" font-size="17" fill="#806398">Bridging engineering precision with biological insight.</text>
+ <path d="M58 302h285" stroke="#d99abf" stroke-width="5" stroke-linecap="round"/>
+ <text x="58" y="339" font-size="15" fill="#9b78b8">✦ Research · Creativity · Curiosity ✦</text>
+</g>
+<g transform="translate(800 20)" filter="url(#shadow)">
+ <!-- long flowing hair silhouette -->
+ <path d="M-150 183C-166 73-91 10-8 15 87 4 157 79 142 191l-4 148-62 51h-165l-54-58z" fill="url(#hair)"/>
+ <path d="M-122 116C-155 42-81 4-22 18c-45 18-61 45-63 81zM35 22c85 3 131 76 104 153-13-58-43-91-104-153z" fill="#302338"/>
+ <!-- body -->
+ <path d="M-151 402c5-104 43-146 111-154h83c73 12 105 55 111 154z" fill="url(#dress)" stroke="#c7b0df" stroke-width="3"/>
+ <path d="M-49 249l49 69 48-69 22 153H-72z" fill="#fff9ff" stroke="#d8c6e9" stroke-width="2"/>
+ <path d="M-18 300l18 15 18-15-7 26H-11z" fill="#b88dcf"/>
+ <path d="M-128 306q-33 31-35 78l46 18 28-87zM128 306q33 31 35 78l-46 18-28-87z" fill="#d8c5f0" stroke="#b99ed7" stroke-width="3"/>
+ <!-- neck and face -->
+ <rect x="-23" y="210" width="46" height="52" rx="18" fill="url(#skin)"/>
+ <path d="M-91 113c0-68 37-99 91-99s91 31 91 99v79c0 54-39 86-91 86s-91-32-91-86z" fill="url(#skin)"/>
+ <!-- ears -->
+ <ellipse cx="-91" cy="176" rx="17" ry="25" fill="#f1c6b5"/><ellipse cx="91" cy="176" rx="17" ry="25" fill="#f1c6b5"/>
+ <!-- bangs and side curls -->
+ <path d="M-94 135C-112 48-45 4 17 18c67 9 98 67 74 130-15-29-35-49-62-60-24 30-68 43-109 27-2 10-6 17-14 20z" fill="url(#hair)"/>
+ <path d="M-82 119c-30 73-13 161 23 191-42-10-64-57-54-119 4-31 13-55 31-72zM83 116c30 73 13 161-23 191 42-10 64-57 54-119-4-31-13-55-31-72z" fill="url(#hair)"/>
+ <path d="M-70 80q40-57 104-40 27 8 45 31-67-26-149 29z" fill="#261e30"/>
+ <!-- eyes -->
+ <ellipse cx="-35" cy="169" rx="17" ry="23" fill="url(#eye)"/><ellipse cx="35" cy="169" rx="17" ry="23" fill="url(#eye)"/>
+ <ellipse cx="-35" cy="170" rx="7" ry="14" fill="#392746"/><ellipse cx="35" cy="170" rx="7" ry="14" fill="#392746"/>
+ <circle cx="-41" cy="159" r="6" fill="#fff"/><circle cx="29" cy="159" r="6" fill="#fff"/><circle cx="-28" cy="178" r="3" fill="#fff"/><circle cx="42" cy="178" r="3" fill="#fff"/>
+ <path d="M-54 139q19-13 37 0M17 139q19-13 37 0" fill="none" stroke="#4b354e" stroke-width="5" stroke-linecap="round"/>
+ <!-- glasses -->
+ <g fill="none" stroke="#594866" stroke-width="3.5"><circle cx="-35" cy="169" r="29"/><circle cx="35" cy="169" r="29"/><path d="M-6 165q6-5 12 0M-65 164l-12-6M65 164l12-6"/></g>
+ <ellipse cx="-61" cy="207" rx="18" ry="8" fill="#e98da8" opacity=".35"/><ellipse cx="61" cy="207" rx="18" ry="8" fill="#e98da8" opacity=".35"/>
+ <path d="M-16 218q16 18 32 0" fill="none" stroke="#a85f72" stroke-width="4" stroke-linecap="round"/>
+ <!-- hair bow -->
+ <path d="M-105 74q-58-38-55 4 5 34 59 18-42 44-5 53 32 1 37-48z" fill="#d9c4f2" stroke="#a984c4" stroke-width="4"/>
+ <path d="M-101 74q-8-42 27-40 29 4 8 49z" fill="#cbb7ec" stroke="#a984c4" stroke-width="4"/>
+ <circle cx="-94" cy="103" r="10" fill="#a984c4"/>
+ <!-- raised arm and waving hand -->
+ <path d="M104 320q36-35 45-80" fill="none" stroke="#d9c4f2" stroke-width="37" stroke-linecap="round"/>
+ <g transform="translate(148 240)">
+  <animateTransform attributeName="transform" type="rotate" values="-25 0 65;22 0 65;-25 0 65" dur=".9s" repeatCount="indefinite"/>
+  <path d="M0 70q-13-23-11-48l-2-39q0-12 10-12t11 12l2 35 6-51q2-12 12-10t9 14l-4 49 11-39q4-11 13-7t5 15l-10 42 14-26q6-10 15-4t-1 17l-28 51q-17 29-43 19z" fill="url(#skin)" stroke="#d99f91" stroke-width="3.5" stroke-linejoin="round"/>
+ </g>
+ <g fill="none" stroke="#d98eaf" stroke-width="4" stroke-linecap="round"><path d="M180 190q24-24 6-48"><animate attributeName="opacity" values=".2;1;.2" dur=".9s" repeatCount="indefinite"/></path><path d="M199 208q29-31 6-62"><animate attributeName="opacity" values="1;.2;1" dur=".9s" repeatCount="indefinite"/></path></g>
+ <!-- tiny bow necklace -->
+ <path d="M-9 277l9 8 9-8-3 14H-6z" fill="#d98eaf"/>
+</g>
+<!-- sleepy kitten -->
+<g transform="translate(925 342)">
+ <ellipse cx="0" cy="20" rx="39" ry="28" fill="#fffaff" stroke="#e5cfe9" stroke-width="3"/>
+ <path d="M-29 4l-6-39 31 19M29 4l6-39-31 19" fill="#fffaff" stroke="#e5cfe9" stroke-width="3" stroke-linejoin="round"/>
+ <path d="M-15 17q7 8 14 0M1 17q7 8 14 0" fill="none" stroke="#725b7d" stroke-width="3" stroke-linecap="round"/>
+ <path d="M-3 27q3 4 6 0" fill="none" stroke="#d98eaf" stroke-width="2"/>
+ <circle cx="-20" cy="25" r="5" fill="#f0a7c0" opacity=".65"/><circle cx="20" cy="25" r="5" fill="#f0a7c0" opacity=".65"/>
+ <path d="M-16 54q16 9 32 0" fill="none" stroke="#b89acb" stroke-width="4" stroke-linecap="round"/>
+</g>
 </svg>
