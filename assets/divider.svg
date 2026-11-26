@@ -1,28 +1,16 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="900" height="70" viewBox="0 0 900 70">
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="72" viewBox="0 0 900 72">
   <defs>
-    <linearGradient id="rgb" x1="0" y1="0" x2="1" y2="0" spreadMethod="reflect">
-      <stop offset="0" stop-color="#ff4d6d"/><stop offset="0.33" stop-color="#ffd166"/>
-      <stop offset="0.66" stop-color="#06d6a0"/><stop offset="1" stop-color="#4cc9f0"/>
-      <animate attributeName="x1" values="0;1;0" dur="5s" repeatCount="indefinite"/>
-      <animate attributeName="x2" values="1;2;1" dur="5s" repeatCount="indefinite"/>
+    <linearGradient id="silk" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#d9c4f2"/><stop offset=".48" stop-color="#f4bfd2"/><stop offset="1" stop-color="#cbb7ec"/>
     </linearGradient>
-    <radialGradient id="pg" cx="0.5" cy="0.3" r="0.8">
-      <stop offset="0" stop-color="#fff0f5"/><stop offset="0.6" stop-color="#ffb7c5"/><stop offset="1" stop-color="#ff7aa2"/>
-    </radialGradient>
-    <filter id="glow"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-    <g id="p"><path d="M0 0C-9-6-8-18 0-24C8-18 9-6 0 0Z" fill="url(#pg)"/></g>
+    <linearGradient id="glow" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0"/><stop offset=".5" stop-color="#fff8fc" stop-opacity=".95"/><stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="soft"><feGaussianBlur stdDeviation="4"/></filter>
   </defs>
-  <rect x="40" y="33" width="820" height="4" rx="2" fill="url(#rgb)" filter="url(#glow)"/>
-  <g>
-    <g><animateMotion dur="7s" begin="0s" repeatCount="indefinite" path="M-20,20 C200,60 400,0 920,40"/><g transform="scale(0.8)"><use xlink:href="#p"><animateTransform attributeName="transform" type="rotate" values="0;360" dur="4s" repeatCount="indefinite"/></use></g></g>
-    <g><animateMotion dur="9s" begin="-3s" repeatCount="indefinite" path="M-20,50 C250,0 500,70 920,20"/><g transform="scale(1)"><use xlink:href="#p"><animateTransform attributeName="transform" type="rotate" values="0;-360" dur="5s" repeatCount="indefinite"/></use></g></g>
-    <g><animateMotion dur="8s" begin="-5s" repeatCount="indefinite" path="M-20,35 C300,70 600,0 920,45"/><g transform="scale(0.65)"><use xlink:href="#p"><animateTransform attributeName="transform" type="rotate" values="0;360" dur="3.5s" repeatCount="indefinite"/></use></g></g>
-    <g><animateMotion dur="11s" begin="-7s" repeatCount="indefinite" path="M-20,10 C150,50 650,20 920,55"/><g transform="scale(0.9)"><use xlink:href="#p"><animateTransform attributeName="transform" type="rotate" values="0;-360" dur="6s" repeatCount="indefinite"/></use></g></g>
-  </g>
-  <!-- water droplets -->
-  <g fill="#9ad7ff" opacity="0.8">
-    <circle r="3"><animateMotion dur="6s" repeatCount="indefinite" path="M120,0 L140,70"/><animate attributeName="opacity" values="0;1;0" dur="6s" repeatCount="indefinite"/></circle>
-    <circle r="2.5"><animateMotion dur="7s" begin="-2s" repeatCount="indefinite" path="M450,0 L430,70"/><animate attributeName="opacity" values="0;1;0" dur="7s" begin="-2s" repeatCount="indefinite"/></circle>
-    <circle r="3"><animateMotion dur="5s" begin="-1s" repeatCount="indefinite" path="M760,0 L780,70"/><animate attributeName="opacity" values="0;1;0" dur="5s" begin="-1s" repeatCount="indefinite"/></circle>
-  </g>
+  <path d="M24 36 C180 8 300 64 450 36 S720 8 876 36" fill="none" stroke="url(#glow)" stroke-width="12" filter="url(#soft)"/>
+  <path d="M24 36 C180 8 300 64 450 36 S720 8 876 36" fill="none" stroke="url(#silk)" stroke-width="2.2" stroke-linecap="round"/>
+  <path d="M24 48 H876" stroke="#e9dcef" stroke-width="1" opacity=".7"/>
+  <g fill="#d7b9df"><path d="M450 22 C440 30 442 39 450 43 C458 39 460 30 450 22Z"/><circle cx="34" cy="36" r="3"/><circle cx="866" cy="36" r="3"/></g>
+  <g fill="#f0c7d9" opacity=".9"><circle cx="220" cy="29" r="2"/><circle cx="680" cy="43" r="2"/></g>
 </svg>
