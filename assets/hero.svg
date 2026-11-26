@@ -1,58 +1,111 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="360" viewBox="0 0 1000 360" role="img" aria-labelledby="title desc">
-  <title id="title">Sudha Mondal — Biomedical Engineering</title>
-  <desc id="desc">A soft lavender and blush-pink banner introducing Sudha Mondal, a biomedical engineering student interested in artificial heart systems, cognitive neuroscience, and interdisciplinary research. A simple illustrated researcher stands on the right.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="900" height="400" viewBox="0 0 900 400">
   <defs>
-    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#F8F1FC"/>
-      <stop offset="0.55" stop-color="#F5E7F1"/>
-      <stop offset="1" stop-color="#E9DDF7"/>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0f0c29"/><stop offset="0.5" stop-color="#302b63"/><stop offset="1" stop-color="#24243e"/>
+      <animate attributeName="x2" values="1;0.6;1" dur="10s" repeatCount="indefinite"/>
     </linearGradient>
-    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0" stop-color="#9B78B8"/>
-      <stop offset="1" stop-color="#D98EAF"/>
+    <linearGradient id="rgb" x1="0" y1="0" x2="1" y2="0" gradientUnits="objectBoundingBox" spreadMethod="reflect">
+      <stop offset="0" stop-color="#ff4d6d"/><stop offset="0.33" stop-color="#ffd166"/>
+      <stop offset="0.66" stop-color="#06d6a0"/><stop offset="1" stop-color="#4cc9f0"/>
+      <animate attributeName="x1" values="0;1;0" dur="6s" repeatCount="indefinite"/>
+      <animate attributeName="x2" values="1;2;1" dur="6s" repeatCount="indefinite"/>
     </linearGradient>
-    <linearGradient id="coat" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#FFFFFF"/>
-      <stop offset="1" stop-color="#D9CDEE"/>
-    </linearGradient>
-    <filter id="shadow" x="-30%" y="-30%" width="160%" height="170%">
-      <feDropShadow dx="0" dy="8" stdDeviation="9" flood-color="#6B557D" flood-opacity=".16"/>
+    <radialGradient id="pg" cx="0.5" cy="0.3" r="0.8">
+      <stop offset="0" stop-color="#fff0f5"/><stop offset="0.6" stop-color="#ffb7c5"/><stop offset="1" stop-color="#ff7aa2"/>
+    </radialGradient>
+    <radialGradient id="skin" cx="0.35" cy="0.3" r="0.9">
+      <stop offset="0" stop-color="#ffe6d2"/><stop offset="1" stop-color="#e8a98a"/>
+    </radialGradient>
+    <radialGradient id="coat" cx="0.3" cy="0.2" r="1">
+      <stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#b9c4e6"/>
+    </radialGradient>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
+    <filter id="shadow" x="-30%" y="-30%" width="170%" height="170%">
+      <feDropShadow dx="6" dy="10" stdDeviation="6" flood-color="#000" flood-opacity="0.45"/>
+    </filter>
+    <g id="p"><path d="M0 0C-9-6-8-18 0-24C8-18 9-6 0 0Z" fill="url(#pg)"/><path d="M0 0C-1-8 0-16 0-22" stroke="#ff7aa2" stroke-width="0.6" fill="none"/></g>
   </defs>
-  <rect width="1000" height="360" rx="26" fill="url(#background)"/>
-  <circle cx="875" cy="76" r="116" fill="#F4C9D9" opacity=".42"/>
-  <circle cx="760" cy="300" r="142" fill="#CBB7EC" opacity=".28"/>
-  <path d="M35 286 C180 270 300 305 470 280" fill="none" stroke="#D8C5E8" stroke-width="2"/>
-  <circle cx="64" cy="76" r="5" fill="#D98EAF" opacity=".8"/>
-  <circle cx="490" cy="76" r="4" fill="#B79AD5" opacity=".8"/>
-  <path d="M48 104 H112" stroke="#D98EAF" stroke-width="4" stroke-linecap="round"/>
-  <text x="48" y="164" font-family="Segoe UI, Arial, sans-serif" font-size="54" font-weight="700" fill="#403052">Sudha Mondal</text>
-  <text x="51" y="207" font-family="Segoe UI, Arial, sans-serif" font-size="23" font-weight="600" fill="#765D8D">Biomedical Engineering Student</text>
-  <text x="51" y="247" font-family="Segoe UI, Arial, sans-serif" font-size="19" fill="#594866">Artificial heart systems · Cognitive neuroscience</text>
-  <text x="51" y="276" font-family="Segoe UI, Arial, sans-serif" font-size="17" fill="#765D8D">Bridging engineering precision with biological insight.</text>
-  <rect x="51" y="302" width="310" height="5" rx="3" fill="url(#accent)"/>
-  <g transform="translate(810 212)" filter="url(#shadow)">
-    <path d="M-92 142 C-88 62 -56 28 0 28 C56 28 88 62 92 142Z" fill="url(#coat)" stroke="#CBB7EC" stroke-width="2"/>
-    <path d="M-31 40 L0 91 L31 40 L17 142 H-17Z" fill="#E7DDF1"/>
-    <path d="M-14 35 L0 58 L14 35" fill="none" stroke="#B79AD5" stroke-width="3"/>
-    <rect x="-10" y="7" width="20" height="34" rx="8" fill="#D99F89"/>
-    <path d="M-48 -42 C-45 -96 45 -96 49 -42 L43 7 C34 37 -34 37 -43 7Z" fill="#38283F"/>
-    <ellipse cx="0" cy="-39" rx="43" ry="48" fill="#E8B69B"/>
-    <path d="M-44 -42 C-42 -91 40 -96 46 -43 C25 -61 -22 -62 -44 -42Z" fill="#38283F"/>
-    <path d="M-42 -32 C-62 6 -50 42 -28 48 L-35 -13Z" fill="#38283F"/>
-    <path d="M42 -32 C62 6 50 42 28 48 L35 -13Z" fill="#38283F"/>
-    <ellipse cx="-15" cy="-34" rx="4" ry="5" fill="#403052"/>
-    <ellipse cx="15" cy="-34" rx="4" ry="5" fill="#403052"/>
-    <path d="M-10 -10 Q0 -2 10 -10" fill="none" stroke="#A85F72" stroke-width="3" stroke-linecap="round"/>
-    <path d="M-27 -19 Q-15 -25 -5 -19 M5 -19 Q15 -25 27 -19" fill="none" stroke="#704A59" stroke-width="2"/>
-    <path d="M-70 72 L-112 112" stroke="#E8B69B" stroke-width="17" stroke-linecap="round"/>
-    <path d="M70 72 L112 28" stroke="#E8B69B" stroke-width="17" stroke-linecap="round"/>
-    <path d="M112 28 l-8 -18 m8 18 l16 -10 m-16 10 l4 17" fill="none" stroke="#E8B69B" stroke-width="8" stroke-linecap="round"/>
-    <rect x="-62" y="68" width="124" height="12" rx="6" fill="#CBB7EC" opacity=".6"/>
+
+  <rect width="900" height="400" rx="22" fill="url(#bg)"/>
+
+  <!-- twinkling stars -->
+  <g fill="#fff">
+    <circle cx="80" cy="60" r="1.5"><animate attributeName="opacity" values="0.2;1;0.2" dur="3s" repeatCount="indefinite"/></circle>
+    <circle cx="300" cy="30" r="1.2"><animate attributeName="opacity" values="1;0.2;1" dur="4s" repeatCount="indefinite"/></circle>
+    <circle cx="520" cy="80" r="1.6"><animate attributeName="opacity" values="0.3;1;0.3" dur="2.5s" repeatCount="indefinite"/></circle>
+    <circle cx="840" cy="40" r="1.3"><animate attributeName="opacity" values="1;0.2;1" dur="3.5s" repeatCount="indefinite"/></circle>
+    <circle cx="700" cy="350" r="1.4"><animate attributeName="opacity" values="0.2;1;0.2" dur="5s" repeatCount="indefinite"/></circle>
   </g>
-  <g fill="#B79AD5" opacity=".9">
-    <path d="M688 67 C678 79 681 91 692 96 C703 91 706 79 696 67Z"/>
-    <circle cx="946" cy="230" r="4"/>
-    <circle cx="706" cy="148" r="3"/>
+
+  <!-- text -->
+  <g filter="url(#glow)">
+    <text x="50" y="150" font-family="Segoe UI, Arial, sans-serif" font-size="58" font-weight="800" fill="url(#rgb)">Sudha Mondal 🌸</text>
+  </g>
+  <text x="52" y="195" font-family="Consolas, monospace" font-size="20" fill="#ffd6e4">B.Tech Biomedical Engineering Student</text>
+  <text x="52" y="228" font-family="Consolas, monospace" font-size="18" fill="#9ad7ff">Researcher  •  Interdisciplinary Creator</text>
+  <text x="52" y="285" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-style="italic" fill="#e9d8ff">Bridging engineering precision with biological</text>
+  <text x="52" y="308" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-style="italic" fill="#e9d8ff">systems and creative expression.</text>
+  <rect x="52" y="325" width="300" height="3" rx="2" fill="url(#rgb)"/>
+
+  <!-- 3D-style character saying Hi -->
+  <g transform="translate(700 230)" filter="url(#shadow)">
+    <animateTransform attributeName="transform" type="translate" values="700 230;700 220;700 230" dur="3s" repeatCount="indefinite"/>
+    <!-- body / lab coat -->
+    <path d="M-60 150 C-65 80 -40 55 0 55 C40 55 65 80 60 150Z" fill="url(#coat)"/>
+    <path d="M0 55 L-14 100 L0 150 L14 100Z" fill="#7aa2ff" opacity="0.5"/>
+    <!-- neck + head -->
+    <rect x="-9" y="38" width="18" height="22" rx="6" fill="#e8a98a"/>
+    <!-- hair back + bun -->
+    <circle cx="0" cy="-8" r="52" fill="#1b1230"/>
+    <circle cx="0" cy="-62" r="20" fill="#1b1230"/>
+    <path d="M-6 -70 q6 -10 12 0 q-6 6 -12 0Z" fill="#ff9fb8"/>
+    <!-- face -->
+    <circle cx="0" cy="0" r="44" fill="url(#skin)"/>
+    <path d="M-46 -8 C-40 -48 40 -48 46 -8 C30 -30 -30 -30 -46 -8Z" fill="#1b1230"/>
+    <!-- eyes blink -->
+    <g fill="#2a1a3a">
+      <ellipse cx="-16" cy="2" rx="4.5" ry="6"><animate attributeName="ry" values="6;6;0.6;6;6" keyTimes="0;0.9;0.93;0.96;1" dur="4s" repeatCount="indefinite"/></ellipse>
+      <ellipse cx="16" cy="2" rx="4.5" ry="6"><animate attributeName="ry" values="6;6;0.6;6;6" keyTimes="0;0.9;0.93;0.96;1" dur="4s" repeatCount="indefinite"/></ellipse>
+    </g>
+    <circle cx="-14.5" cy="0" r="1.6" fill="#fff"/><circle cx="17.5" cy="0" r="1.6" fill="#fff"/>
+    <ellipse cx="-28" cy="16" rx="7" ry="4" fill="#ff8fa3" opacity="0.6"/>
+    <ellipse cx="28" cy="16" rx="7" ry="4" fill="#ff8fa3" opacity="0.6"/>
+    <path d="M-10 20 Q0 32 10 20" stroke="#a0334f" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <!-- glasses-free sparkle -->
+    <text x="34" y="-30" font-size="14" fill="#fff6a8">✦<animate attributeName="opacity" values="0;1;0" dur="2s" repeatCount="indefinite"/></text>
+    <!-- waving arm -->
+    <g transform="translate(55 85)">
+      <animateTransform attributeName="transform" type="rotate" values="0 55 85;-28 55 85;10 55 85;-28 55 85;0 55 85" dur="1.6s" repeatCount="indefinite" additive="sum"/>
+      <rect x="-6" y="-70" width="20" height="78" rx="10" fill="url(#coat)" transform="rotate(-18)"/>
+      <circle cx="-24" cy="-76" r="13" fill="url(#skin)"/>
+    </g>
+    <!-- other arm -->
+    <rect x="-70" y="80" width="20" height="68" rx="10" fill="url(#coat)" transform="rotate(8 -60 80)"/>
+  </g>
+
+  <!-- speech bubble -->
+  <g transform="translate(590 70)">
+    <animateTransform attributeName="transform" type="scale" additive="sum" values="1;1.08;1" dur="1.6s" repeatCount="indefinite"/>
+    <path d="M0 0 h120 a16 16 0 0 1 16 16 v46 a16 16 0 0 1 -16 16 h-60 l-18 22 l2 -22 h-44 a16 16 0 0 1 -16 -16 v-46 a16 16 0 0 1 16 -16z" transform="translate(40 0)" fill="#fff" opacity="0.95"/>
+    <text x="108" y="58" font-family="Segoe UI, Arial, sans-serif" font-size="40" font-weight="800" fill="#ff4d8d">Hi!<animate attributeName="fill" values="#ff4d8d;#4cc9f0;#06d6a0;#ffd166;#ff4d8d" dur="4s" repeatCount="indefinite"/></text>
+  </g>
+
+  <!-- SAKURA PETAL RAIN -->
+  <g>
+    <g><animateMotion dur="9s" begin="0s" repeatCount="indefinite" path="M40,-30 C90,100 10,220 70,440"/><g transform="scale(1.1)"><use xlink:href="#p"><animateTransform attributeName="transform" type="rotate" values="0;360" dur="5s" repeatCount="indefinite"/></use></g></g>
+    <g><animateMotion dur="11s" begin="-4s" repeatCount="indefinite" path="M160,-30 C220,120 120,230 200,440"/><g transform="scale(0.8)"><use xlink:href="#p"><animateTransform attributeName="transform" type="rotate" values="0;-360" dur="6s" repeatCount="indefinite"/></use></g></g>
+    <g><animateMotion dur="8s" begin="-2s" repeatCount="indefinite" path="M280,-30 C330,90 240,250 320,440"/><g transform="scale(1.3)"><use xlink:href="#p"><animateTransform attributeName="transform" type="rotate" values="0;360" dur="4s" repeatCount="indefinite"/></use></g></g>
+    <g><animateMotion dur="12s" begin="-6s" repeatCount="indefinite" path="M400,-30 C460,110 350,210 430,440"/><g transform="scale(0.9)"><use xlink:href="#p"><animateTransform attributeName="transform" type="rotate" values="0;-360" dur="7s" repeatCount="indefinite"/></use></g></g>
+    <g><animateMotion dur="10s" begin="-1s" repeatCount="indefinite" path="M520,-30 C570,130 470,240 550,440"/><g transform="scale(1.2)"><use xlink:href="#p"><animateTransform attributeName="transform" type="rotate" values="0;360" dur="5.5s" repeatCount="indefinite"/></use></g></g>
+    <g><animateMotion dur="9.5s" begin="-5s" repeatCount="indefinite" path="M620,-30 C680,90 570,220 650,440"/><g transform="scale(0.7)"><use xlink:href="#p"><animateTransform attributeName="transform" type="rotate" values="0;-360" dur="4.5s" repeatCount="indefinite"/></use></g></g>
+    <g><animateMotion dur="13s" begin="-8s" repeatCount="indefinite" path="M740,-30 C790,120 690,230 770,440"/><g transform="scale(1)"><use xlink:href="#p"><animateTransform attributeName="transform" type="rotate" values="0;360" dur="6.5s" repeatCount="indefinite"/></use></g></g>
+    <g><animateMotion dur="8.5s" begin="-3s" repeatCount="indefinite" path="M850,-30 C890,100 790,250 860,440"/><g transform="scale(1.4)"><use xlink:href="#p"><animateTransform attributeName="transform" type="rotate" values="0;-360" dur="5s" repeatCount="indefinite"/></use></g></g>
+    <g><animateMotion dur="14s" begin="-9s" repeatCount="indefinite" path="M100,-30 C30,150 160,260 90,440"/><g transform="scale(0.6)"><use xlink:href="#p"><animateTransform attributeName="transform" type="rotate" values="0;360" dur="3.5s" repeatCount="indefinite"/></use></g></g>
+    <g><animateMotion dur="10.5s" begin="-7s" repeatCount="indefinite" path="M460,-30 C400,140 520,250 470,440"/><g transform="scale(0.85)"><use xlink:href="#p"><animateTransform attributeName="transform" type="rotate" values="0;-360" dur="5.2s" repeatCount="indefinite"/></use></g></g>
+    <g><animateMotion dur="12.5s" begin="-10s" repeatCount="indefinite" path="M690,-30 C640,110 750,240 700,440"/><g transform="scale(1.1)"><use xlink:href="#p"><animateTransform attributeName="transform" type="rotate" values="0;360" dur="6s" repeatCount="indefinite"/></use></g></g>
+    <g><animateMotion dur="9s" begin="-6.5s" repeatCount="indefinite" path="M220,-30 C170,120 270,230 230,440"/><g transform="scale(0.75)"><use xlink:href="#p"><animateTransform attributeName="transform" type="rotate" values="0;-360" dur="4.2s" repeatCount="indefinite"/></use></g></g>
+    <g><animateMotion dur="11.5s" begin="-2.5s" repeatCount="indefinite" path="M580,-30 C530,100 630,260 590,440"/><g transform="scale(1.0)"><use xlink:href="#p"><animateTransform attributeName="transform" type="rotate" values="0;360" dur="5.8s" repeatCount="indefinite"/></use></g></g>
   </g>
 </svg>
