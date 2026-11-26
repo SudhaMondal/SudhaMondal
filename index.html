@@ -33,6 +33,13 @@
     @media(max-width:760px){.navlinks{gap:13px;font-size:.8rem}.hero{grid-template-columns:1fr;padding:65px 0 50px;gap:20px}.portrait{min-height:300px}.orb{width:260px}.monogram{font-size:5.5rem}.float.one{left:5%}.float.two{right:4%}.grid{grid-template-columns:1fr}.about{grid-template-columns:1fr;gap:20px}.section-head{display:block}.section-head p{margin-top:8px}}
     @media(max-width:430px){.wrap{width:min(100% - 28px,1100px)}.nav{align-items:flex-start}.navlinks{gap:9px;flex-wrap:wrap;justify-content:flex-end}.hero h1{font-size:3.35rem}.lead{font-size:1rem}}
     @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
+  
+    /* SUDHA vibing to — floating music player */
+    .vibe-player{position:fixed;z-index:18;left:20px;bottom:20px;width:min(370px,calc(100vw - 32px));padding:15px;border:1px solid #e6c8f355;border-radius:20px;background:linear-gradient(145deg,#211a31f5,#171321f5);backdrop-filter:blur(18px);box-shadow:0 16px 48px #0008;color:var(--text)}
+    .vibe-head{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:11px}.vibe-brand{font-weight:800;letter-spacing:.02em;font-size:.98rem}.vibe-brand span{color:var(--pink)}.vibe-kicker{font-size:.63rem;color:var(--muted);letter-spacing:.14em;text-transform:uppercase}.vibe-collapse{border:1px solid #ffffff30;background:#ffffff0c;color:var(--text);border-radius:50%;width:30px;height:30px;cursor:pointer}
+    .vibe-now{display:flex;gap:11px;align-items:center;margin-bottom:11px}.vibe-art{width:48px;height:48px;flex:0 0 48px;border-radius:13px;display:grid;place-items:center;background:linear-gradient(135deg,#d8b9ee,#f0b8d0);color:#2b2039;font-size:1.35rem}.vibe-track{font-size:.88rem;font-weight:700;line-height:1.3}.vibe-artist{font-size:.73rem;color:var(--muted);margin-top:3px}.vibe-controls{display:flex;align-items:center;gap:8px}.vibe-btn{border:1px solid #ffffff35;background:#ffffff0c;color:var(--text);border-radius:999px;padding:7px 11px;font:600 .75rem 'DM Sans',sans-serif;cursor:pointer}.vibe-btn.play{background:linear-gradient(110deg,#d8b9ee,#f0b8d0);color:#21182d;border:0;font-weight:800}.vibe-btn:disabled{opacity:.4;cursor:not-allowed}.vibe-volume{display:flex;align-items:center;gap:7px;margin-left:auto;color:var(--muted);font-size:.72rem}.vibe-volume input{width:75px;accent-color:#e4bce5}.vibe-list{display:grid;gap:5px;margin-top:12px;max-height:155px;overflow:auto}.vibe-song{display:flex;align-items:center;gap:9px;width:100%;text-align:left;border:1px solid transparent;background:#ffffff08;color:var(--text);border-radius:10px;padding:8px 9px;cursor:pointer;font:500 .76rem 'DM Sans',sans-serif}.vibe-song:hover,.vibe-song.active{background:#d8b9ee18;border-color:#d8b9ee55}.vibe-song small{display:block;color:var(--muted);font-size:.68rem}.vibe-index{color:var(--pink);font-size:.68rem;width:17px}.vibe-frame{position:absolute;width:1px;height:1px;opacity:.01;pointer-events:none;left:-9999px}.vibe-note{font-size:.62rem;color:var(--muted);margin:9px 1px 0;line-height:1.4}.vibe-player.minimized{width:auto;padding:10px 13px}.vibe-player.minimized .vibe-content{display:none}.vibe-player.minimized .vibe-head{margin:0}.vibe-player.minimized .vibe-kicker{display:none}
+    @media(max-width:520px){.vibe-player{left:12px;bottom:12px;width:min(370px,calc(100vw - 24px));padding:12px}.vibe-player.minimized{width:auto}.vibe-volume input{width:62px}}
+
   </style>
 </head>
 <body>
@@ -83,6 +90,37 @@
     $("saveProfile").addEventListener("click",()=>{const p={name:$("editName").value.trim()||defaults.name,role:$("editRole").value.trim()||defaults.role,intro:$("editIntro").value.trim()||defaults.intro,accent:$("editAccent").value};applyProfile(p);try{localStorage.setItem("sudhaPortfolioProfile",JSON.stringify(p));$("saveMessage").textContent="Saved in this browser ✓";}catch(e){$("saveMessage").textContent="Applied for this visit; browser storage is unavailable.";}});
     $("resetProfile").addEventListener("click",()=>{applyProfile(defaults);try{localStorage.removeItem("sudhaPortfolioProfile");}catch(e){}$("saveMessage").textContent="Profile details reset.";});try{const p=localStorage.getItem("sudhaPortfolioProfile");if(p)applyProfile({...defaults,...JSON.parse(p)});}catch(e){}
     const sidebar=$("editorSidebar"),toggle=$("sidebarToggle"),scrim=$("sidebarScrim");function closeSidebar(){sidebar.classList.remove("open");scrim.classList.remove("show");toggle.setAttribute("aria-expanded","false");}toggle.addEventListener("click",()=>{const open=!sidebar.classList.contains("open");sidebar.classList.toggle("open",open);scrim.classList.toggle("show",open);toggle.setAttribute("aria-expanded",String(open));});scrim.addEventListener("click",closeSidebar);sidebar.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener("click",closeSidebar));
+
+    // SUDHA vibing to — YouTube embeds. Playback starts only after a visitor chooses Play.
+    const vibeSongs=[
+      {title:"Housewife",artist:"Tate McRae",id:"DPEodkHzH-s"},
+      {title:"Stop The Wedding!",artist:"Ashe",id:"DLV8FpyxZPQ"},
+      {title:"Choosin' Texas",artist:"Ella Langley",id:"nUsrYVxrDwI"},
+      {title:"Dracula (JENNIE Remix)",artist:"Tame Impala & JENNIE",id:"0UPDBODtxzw"}
+    ];
+    const vibePlayer=$("vibePlayer"),vibeFrame=$("vibeFrame"),vibeList=$("vibeList");
+    let vibeIndex=-1,vibeStarted=false,vibeMuted=false,vibeVolume=75;
+    function vibeCommand(func,args=[]){if(vibeFrame.contentWindow)vibeFrame.contentWindow.postMessage(JSON.stringify({event:"command",func,args}),"*");}
+    function vibeSetTrack(index,play=true){
+      if(index<0||index>=vibeSongs.length)return;
+      vibeIndex=index;const song=vibeSongs[index];
+      $("vibeTrack").textContent=song.title;$("vibeArtist").textContent=song.artist;
+      vibeList.querySelectorAll(".vibe-song").forEach((b,i)=>{b.classList.toggle("active",i===index);b.setAttribute("aria-current",i===index?"true":"false");});
+      $("vibePrev").disabled=index===0;$("vibeNext").disabled=index===vibeSongs.length-1;
+      const origin=location.origin==="null"?"": "&origin="+encodeURIComponent(location.origin);
+      vibeFrame.src="https://www.youtube-nocookie.com/embed/"+song.id+"?autoplay="+(play?"1":"0")+"&controls=1&rel=0&playsinline=1&enablejsapi=1"+origin;
+      vibeStarted=play;$("vibePlay").textContent=play?"Ⅱ Pause":"▶ Play";
+      $("vibePlay").setAttribute("aria-label",play?"Pause":"Play");
+      if(play){setTimeout(()=>{vibeCommand("setVolume",[vibeVolume]);if(vibeMuted)vibeCommand("mute");},650);}
+    }
+    vibeSongs.forEach((song,i)=>{const b=document.createElement("button");b.type="button";b.className="vibe-song";b.innerHTML='<span class="vibe-index">'+String(i+1).padStart(2,"0")+'</span><span>'+song.title+'<small>'+song.artist+'</small></span>';b.addEventListener("click",()=>vibeSetTrack(i,true));vibeList.appendChild(b);});
+    $("vibePlay").addEventListener("click",()=>{if(vibeIndex<0){vibeSetTrack(0,true);return;}if(!vibeStarted){vibeSetTrack(vibeIndex,true);return;}vibeCommand("pauseVideo");vibeStarted=false;$("vibePlay").textContent="▶ Play";});
+    $("vibePrev").addEventListener("click",()=>{if(vibeIndex>0)vibeSetTrack(vibeIndex-1,true);});
+    $("vibeNext").addEventListener("click",()=>{if(vibeIndex<vibeSongs.length-1)vibeSetTrack(vibeIndex+1,true);});
+    $("vibeVolume").addEventListener("input",e=>{vibeVolume=Number(e.target.value);if(vibeIndex>=0)vibeCommand("setVolume",[vibeVolume]);if(vibeVolume>0&&vibeMuted){vibeMuted=false;vibeCommand("unMute");$("vibeMute").textContent="Mute";}});
+    $("vibeMute").addEventListener("click",()=>{vibeMuted=!vibeMuted;if(vibeIndex>=0)vibeCommand(vibeMuted?"mute":"unMute");$("vibeMute").textContent=vibeMuted?"Unmute":"Mute";});
+    $("vibeCollapse").addEventListener("click",()=>{const minimized=vibePlayer.classList.toggle("minimized");$("vibeCollapse").textContent=minimized?"+":"−";$("vibeCollapse").setAttribute("aria-label",minimized?"Expand music player":"Minimize music player");});
+
   </script>
 </body>
 </html>
