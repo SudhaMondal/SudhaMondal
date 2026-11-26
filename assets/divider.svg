@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="900" height="72" viewBox="0 0 900 72" role="img" aria-label="Animated lavender and blush silk waves with floating sakura petals and sparkling pastel gems">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="900" height="72" viewBox="0 0 900 72" role="img" aria-label="Animated lavender and blush waves with facing whales, sakura petals, gems, seaweed, starfish, a seahorse and pearl oysters">
   <defs>
     <linearGradient id="silk" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#d9c4f2"/><stop offset=".48" stop-color="#f4bfd2"/><stop offset="1" stop-color="#cbb7ec"/></linearGradient>
     <linearGradient id="wave" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f8d7e8" stop-opacity=".85"/><stop offset="1" stop-color="#cbb7ec" stop-opacity=".08"/></linearGradient>
@@ -39,16 +39,41 @@
     <use xlink:href="#sparkle" transform="translate(615 48) scale(.55)"><animate attributeName="opacity" values=".2;.95;.2" dur="4.8s" repeatCount="indefinite"/></use>
     <use xlink:href="#sparkle" transform="translate(825 25) scale(.62)"><animate attributeName="opacity" values="1;.25;1" dur="3.5s" repeatCount="indefinite"/><animateTransform attributeName="transform" additive="sum" type="rotate" values="0 825 25;90 825 25;180 825 25" dur="9s" repeatCount="indefinite"/></use>
   </g>
-  <!-- Two tiny, independently drifting whales -->
-  <g opacity=".95">
-    <!-- Larger whale swims right -->
-    <g transform="translate(165 22) scale(.72)">
-      <use xlink:href="#whalebody"><animateTransform attributeName="transform" type="translate" values="0 0;25 -4;50 1;75 -3;0 0" dur="24s" repeatCount="indefinite"/><animateTransform attributeName="transform" additive="sum" type="rotate" values="-2 0 0;2 0 0;-2 0 0" dur="5s" repeatCount="indefinite"/></use>
+  <!-- Whales face one another and gently swim toward and away from the center -->
+  <g opacity=".98">
+    <g transform="translate(340 24) scale(.72)">
+      <use xlink:href="#whalebody"><animateTransform attributeName="transform" type="translate" values="0 0;12 -3;22 1;12 -2;0 0" dur="18s" repeatCount="indefinite"/><animateTransform attributeName="transform" additive="sum" type="rotate" values="-2 0 0;2 0 0;-2 0 0" dur="5s" repeatCount="indefinite"/></use>
     </g>
-    <!-- Smaller whale is mirrored and swims left -->
-    <g transform="translate(735 50) scale(-.43 .43)">
-      <use xlink:href="#whalebody"><animateTransform attributeName="transform" type="translate" values="0 0;25 -4;50 1;75 -3;0 0" dur="19s" repeatCount="indefinite"/><animateTransform attributeName="transform" additive="sum" type="rotate" values="2 0 0;-3 0 0;2 0 0" dur="4.4s" repeatCount="indefinite"/></use>
+    <g transform="translate(560 48) scale(-.48 .48)">
+      <use xlink:href="#whalebody"><animateTransform attributeName="transform" type="translate" values="0 0;12 -3;22 1;12 -2;0 0" dur="16s" repeatCount="indefinite"/><animateTransform attributeName="transform" additive="sum" type="rotate" values="2 0 0;-3 0 0;2 0 0" dur="4.6s" repeatCount="indefinite"/></use>
     </g>
+  </g>
+  <!-- Seaweed fronds sway gently with the current -->
+  <g fill="none" stroke-linecap="round">
+    <path d="M70 69 Q65 52 74 42 Q80 34 75 27 M70 69 Q57 55 60 45 Q63 39 58 34 M74 69 Q86 55 84 46 Q82 40 88 35" stroke="#a9cdbd" stroke-width="2.3"><animate attributeName="d" dur="7s" repeatCount="indefinite" values="M70 69 Q65 52 74 42 Q80 34 75 27 M70 69 Q57 55 60 45 Q63 39 58 34 M74 69 Q86 55 84 46 Q82 40 88 35;M70 69 Q80 52 68 42 Q62 34 69 27 M70 69 Q50 55 56 45 Q62 39 53 34 M74 69 Q94 55 88 46 Q84 40 94 35;M70 69 Q65 52 74 42 Q80 34 75 27 M70 69 Q57 55 60 45 Q63 39 58 34 M74 69 Q86 55 84 46 Q82 40 88 35"/></path>
+    <path d="M825 69 Q818 54 826 43 Q831 36 827 29 M825 69 Q840 55 838 45 Q834 39 842 34 M821 69 Q807 55 810 46 Q814 40 806 35" stroke="#a9cdbd" stroke-width="2.2"><animate attributeName="d" dur="8s" repeatCount="indefinite" values="M825 69 Q818 54 826 43 Q831 36 827 29 M825 69 Q840 55 838 45 Q834 39 842 34 M821 69 Q807 55 810 46 Q814 40 806 35;M825 69 Q834 54 820 43 Q815 36 820 29 M825 69 Q848 55 844 45 Q840 39 850 34 M821 69 Q800 55 806 46 Q810 40 798 35;M825 69 Q818 54 826 43 Q831 36 827 29 M825 69 Q840 55 838 45 Q834 39 842 34 M821 69 Q807 55 810 46 Q814 40 806 35"/></path>
+  </g>
+  <!-- Little pastel starfish -->
+  <g fill="#f3c6b9" stroke="#d9a9b7" stroke-width=".8">
+    <path d="M230 58 L233 51 L237 57 L245 57 L239 62 L241 69 L234 65 L228 69 L229 62 L223 58Z"><animateTransform attributeName="transform" type="rotate" values="0 234 60;12 234 60;0 234 60" dur="7s" repeatCount="indefinite"/></path>
+    <path d="M672 60 L675 53 L679 59 L687 59 L681 64 L683 71 L676 67 L670 71 L671 64 L665 60Z"><animateTransform attributeName="transform" type="rotate" values="0 676 62;-10 676 62;0 676 62" dur="8s" repeatCount="indefinite"/></path>
+  </g>
+  <!-- Tiny seahorse with curled tail -->
+  <g transform="translate(748 49)" stroke="#d59bbd" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M2 15 Q-3 12 0 8 Q4 4 1 0 Q-2 -5 3 -9 Q8 -12 11 -7 Q14 -2 10 2 Q7 5 9 9 Q11 13 7 15 Q4 17 2 14 Q0 11 4 10" fill="#f3c4d8"/>
+    <path d="M3 -9 Q1 -13 5 -15 L9 -12 L11 -8" fill="#e6c7ef"/>
+    <circle cx="8" cy="-7" r="1" fill="#6e597f" stroke="none"/>
+    <path d="M10 -4 L15 -2 L10 0" fill="none"/>
+    <animateTransform attributeName="transform" type="translate" values="748 49;748 46;748 49" dur="4s" repeatCount="indefinite"/>
+  </g>
+  <!-- Open oyster shells with a pearl -->
+  <g transform="translate(455 61)" stroke="#c4a8d7" stroke-width=".8">
+    <path d="M-17 4 Q-14 -7 0 -9 Q14 -7 17 4 Q0 10 -17 4Z" fill="#e7d8ef"/>
+    <path d="M-17 4 Q-12 -3 0 -3 Q12 -3 17 4 Q0 14 -17 4Z" fill="#f5d6e4"/>
+    <path d="M-12 3 Q-5 -2 0 -2 Q7 -2 12 3" fill="none" stroke="#fff8ff" stroke-width="1.2"/>
+    <circle cx="0" cy="0" r="3.1" fill="#fff8f0" stroke="#d8c4e5"/>
+    <circle cx="-1" cy="-1" r=".9" fill="#fff"/>
+    <animateTransform attributeName="transform" type="translate" values="455 61;455 59;455 61" dur="5.5s" repeatCount="indefinite"/>
   </g>
   <g fill="none" stroke="#cbb7ec" stroke-width=".9" opacity=".7"><circle cx="145" cy="14" r="1.5"><animate attributeName="cy" values="14;10;14" dur="3s" repeatCount="indefinite"/></circle><circle cx="148" cy="10" r="1"><animate attributeName="cy" values="10;7;10" dur="3.5s" repeatCount="indefinite"/></circle><circle cx="756" cy="42" r="1.2"><animate attributeName="cy" values="42;38;42" dur="3.2s" repeatCount="indefinite"/></circle></g>
 </svg>
