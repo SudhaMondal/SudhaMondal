@@ -2,7 +2,7 @@
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=12,14,18,24,30&height=140&section=header&text=&animation=twinkling&fontColor=ffb7c5" width="100%"/>
 
-<img src="https://raw.githubusercontent.com/SudhaMondal/SudhaMondal/main/assets/hero.svg?v=3d-mascot-20261126" alt="Animated dark purple profile banner with rainbow Sudha Mondal title, a waving 3D-style researcher mascot, a Hi speech bubble, twinkling stars and falling sakura petals" width="100%"/>
+<img src="https://raw.githubusercontent.com/SudhaMondal/SudhaMondal/main/assets/hero.svg?v=waves-gems-cakes-20261126" alt="Animated dark purple profile banner with rainbow Sudha Mondal title, a waving 3D-style researcher mascot, a Hi speech bubble, twinkling stars and falling sakura petals" width="100%"/>
 
 <a href="https://github.com/SudhaMondal"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&duration=3200&pause=900&color=9B78B8&center=true&vCenter=true&width=760&lines=Hi!+I'm+Sudha+Mondal+%F0%9F%91%8B;B.Tech+Biomedical+Engineering+Student;%F0%9F%AB%80+Total+Artificial+Heart+Systems;%F0%9F%A7%A0+Cognitive+Neuroscience+%26+Neural+Engineering;Bridging+Engineering+%26+Biology+%F0%9F%8C%B8" alt="Typing SVG"/></a>
 
