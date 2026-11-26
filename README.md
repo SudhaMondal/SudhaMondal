@@ -93,7 +93,7 @@ When I'm not in the lab or buried in MATLAB simulations, I'm usually playing the
 
 </div>
 
-### **📰 Recent GitHub Activity**
+## **📰 Recent GitHub Activity**
 
 <div align="center">
 
