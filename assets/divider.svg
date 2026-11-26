@@ -1,16 +1,19 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="900" height="72" viewBox="0 0 900 72">
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="72" viewBox="0 0 900 72" role="img" aria-label="Animated lavender and blush flowing wave divider with floating sakura petals">
   <defs>
-    <linearGradient id="silk" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0" stop-color="#d9c4f2"/><stop offset=".48" stop-color="#f4bfd2"/><stop offset="1" stop-color="#cbb7ec"/>
-    </linearGradient>
-    <linearGradient id="glow" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0" stop-color="#ffffff" stop-opacity="0"/><stop offset=".5" stop-color="#fff8fc" stop-opacity=".95"/><stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
-    </linearGradient>
-    <filter id="soft"><feGaussianBlur stdDeviation="4"/></filter>
+    <linearGradient id="silk" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#d9c4f2"/><stop offset=".48" stop-color="#f4bfd2"/><stop offset="1" stop-color="#cbb7ec"/></linearGradient>
+    <linearGradient id="glow" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff8fc" stop-opacity=".95"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+    <filter id="soft" x="-10%" y="-100%" width="120%" height="300%"><feGaussianBlur stdDeviation="4"/></filter>
+    <g id="petal"><path d="M0 -8 C-7 -3 -6 5 0 9 C6 5 7 -3 0 -8Z" fill="#f0bfd5" stroke="#d9a9c7" stroke-width=".7"/><path d="M0 -5 Q1 0 0 6" fill="none" stroke="#fff4fa" stroke-width=".7" opacity=".8"/></g>
   </defs>
-  <path d="M24 36 C180 8 300 64 450 36 S720 8 876 36" fill="none" stroke="url(#glow)" stroke-width="12" filter="url(#soft)"/>
-  <path d="M24 36 C180 8 300 64 450 36 S720 8 876 36" fill="none" stroke="url(#silk)" stroke-width="2.2" stroke-linecap="round"/>
-  <path d="M24 48 H876" stroke="#e9dcef" stroke-width="1" opacity=".7"/>
-  <g fill="#d7b9df"><path d="M450 22 C440 30 442 39 450 43 C458 39 460 30 450 22Z"/><circle cx="34" cy="36" r="3"/><circle cx="866" cy="36" r="3"/></g>
-  <g fill="#f0c7d9" opacity=".9"><circle cx="220" cy="29" r="2"/><circle cx="680" cy="43" r="2"/></g>
+  <path d="M24 36 C180 8 300 64 450 36 S720 8 876 36" fill="none" stroke="url(#glow)" stroke-width="12" filter="url(#soft)" opacity=".8"><animate attributeName="d" dur="9s" repeatCount="indefinite" values="M24 36 C180 8 300 64 450 36 S720 8 876 36;M24 36 C180 62 300 8 450 36 S720 64 876 36;M24 36 C180 8 300 64 450 36 S720 8 876 36"/></path>
+  <path d="M24 36 C180 8 300 64 450 36 S720 8 876 36" fill="none" stroke="url(#silk)" stroke-width="2.4" stroke-linecap="round"><animate attributeName="d" dur="9s" repeatCount="indefinite" values="M24 36 C180 8 300 64 450 36 S720 8 876 36;M24 36 C180 62 300 8 450 36 S720 64 876 36;M24 36 C180 8 300 64 450 36 S720 8 876 36"/></path>
+  <path d="M24 48 C180 48 300 48 450 48 S720 48 876 48" fill="none" stroke="#e9dcef" stroke-width="1" opacity=".65"><animate attributeName="d" dur="11s" repeatCount="indefinite" values="M24 48 C180 48 300 48 450 48 S720 48 876 48;M24 48 C180 42 300 54 450 48 S720 42 876 48;M24 48 C180 48 300 48 450 48 S720 48 876 48"/></path>
+  <g fill="#d7b9df"><path d="M450 22 C440 30 442 39 450 43 C458 39 460 30 450 22Z"><animateTransform attributeName="transform" type="rotate" values="0 450 33;12 450 33;0 450 33" dur="7s" repeatCount="indefinite"/></path><circle cx="34" cy="36" r="3"><animate attributeName="r" values="2.5;3.6;2.5" dur="3.8s" repeatCount="indefinite"/></circle><circle cx="866" cy="36" r="3"><animate attributeName="r" values="3.5;2.4;3.5" dur="4.2s" repeatCount="indefinite"/></circle></g>
+  <g fill="#f0c7d9" opacity=".9"><circle cx="220" cy="29" r="2"><animate attributeName="cy" values="29;24;29" dur="5s" repeatCount="indefinite"/></circle><circle cx="680" cy="43" r="2"><animate attributeName="cy" values="43;48;43" dur="5.7s" repeatCount="indefinite"/></circle></g>
+  <g>
+    <use href="#petal" transform="translate(128 18) rotate(-18)"><animateTransform attributeName="transform" type="translate" values="128 18;150 34;176 17;198 30" dur="13s" repeatCount="indefinite"/><animateTransform attributeName="transform" additive="sum" type="rotate" values="-18;35;95;150" dur="13s" repeatCount="indefinite"/><animate attributeName="opacity" values=".15;.9;.7;.15" dur="13s" repeatCount="indefinite"/></use>
+    <use href="#petal" transform="translate(310 54) rotate(24)"><animateTransform attributeName="transform" type="translate" values="310 54;292 37;270 52;248 30" dur="16s" repeatCount="indefinite"/><animateTransform attributeName="transform" additive="sum" type="rotate" values="24;80;145;205" dur="16s" repeatCount="indefinite"/><animate attributeName="opacity" values=".1;.75;.8;.1" dur="16s" repeatCount="indefinite"/></use>
+    <use href="#petal" transform="translate(570 15) rotate(12)"><animateTransform attributeName="transform" type="translate" values="570 15;590 31;612 13;635 28" dur="14s" repeatCount="indefinite"/><animateTransform attributeName="transform" additive="sum" type="rotate" values="12;65;120;190" dur="14s" repeatCount="indefinite"/><animate attributeName="opacity" values=".15;.85;.65;.15" dur="14s" repeatCount="indefinite"/></use>
+    <use href="#petal" transform="translate(770 55) rotate(-12)"><animateTransform attributeName="transform" type="translate" values="770 55;748 38;725 53;704 34" dur="17s" repeatCount="indefinite"/><animateTransform attributeName="transform" additive="sum" type="rotate" values="-12;40;110;175" dur="17s" repeatCount="indefinite"/><animate attributeName="opacity" values=".1;.8;.7;.1" dur="17s" repeatCount="indefinite"/></use>
+  </g>
 </svg>
