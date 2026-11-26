@@ -90,7 +90,6 @@ When I'm not in the lab or buried in MATLAB simulations, I'm usually playing the
   <img src="https://github-readme-activity-graph.ashutosh-dwivedi0710.workers.dev/graph?username=SudhaMondal&bg_color=17132b&color=e9d8ff&line=ff8fb1&point=ffd166&area=true&hide_border=true&custom_title=Sudha's%20Recent%20GitHub%20Activity" alt="GitHub contribution activity graph for the last 31 days" width="100%"/>
 </a>
 
-[View the complete GitHub activity timeline →](https://github.com/SudhaMondal?tab=overview)
 
 </div>
 
