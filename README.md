@@ -98,10 +98,10 @@ When I'm not in the lab or buried in MATLAB simulations, I'm usually playing the
 <div align="center">
 
 <a href="https://github.com/SudhaMondal">
-  <img src="https://ghstats.dev/api/card?username=SudhaMondal&theme=tokyonight&bg=17132b&text=e9d8ff&title_color=ffb7c5&icon_color=c9a7ff&border_color=765d8d" alt="Live GitHub profile statistics" height="180"/>
+  <img src="https://github-stats-extended.vercel.app/api?username=SudhaMondal&theme=tokyonight&bg_color=17132b&text_color=e9d8ff&title_color=ffb7c5&icon_color=c9a7ff&border_color=765d8d&show_icons=true" alt="Live GitHub profile statistics" height="180"/>
 </a>
 <a href="https://github.com/SudhaMondal">
-  <img src="https://ghstats.dev/api/langs?username=SudhaMondal&theme=tokyonight&bg=17132b&text=e9d8ff&title_color=ffb7c5&border_color=765d8d&layout=compact&max_langs=8" alt="Most-used programming languages across public repositories" height="180"/>
+  <img src="https://github-stats-extended.vercel.app/api/top-langs/?username=SudhaMondal&theme=tokyonight&bg_color=17132b&text_color=e9d8ff&title_color=ffb7c5&border_color=765d8d&layout=compact&langs_count=8" alt="Most-used programming languages across public repositories" height="180"/>
 </a>
 
 </div>
