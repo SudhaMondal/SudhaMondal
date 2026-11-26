@@ -2,7 +2,7 @@
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=12,14,18,24,30&height=140&section=header&text=&animation=twinkling&fontColor=ffb7c5" width="100%"/>
 
-<img src="https://raw.githubusercontent.com/SudhaMondal/SudhaMondal/main/assets/hero.svg" alt="Lavender and blush-pink profile banner introducing Sudha Mondal, with a simple illustrated researcher on the right" width="100%"/>
+<img src="https://raw.githubusercontent.com/SudhaMondal/SudhaMondal/main/assets/hero.svg" alt="Original animated profile banner with a 3D-style waving mascot beside Sudha Mondal’s introduction" width="100%"/>
 
 <a href="https://github.com/SudhaMondal"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&duration=3200&pause=900&color=9B78B8&center=true&vCenter=true&width=760&lines=Hi!+I'm+Sudha+Mondal+%F0%9F%91%8B;B.Tech+Biomedical+Engineering+Student;%F0%9F%AB%80+Total+Artificial+Heart+Systems;%F0%9F%A7%A0+Cognitive+Neuroscience+%26+Neural+Engineering;Bridging+Engineering+%26+Biology+%F0%9F%8C%B8" alt="Typing SVG"/></a>
 
