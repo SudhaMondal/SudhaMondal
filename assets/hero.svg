@@ -1,81 +1,58 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="420" viewBox="0 0 1000 420" role="img" aria-labelledby="title desc">
-<title id="title">Kawaii anime girl waving hello</title>
-<desc id="desc">A cheerful anime chibi girl with long wavy dark hair, sparkling violet eyes, round glasses, a large lavender bow and a lilac cardigan waves hello beside a sleepy white cat, against a dreamy lavender and pink floral background.</desc>
-<defs>
- <linearGradient id="bg" x2="1" y2="1"><stop stop-color="#fff5fb"/><stop offset=".52" stop-color="#f5e8fb"/><stop offset="1" stop-color="#e7dafa"/></linearGradient>
- <radialGradient id="glow"><stop stop-color="#fff" stop-opacity=".95"/><stop offset="1" stop-color="#efc9e8" stop-opacity="0"/></radialGradient>
- <linearGradient id="hair" x2=".8" y2="1"><stop stop-color="#76566f"/><stop offset=".42" stop-color="#302338"/><stop offset=".78" stop-color="#49334d"/><stop offset="1" stop-color="#9a7394"/></linearGradient>
- <linearGradient id="skin" x2="0" y2="1"><stop stop-color="#ffe9dc"/><stop offset="1" stop-color="#edb9aa"/></linearGradient>
- <linearGradient id="dress" x2="1" y2="1"><stop stop-color="#fffaff"/><stop offset="1" stop-color="#d9c4f2"/></linearGradient>
- <radialGradient id="eye"><stop stop-color="#fff"/><stop offset=".25" stop-color="#d7b9f4"/><stop offset=".7" stop-color="#8c62b1"/><stop offset="1" stop-color="#49335d"/></radialGradient>
- <filter id="shadow" x="-30%" y="-30%" width="160%" height="170%"><feDropShadow dx="0" dy="9" stdDeviation="9" flood-color="#735a83" flood-opacity=".2"/></filter>
- <g id="flower"><circle r="5" cy="-9" fill="#fff4fc"/><circle r="5" cy="9" fill="#fff4fc"/><circle r="5" cx="-9" fill="#fff4fc"/><circle r="5" cx="9" fill="#fff4fc"/><circle r="4" fill="#e8a9ca"/></g>
-</defs>
-<rect width="1000" height="420" rx="28" fill="url(#bg)"/>
-<circle cx="820" cy="170" r="230" fill="url(#glow)"/>
-<circle cx="890" cy="90" r="120" fill="#f4c7df" opacity=".27"/>
-<circle cx="760" cy="360" r="155" fill="#cbb7ec" opacity=".25"/>
-<g opacity=".8"><use href="#flower" x="690" y="75" transform="translate(690 75) scale(1.2)"/><use href="#flower" x="965" y="300" transform="translate(965 300) scale(.8)"/><use href="#flower" x="650" y="335" transform="translate(650 335) scale(.65)"/></g>
-<g fill="none" stroke="#c49bdc" stroke-width="3" stroke-linecap="round" opacity=".7">
- <path d="M720 55q-13-18-26 0 13 21 26 0z"/><path d="M950 125q-13-18-26 0 13 21 26 0z"/>
- <path d="M680 225l5 13 13 5-13 5-5 13-5-13-13-5 13-5z"/><path d="M960 215l4 10 10 4-10 4-4 10-4-10-10-4 10-4z"/>
-</g>
-<g font-family="Segoe UI,Arial,sans-serif">
- <text x="55" y="150" font-size="49" font-weight="700" fill="#493454">Sudha Mondal</text>
- <text x="58" y="198" font-size="23" font-weight="600" fill="#806398">Biomedical Engineering Student</text>
- <text x="58" y="241" font-size="18" fill="#685273">Artificial heart systems · Cognitive neuroscience</text>
- <text x="58" y="276" font-size="17" fill="#806398">Bridging engineering precision with biological insight.</text>
- <path d="M58 302h285" stroke="#d99abf" stroke-width="5" stroke-linecap="round"/>
- <text x="58" y="339" font-size="15" fill="#9b78b8">✦ Research · Creativity · Curiosity ✦</text>
-</g>
-<g transform="translate(800 20)" filter="url(#shadow)">
- <!-- long flowing hair silhouette -->
- <path d="M-150 183C-166 73-91 10-8 15 87 4 157 79 142 191l-4 148-62 51h-165l-54-58z" fill="url(#hair)"/>
- <path d="M-122 116C-155 42-81 4-22 18c-45 18-61 45-63 81zM35 22c85 3 131 76 104 153-13-58-43-91-104-153z" fill="#302338"/>
- <!-- body -->
- <path d="M-151 402c5-104 43-146 111-154h83c73 12 105 55 111 154z" fill="url(#dress)" stroke="#c7b0df" stroke-width="3"/>
- <path d="M-49 249l49 69 48-69 22 153H-72z" fill="#fff9ff" stroke="#d8c6e9" stroke-width="2"/>
- <path d="M-18 300l18 15 18-15-7 26H-11z" fill="#b88dcf"/>
- <path d="M-128 306q-33 31-35 78l46 18 28-87zM128 306q33 31 35 78l-46 18-28-87z" fill="#d8c5f0" stroke="#b99ed7" stroke-width="3"/>
- <!-- neck and face -->
- <rect x="-23" y="210" width="46" height="52" rx="18" fill="url(#skin)"/>
- <path d="M-91 113c0-68 37-99 91-99s91 31 91 99v79c0 54-39 86-91 86s-91-32-91-86z" fill="url(#skin)"/>
- <!-- ears -->
- <ellipse cx="-91" cy="176" rx="17" ry="25" fill="#f1c6b5"/><ellipse cx="91" cy="176" rx="17" ry="25" fill="#f1c6b5"/>
- <!-- bangs and side curls -->
- <path d="M-94 135C-112 48-45 4 17 18c67 9 98 67 74 130-15-29-35-49-62-60-24 30-68 43-109 27-2 10-6 17-14 20z" fill="url(#hair)"/>
- <path d="M-82 119c-30 73-13 161 23 191-42-10-64-57-54-119 4-31 13-55 31-72zM83 116c30 73 13 161-23 191 42-10 64-57 54-119-4-31-13-55-31-72z" fill="url(#hair)"/>
- <path d="M-70 80q40-57 104-40 27 8 45 31-67-26-149 29z" fill="#261e30"/>
- <!-- eyes -->
- <ellipse cx="-35" cy="169" rx="17" ry="23" fill="url(#eye)"/><ellipse cx="35" cy="169" rx="17" ry="23" fill="url(#eye)"/>
- <ellipse cx="-35" cy="170" rx="7" ry="14" fill="#392746"/><ellipse cx="35" cy="170" rx="7" ry="14" fill="#392746"/>
- <circle cx="-41" cy="159" r="6" fill="#fff"/><circle cx="29" cy="159" r="6" fill="#fff"/><circle cx="-28" cy="178" r="3" fill="#fff"/><circle cx="42" cy="178" r="3" fill="#fff"/>
- <path d="M-54 139q19-13 37 0M17 139q19-13 37 0" fill="none" stroke="#4b354e" stroke-width="5" stroke-linecap="round"/>
- <!-- glasses -->
- <g fill="none" stroke="#594866" stroke-width="3.5"><circle cx="-35" cy="169" r="29"/><circle cx="35" cy="169" r="29"/><path d="M-6 165q6-5 12 0M-65 164l-12-6M65 164l12-6"/></g>
- <ellipse cx="-61" cy="207" rx="18" ry="8" fill="#e98da8" opacity=".35"/><ellipse cx="61" cy="207" rx="18" ry="8" fill="#e98da8" opacity=".35"/>
- <path d="M-16 218q16 18 32 0" fill="none" stroke="#a85f72" stroke-width="4" stroke-linecap="round"/>
- <!-- hair bow -->
- <path d="M-105 74q-58-38-55 4 5 34 59 18-42 44-5 53 32 1 37-48z" fill="#d9c4f2" stroke="#a984c4" stroke-width="4"/>
- <path d="M-101 74q-8-42 27-40 29 4 8 49z" fill="#cbb7ec" stroke="#a984c4" stroke-width="4"/>
- <circle cx="-94" cy="103" r="10" fill="#a984c4"/>
- <!-- raised arm and waving hand -->
- <path d="M104 320q36-35 45-80" fill="none" stroke="#d9c4f2" stroke-width="37" stroke-linecap="round"/>
- <g transform="translate(148 240)">
-  <animateTransform attributeName="transform" type="rotate" values="-25 0 65;22 0 65;-25 0 65" dur=".9s" repeatCount="indefinite"/>
-  <path d="M0 70q-13-23-11-48l-2-39q0-12 10-12t11 12l2 35 6-51q2-12 12-10t9 14l-4 49 11-39q4-11 13-7t5 15l-10 42 14-26q6-10 15-4t-1 17l-28 51q-17 29-43 19z" fill="url(#skin)" stroke="#d99f91" stroke-width="3.5" stroke-linejoin="round"/>
- </g>
- <g fill="none" stroke="#d98eaf" stroke-width="4" stroke-linecap="round"><path d="M180 190q24-24 6-48"><animate attributeName="opacity" values=".2;1;.2" dur=".9s" repeatCount="indefinite"/></path><path d="M199 208q29-31 6-62"><animate attributeName="opacity" values="1;.2;1" dur=".9s" repeatCount="indefinite"/></path></g>
- <!-- tiny bow necklace -->
- <path d="M-9 277l9 8 9-8-3 14H-6z" fill="#d98eaf"/>
-</g>
-<!-- sleepy kitten -->
-<g transform="translate(925 342)">
- <ellipse cx="0" cy="20" rx="39" ry="28" fill="#fffaff" stroke="#e5cfe9" stroke-width="3"/>
- <path d="M-29 4l-6-39 31 19M29 4l6-39-31 19" fill="#fffaff" stroke="#e5cfe9" stroke-width="3" stroke-linejoin="round"/>
- <path d="M-15 17q7 8 14 0M1 17q7 8 14 0" fill="none" stroke="#725b7d" stroke-width="3" stroke-linecap="round"/>
- <path d="M-3 27q3 4 6 0" fill="none" stroke="#d98eaf" stroke-width="2"/>
- <circle cx="-20" cy="25" r="5" fill="#f0a7c0" opacity=".65"/><circle cx="20" cy="25" r="5" fill="#f0a7c0" opacity=".65"/>
- <path d="M-16 54q16 9 32 0" fill="none" stroke="#b89acb" stroke-width="4" stroke-linecap="round"/>
-</g>
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="360" viewBox="0 0 1000 360" role="img" aria-labelledby="title desc">
+  <title id="title">Sudha Mondal — Biomedical Engineering</title>
+  <desc id="desc">A soft lavender and blush-pink banner introducing Sudha Mondal, a biomedical engineering student interested in artificial heart systems, cognitive neuroscience, and interdisciplinary research. A simple illustrated researcher stands on the right.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F8F1FC"/>
+      <stop offset="0.55" stop-color="#F5E7F1"/>
+      <stop offset="1" stop-color="#E9DDF7"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#9B78B8"/>
+      <stop offset="1" stop-color="#D98EAF"/>
+    </linearGradient>
+    <linearGradient id="coat" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#D9CDEE"/>
+    </linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="170%">
+      <feDropShadow dx="0" dy="8" stdDeviation="9" flood-color="#6B557D" flood-opacity=".16"/>
+    </filter>
+  </defs>
+  <rect width="1000" height="360" rx="26" fill="url(#background)"/>
+  <circle cx="875" cy="76" r="116" fill="#F4C9D9" opacity=".42"/>
+  <circle cx="760" cy="300" r="142" fill="#CBB7EC" opacity=".28"/>
+  <path d="M35 286 C180 270 300 305 470 280" fill="none" stroke="#D8C5E8" stroke-width="2"/>
+  <circle cx="64" cy="76" r="5" fill="#D98EAF" opacity=".8"/>
+  <circle cx="490" cy="76" r="4" fill="#B79AD5" opacity=".8"/>
+  <path d="M48 104 H112" stroke="#D98EAF" stroke-width="4" stroke-linecap="round"/>
+  <text x="48" y="164" font-family="Segoe UI, Arial, sans-serif" font-size="54" font-weight="700" fill="#403052">Sudha Mondal</text>
+  <text x="51" y="207" font-family="Segoe UI, Arial, sans-serif" font-size="23" font-weight="600" fill="#765D8D">Biomedical Engineering Student</text>
+  <text x="51" y="247" font-family="Segoe UI, Arial, sans-serif" font-size="19" fill="#594866">Artificial heart systems · Cognitive neuroscience</text>
+  <text x="51" y="276" font-family="Segoe UI, Arial, sans-serif" font-size="17" fill="#765D8D">Bridging engineering precision with biological insight.</text>
+  <rect x="51" y="302" width="310" height="5" rx="3" fill="url(#accent)"/>
+  <g transform="translate(810 212)" filter="url(#shadow)">
+    <path d="M-92 142 C-88 62 -56 28 0 28 C56 28 88 62 92 142Z" fill="url(#coat)" stroke="#CBB7EC" stroke-width="2"/>
+    <path d="M-31 40 L0 91 L31 40 L17 142 H-17Z" fill="#E7DDF1"/>
+    <path d="M-14 35 L0 58 L14 35" fill="none" stroke="#B79AD5" stroke-width="3"/>
+    <rect x="-10" y="7" width="20" height="34" rx="8" fill="#D99F89"/>
+    <path d="M-48 -42 C-45 -96 45 -96 49 -42 L43 7 C34 37 -34 37 -43 7Z" fill="#38283F"/>
+    <ellipse cx="0" cy="-39" rx="43" ry="48" fill="#E8B69B"/>
+    <path d="M-44 -42 C-42 -91 40 -96 46 -43 C25 -61 -22 -62 -44 -42Z" fill="#38283F"/>
+    <path d="M-42 -32 C-62 6 -50 42 -28 48 L-35 -13Z" fill="#38283F"/>
+    <path d="M42 -32 C62 6 50 42 28 48 L35 -13Z" fill="#38283F"/>
+    <ellipse cx="-15" cy="-34" rx="4" ry="5" fill="#403052"/>
+    <ellipse cx="15" cy="-34" rx="4" ry="5" fill="#403052"/>
+    <path d="M-10 -10 Q0 -2 10 -10" fill="none" stroke="#A85F72" stroke-width="3" stroke-linecap="round"/>
+    <path d="M-27 -19 Q-15 -25 -5 -19 M5 -19 Q15 -25 27 -19" fill="none" stroke="#704A59" stroke-width="2"/>
+    <path d="M-70 72 L-112 112" stroke="#E8B69B" stroke-width="17" stroke-linecap="round"/>
+    <path d="M70 72 L112 28" stroke="#E8B69B" stroke-width="17" stroke-linecap="round"/>
+    <path d="M112 28 l-8 -18 m8 18 l16 -10 m-16 10 l4 17" fill="none" stroke="#E8B69B" stroke-width="8" stroke-linecap="round"/>
+    <rect x="-62" y="68" width="124" height="12" rx="6" fill="#CBB7EC" opacity=".6"/>
+  </g>
+  <g fill="#B79AD5" opacity=".9">
+    <path d="M688 67 C678 79 681 91 692 96 C703 91 706 79 696 67Z"/>
+    <circle cx="946" cy="230" r="4"/>
+    <circle cx="706" cy="148" r="3"/>
+  </g>
 </svg>
