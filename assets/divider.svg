@@ -6,6 +6,7 @@
     <filter id="soft" x="-10%" y="-100%" width="120%" height="300%"><feGaussianBlur stdDeviation="4"/></filter>
     <g id="petal"><path d="M0 -8 C-7 -3 -6 5 0 9 C6 5 7 -3 0 -8Z" fill="#f0bfd5" stroke="#d9a9c7" stroke-width=".7"/><path d="M0 -5 Q1 0 0 6" fill="none" stroke="#fff4fa" stroke-width=".7" opacity=".8"/></g>
     <g id="gemshape"><path d="M0 -6 L5 -2 L3 5 L-3 5 L-5 -2Z" fill="url(#gem)" stroke="#cba9df" stroke-width=".7"/><path d="M0 -6 L0 5 M-5 -2 L5 -2 M-5 -2 L0 1 L5 -2" fill="none" stroke="#fff8ff" stroke-width=".65" opacity=".9"/></g>
+    <g id="sparkle"><path d="M0 -6 Q1 -1 6 0 Q1 1 0 6 Q-1 1 -6 0 Q-1 -1 0 -6Z" fill="#fff4c9" stroke="#e6c8ed" stroke-width=".55"/><circle cx="0" cy="0" r="1.1" fill="#fff"/></g>
     <linearGradient id="whale" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#e8d8fb"/><stop offset="1" stop-color="#b9a4dc"/></linearGradient>
     <g id="whalebody"><path d="M-20 0 C-18 -9 -7 -13 5 -10 C13 -8 17 -3 19 1 C13 0 10 3 8 7 C1 10 -10 8 -16 4Z" fill="url(#whale)" stroke="#a88dc9" stroke-width=".8"/><path d="M-18 0 Q-27 -8 -29 -5 Q-27 1 -22 3 Q-28 8 -25 11 Q-17 9 -14 4Z" fill="#cbb7ec" stroke="#a88dc9" stroke-width=".7"/><path d="M-1 6 Q4 12 10 9 Q7 5 4 4Z" fill="#d9c4f2" stroke="#a88dc9" stroke-width=".6"/><circle cx="12" cy="-2" r="1.2" fill="#725b91"/><path d="M8 2 Q12 4 15 2" fill="none" stroke="#fff7ff" stroke-width=".7" stroke-linecap="round"/><path d="M-2 -10 Q-4 -15 0 -17 Q2 -13 1 -10" fill="none" stroke="#e8c5df" stroke-width="1" stroke-linecap="round"/></g>
   </defs>
@@ -31,7 +32,23 @@
     <use xlink:href="#gemshape" transform="translate(700 47) scale(.5)"><animate attributeName="opacity" values=".9;.25;.9" dur="5s" repeatCount="indefinite"/></use>
   </g>
   <g fill="#f0c7d9" opacity=".9"><circle cx="220" cy="29" r="2"><animate attributeName="cy" values="29;24;29" dur="5s" repeatCount="indefinite"/></circle><circle cx="680" cy="43" r="2"><animate attributeName="cy" values="43;48;43" dur="5.7s" repeatCount="indefinite"/></circle><circle cx="585" cy="25" r="1.5"><animate attributeName="opacity" values=".2;1;.2" dur="3.4s" repeatCount="indefinite"/></circle></g>
+  <g>
+    <use xlink:href="#sparkle" transform="translate(82 29) scale(.65)"><animate attributeName="opacity" values=".25;1;.25" dur="3.1s" repeatCount="indefinite"/><animateTransform attributeName="transform" additive="sum" type="rotate" values="0 82 29;90 82 29;180 82 29" dur="8s" repeatCount="indefinite"/></use>
+    <use xlink:href="#sparkle" transform="translate(285 43) scale(.48)"><animate attributeName="opacity" values="1;.2;1" dur="4.2s" repeatCount="indefinite"/></use>
+    <use xlink:href="#sparkle" transform="translate(405 18) scale(.7)"><animate attributeName="opacity" values=".2;1;.2" dur="3.7s" repeatCount="indefinite"/><animateTransform attributeName="transform" additive="sum" type="rotate" values="0 405 18;90 405 18;180 405 18" dur="7s" repeatCount="indefinite"/></use>
+    <use xlink:href="#sparkle" transform="translate(615 48) scale(.55)"><animate attributeName="opacity" values=".2;.95;.2" dur="4.8s" repeatCount="indefinite"/></use>
+    <use xlink:href="#sparkle" transform="translate(825 25) scale(.62)"><animate attributeName="opacity" values="1;.25;1" dur="3.5s" repeatCount="indefinite"/><animateTransform attributeName="transform" additive="sum" type="rotate" values="0 825 25;90 825 25;180 825 25" dur="9s" repeatCount="indefinite"/></use>
+  </g>
   <!-- Two tiny, independently drifting whales -->
-  <g opacity=".95"><use xlink:href="#whalebody" transform="translate(165 22) scale(.72)"><animateTransform attributeName="transform" type="translate" values="165 22;190 18;215 23;240 19;165 22" dur="24s" repeatCount="indefinite"/><animateTransform attributeName="transform" additive="sum" type="rotate" values="-2;2;-2" dur="5s" repeatCount="indefinite"/></use><use xlink:href="#whalebody" transform="translate(735 50) scale(.43)"><animateTransform attributeName="transform" type="translate" values="735 50;710 46;685 51;660 47;735 50" dur="19s" repeatCount="indefinite"/><animateTransform attributeName="transform" additive="sum" type="rotate" values="2;-3;2" dur="4.4s" repeatCount="indefinite"/></use></g>
+  <g opacity=".95">
+    <!-- Larger whale swims right -->
+    <g transform="translate(165 22) scale(.72)">
+      <use xlink:href="#whalebody"><animateTransform attributeName="transform" type="translate" values="0 0;25 -4;50 1;75 -3;0 0" dur="24s" repeatCount="indefinite"/><animateTransform attributeName="transform" additive="sum" type="rotate" values="-2 0 0;2 0 0;-2 0 0" dur="5s" repeatCount="indefinite"/></use>
+    </g>
+    <!-- Smaller whale is mirrored and swims left -->
+    <g transform="translate(735 50) scale(-.43 .43)">
+      <use xlink:href="#whalebody"><animateTransform attributeName="transform" type="translate" values="0 0;25 -4;50 1;75 -3;0 0" dur="19s" repeatCount="indefinite"/><animateTransform attributeName="transform" additive="sum" type="rotate" values="2 0 0;-3 0 0;2 0 0" dur="4.4s" repeatCount="indefinite"/></use>
+    </g>
+  </g>
   <g fill="none" stroke="#cbb7ec" stroke-width=".9" opacity=".7"><circle cx="145" cy="14" r="1.5"><animate attributeName="cy" values="14;10;14" dur="3s" repeatCount="indefinite"/></circle><circle cx="148" cy="10" r="1"><animate attributeName="cy" values="10;7;10" dur="3.5s" repeatCount="indefinite"/></circle><circle cx="756" cy="42" r="1.2"><animate attributeName="cy" values="42;38;42" dur="3.2s" repeatCount="indefinite"/></circle></g>
 </svg>
