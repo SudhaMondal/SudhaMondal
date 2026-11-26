@@ -407,6 +407,40 @@
       }
     }
 
+
+    /* Each uploaded photo is its own portrait album card beneath the single Photo Album heading. */
+    #personal-photo-album .album-photo-tools{
+      width:100%;min-width:0;min-height:0;height:auto;padding:16px;
+      border:0;border-radius:0;background:transparent;box-shadow:none
+    }
+    #personal-photo-album .album-photo-gallery{
+      display:grid;width:100%;grid-template-columns:repeat(3,minmax(0,1fr));
+      gap:22px;overflow:visible;padding:10px 2px 18px;box-sizing:border-box
+    }
+    #personal-photo-album .album-photo-tile{
+      position:relative;display:block;width:100%;aspect-ratio:4 / 5;height:auto;
+      min-width:0;margin:0;padding:8px;overflow:hidden;box-sizing:border-box;
+      border:5px solid #e5d2ee;border-radius:20px;
+      background:linear-gradient(145deg,#fffdfd 0%,#fbf5ff 52%,#f2e8fa 100%);
+      box-shadow:inset 0 0 0 2px rgba(255,255,255,.9),0 9px 24px rgba(86,61,107,.13)
+    }
+    #personal-photo-album .album-photo-image{
+      display:block;width:100%;height:100%;aspect-ratio:auto;object-fit:cover;
+      border-radius:10px;transition:transform .35s ease
+    }
+    #personal-photo-album .album-photo-tile:nth-child(even){transform:none}
+    #personal-photo-album .album-photo-delete{top:14px;right:14px}
+    @media(max-width:760px){
+      #personal-photo-album .album-photo-tools{padding:10px}
+      #personal-photo-album .album-photo-gallery{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;padding:8px 2px 14px}
+      #personal-photo-album .album-photo-tile{padding:6px;border-width:4px;border-radius:15px}
+      #personal-photo-album .album-photo-image{border-radius:8px}
+      #personal-photo-album .album-photo-delete{top:10px;right:10px;opacity:1;width:30px;height:30px}
+    }
+    @media(max-width:390px){
+      #personal-photo-album .album-photo-gallery{grid-template-columns:1fr;gap:14px}
+    }
+
 </style>
 </head>
 <body>
@@ -604,11 +638,11 @@
       const photoUrl=photo=>{if(!urls.has(photo.id))urls.set(photo.id,URL.createObjectURL(photo.blob));return urls.get(photo.id);};
       const panel=document.createElement("div");panel.className="album-photo-tools";
       const actions=document.createElement("div");actions.className="album-photo-actions";
-      const label=document.createElement("label");label.className="album-upload-label";label.textContent="＋ Add photos";
-      const input=document.createElement("input");input.className="album-upload-input";input.type="file";input.accept="image/*";input.multiple=true;input.setAttribute("aria-label","Add photos to album");label.append(input);
+      const label=document.createElement("label");label.className="album-upload-label";label.textContent="＋ Add album photo";
+      const input=document.createElement("input");input.className="album-upload-input";input.type="file";input.accept="image/*";input.multiple=false;input.setAttribute("aria-label","Add one photo to a new album");label.append(input);
       const status=document.createElement("p");status.className="album-photo-status";status.setAttribute("role","status");
       const gallery=document.createElement("div");gallery.className="album-photo-gallery";gallery.setAttribute("aria-label","Photo album");
-      const empty=document.createElement("div");empty.className="album-gallery-empty";empty.textContent="Your photos will appear here ♡";
+      const empty=document.createElement("div");empty.className="album-gallery-empty";empty.textContent="Your first photo album will appear here ♡";
       actions.append(label);panel.append(actions,status,gallery,empty);host.append(panel);
       async function render(){
         const photos=(await allPhotos()).sort((a,b)=>(a.createdAt||0)-(b.createdAt||0));
@@ -624,9 +658,9 @@
       }
       input.addEventListener("change",async()=>{
         const files=[...input.files];input.value="";if(!files.length)return;
-        if(files.some(f=>!f.type.startsWith("image/")||f.size>12*1024*1024)){status.textContent="Choose image files smaller than 12 MB each.";return;}
+        if(files.some(f=>!f.type.startsWith("image/")||f.size>12*1024*1024)){status.textContent="Choose one image smaller than 12 MB.";return;}
         input.disabled=true;label.style.opacity=".6";status.textContent="Saving…";
-        try{for(const file of files)await savePhoto({id:(crypto.randomUUID?crypto.randomUUID():Date.now()+"-"+Math.random()),createdAt:Date.now(),blob:file});status.textContent="";await render();}
+        try{for(const file of files)await savePhoto({id:(crypto.randomUUID?crypto.randomUUID():Date.now()+"-"+Math.random()),createdAt:Date.now(),blob:file});status.textContent="New photo album added ♡";await render();}
         catch(e){status.textContent="Storage is full or unavailable. Try smaller photos.";console.error(e);}
         finally{input.disabled=false;label.style.opacity="1";}
       });
