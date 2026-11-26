@@ -2,23 +2,23 @@
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=12,14,18,24,30&height=140&section=header&text=&animation=twinkling&fontColor=ffb7c5" width="100%"/>
 
-<img src="https://raw.githubusercontent.com/SudhaMondal/SudhaMondal/main/assets/hero.svg" alt="Sudha Mondal - Hi!" width="100%"/>
+<img src="https://raw.githubusercontent.com/SudhaMondal/SudhaMondal/main/assets/hero.svg" alt="Illustrated lavender and blush-pink banner introducing Sudha Mondal and her biomedical engineering research interests" width="100%"/>
 
-<a href="https://github.com/SudhaMondal"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&duration=3200&pause=900&color=FF8FB1&center=true&vCenter=true&width=760&lines=Hi!+I'm+Sudha+Mondal+%F0%9F%91%8B;B.Tech+Biomedical+Engineering+Student;%F0%9F%AB%80+Total+Artificial+Heart+Systems;%F0%9F%A7%A0+Cognitive+Neuroscience+%26+Neural+Engineering;Bridging+Engineering+%26+Biology+%F0%9F%8C%B8" alt="Typing SVG"/></a>
+<a href="https://github.com/SudhaMondal"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&duration=3200&pause=900&color=9B78B8&center=true&vCenter=true&width=760&lines=Hi!+I'm+Sudha+Mondal+%F0%9F%91%8B;B.Tech+Biomedical+Engineering+Student;%F0%9F%AB%80+Total+Artificial+Heart+Systems;%F0%9F%A7%A0+Cognitive+Neuroscience+%26+Neural+Engineering;Bridging+Engineering+%26+Biology+%F0%9F%8C%B8" alt="Typing SVG"/></a>
 
-<img src="https://komarev.com/ghpvc/?username=SudhaMondal&label=Profile%20Views&color=ff69b4&style=for-the-badge" alt="profile views"/>
-<img src="https://img.shields.io/badge/She%2FHer-ff9ecb?style=for-the-badge&logo=github&logoColor=white" alt="pronouns"/>
-<img src="https://img.shields.io/badge/Open%20to-Research%20Collaborations-2ea44f?style=for-the-badge" alt="open to collaborate"/>
+<img src="https://komarev.com/ghpvc/?username=SudhaMondal&label=Profile%20Views&color=CBB7EC&style=for-the-badge" alt="profile views"/>
+<img src="https://img.shields.io/badge/She%2FHer-D9C4F2?style=for-the-badge&logo=github&logoColor=white" alt="pronouns"/>
+<img src="https://img.shields.io/badge/Open%20to-Research%20Collaborations-765D8D?style=for-the-badge" alt="open to collaborate"/>
 <a href="https://orcid.org/0009-0006-2752-1684"><img src="https://img.shields.io/badge/ORCID-0009--0006--2752--1684-A6CE39?style=for-the-badge&logo=orcid&logoColor=white" alt="ORCID"/></a>
 
 </div>
 
-<img src="https://raw.githubusercontent.com/SudhaMondal/SudhaMondal/main/assets/divider.svg" width="100%"/>
+<img src="https://raw.githubusercontent.com/SudhaMondal/SudhaMondal/main/assets/divider.svg" alt="" width="100%"/>
 
 ## 👋 Hi, I'm Sudha Mondal | Engineering Hearts, Decoding Minds 🌸
 B.Tech Biomedical Engineering student at Adamas University, driven by two questions: *can we rebuild the human heart, and can we understand the human mind?* I build small, real things (see below) while chasing bigger ones in biomechanics and neural engineering.
 
-<img src="https://raw.githubusercontent.com/SudhaMondal/SudhaMondal/main/assets/divider.svg" width="100%"/>
+<img src="https://raw.githubusercontent.com/SudhaMondal/SudhaMondal/main/assets/divider.svg" alt="" width="100%"/>
 
 ## 🎯 Research Interests
 - 🫀 **Total Artificial Heart (TAH) Systems** — mechanical circulatory support, cardiac biomechanics, and artificial organ engineering.
@@ -35,7 +35,7 @@ B.Tech Biomedical Engineering student at Adamas University, driven by two questi
 - Digital electronics prototyping (logic gates, adders, multiplexers, decoders).
 - CI/CD fundamentals (Jenkins) and secure, compliant AI/ML-driven development practices.
 
-<img src="https://raw.githubusercontent.com/SudhaMondal/SudhaMondal/main/assets/divider.svg" width="100%"/>
+<img src="https://raw.githubusercontent.com/SudhaMondal/SudhaMondal/main/assets/divider.svg" alt="" width="100%"/>
 
 ## 🛠️ Tech Stack & Lab Methodologies
 - **Programming & Tools:** C, MATLAB, Git & GitHub, Jenkins.
@@ -55,7 +55,7 @@ B.Tech Biomedical Engineering student at Adamas University, driven by two questi
 
 </div>
 
-<img src="https://raw.githubusercontent.com/SudhaMondal/SudhaMondal/main/assets/divider.svg" width="100%"/>
+<img src="https://raw.githubusercontent.com/SudhaMondal/SudhaMondal/main/assets/divider.svg" alt="" width="100%"/>
 
 ## 📌 Featured Projects
 
@@ -67,7 +67,7 @@ B.Tech Biomedical Engineering student at Adamas University, driven by two questi
 - 🧪 **[ScentLab](https://github.com/SudhaMondal/ScentLab)** — A perfume-discovery and maker workbench for exploring fragrance concepts, scaling example recipes, recording experiments, bookmarking creations, and browsing a scent reference codex.
 
 
-<img src="https://raw.githubusercontent.com/SudhaMondal/SudhaMondal/main/assets/divider.svg" width="100%"/>
+<img src="https://raw.githubusercontent.com/SudhaMondal/SudhaMondal/main/assets/divider.svg" alt="" width="100%"/>
 
 ## 🎨 Beyond the Lab
 When I'm not in the lab or buried in MATLAB simulations, I'm usually playing the violin, dancing Bharatanatyam, mixing colors in abstract acrylic paintings, writing atmospheric short fiction and poetry, designing progressive literary quiz tournaments, nature journaling, or training in Taekwondo (Yellow Belt) and rifle shooting sports. 🎻 🩰 🎨 ✍️ 🎯
@@ -79,7 +79,7 @@ When I'm not in the lab or buried in MATLAB simulations, I'm usually playing the
 - [ ] Publish a project using MATLAB or Python for biomedical signal processing
 - [ ] Add real descriptions/topics to every public repo (even the small ones deserve a one-liner!)
 
-<img src="https://raw.githubusercontent.com/SudhaMondal/SudhaMondal/main/assets/divider.svg" width="100%"/>
+<img src="https://raw.githubusercontent.com/SudhaMondal/SudhaMondal/main/assets/divider.svg" alt="" width="100%"/>
 
 ## 📫 How to Reach Me
 
@@ -99,7 +99,7 @@ She/Her
 
  *"From artificial hearts to the architecture of thought - engineering tomorrow's MedTech."*
 
-<img src="https://raw.githubusercontent.com/SudhaMondal/SudhaMondal/main/assets/divider.svg" width="100%"/>
+<img src="https://raw.githubusercontent.com/SudhaMondal/SudhaMondal/main/assets/divider.svg" alt="" width="100%"/>
 
 ⭐ **If any of this resonates with you - research, MedTech, or just the mascot above - say hi!**
 
