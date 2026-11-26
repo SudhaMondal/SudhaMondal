@@ -298,7 +298,9 @@
     #personal-photo-album .album-photo-actions{justify-content:flex-end;margin-bottom:16px}
     .album-carousel{width:100%;max-width:100%;margin:0 auto}
     .album-carousel-stage{position:relative;width:100%;height:clamp(340px,55vw,720px);max-height:78vh;min-height:280px;overflow:hidden;border-radius:20px;background:radial-gradient(ellipse at center,#fff 0%,#f4edf9 72%,#e9def1 100%);display:flex;align-items:center;justify-content:center;box-shadow:inset 0 0 0 1px rgba(180,151,205,.22),0 10px 28px rgba(68,48,86,.12)}
-    .album-carousel-image{display:block;width:100%;height:100%;object-fit:contain;padding:8px}
+    .album-carousel-stage:before{content:"";position:absolute;inset:-20px;background-image:var(--album-photo-bg);background-size:cover;background-position:center;filter:blur(24px);opacity:.48;transform:scale(1.08);pointer-events:none}
+    .album-carousel-image{position:relative;z-index:1;display:block;width:100%;height:100%;object-fit:contain;padding:8px}
+    .album-carousel-empty{position:relative;z-index:1}
     .album-carousel-empty{width:100%;height:100%;display:grid;place-items:center;border:2px dashed #d8c4e7;border-radius:20px;color:#9b83ad;font-size:clamp(1rem,2vw,1.3rem);text-align:center;padding:20px}
     .album-carousel-arrow{position:absolute;top:50%;transform:translateY(-50%);width:48px;height:48px;border:1px solid #ffffffbb;border-radius:50%;background:rgba(255,255,255,.88);color:#765b8d;font-size:36px;line-height:1;display:grid;place-items:center;cursor:pointer;box-shadow:0 4px 16px #38264a2b;backdrop-filter:blur(8px);transition:transform .18s ease,background .18s ease}
     .album-carousel-arrow:hover{transform:translateY(-50%) scale(1.08);background:#fff}
@@ -550,8 +552,8 @@ n  </style>
       function goTo(index){if(!currentPhotos.length)return;activeIndex=(index+currentPhotos.length)%currentPhotos.length;renderSlides();}
       function renderSlides(){
         const has=currentPhotos.length>0;image.hidden=!has;empty.hidden=has;prev.hidden=!has;next.hidden=!has;remove.hidden=!has;
-        if(!has){count.textContent="0 photos";dots.replaceChildren();return;}
-        const photo=currentPhotos[activeIndex];image.src=photoUrl(photo);image.alt="";count.textContent=(activeIndex+1)+" / "+currentPhotos.length;
+        if(!has){stage.style.removeProperty("--album-photo-bg");count.textContent="0 photos";dots.replaceChildren();return;}
+        const photo=currentPhotos[activeIndex];image.src=photoUrl(photo);stage.style.setProperty("--album-photo-bg",'url("'+photoUrl(photo)+'")');image.alt="";count.textContent=(activeIndex+1)+" / "+currentPhotos.length;
         dots.replaceChildren();
         currentPhotos.forEach((item,index)=>{const dot=document.createElement("button");dot.type="button";dot.className="album-carousel-dot"+(index===activeIndex?" is-active":"");dot.setAttribute("aria-label","Show photo "+(index+1));dot.setAttribute("aria-current",index===activeIndex?"true":"false");dot.addEventListener("click",()=>goTo(index));dots.append(dot);});
       }
