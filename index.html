@@ -72,6 +72,52 @@
     .vibe-now{display:flex;gap:11px;align-items:center;margin-bottom:11px}.vibe-art{width:48px;height:48px;flex:0 0 48px;border-radius:13px;display:grid;place-items:center;background:linear-gradient(135deg,#d8b9ee,#f0b8d0);color:#2b2039;font-size:1.35rem}.vibe-track{font-size:.88rem;font-weight:700;line-height:1.3}.vibe-artist{font-size:.73rem;color:var(--muted);margin-top:3px}.vibe-controls{display:flex;align-items:center;gap:8px}.vibe-btn{border:1px solid #ffffff35;background:#ffffff0c;color:var(--text);border-radius:999px;padding:7px 11px;font:600 .75rem 'DM Sans',sans-serif;cursor:pointer}.vibe-btn.play{background:linear-gradient(110deg,#d8b9ee,#f0b8d0);color:#21182d;border:0;font-weight:800}.vibe-btn:disabled{opacity:.4;cursor:not-allowed}.vibe-volume{display:flex;align-items:center;gap:7px;margin-left:auto;color:var(--muted);font-size:.72rem}.vibe-volume input{width:75px;accent-color:#e4bce5}.vibe-list{display:grid;gap:5px;margin-top:12px;max-height:155px;overflow:auto}.vibe-song{display:flex;align-items:center;gap:9px;width:100%;text-align:left;border:1px solid transparent;background:#ffffff08;color:var(--text);border-radius:10px;padding:8px 9px;cursor:pointer;font:500 .76rem 'DM Sans',sans-serif}.vibe-song:hover,.vibe-song.active{background:#d8b9ee18;border-color:#d8b9ee55}.vibe-song small{display:block;color:var(--muted);font-size:.68rem}.vibe-index{color:var(--pink);font-size:.68rem;width:17px}.vibe-frame{position:absolute!important;width:1px!important;height:1px!important;min-width:1px!important;min-height:1px!important;opacity:0!important;pointer-events:none!important;left:-10000px!important;top:auto!important;border:0!important}.vibe-note{font-size:.62rem;color:var(--muted);margin:9px 1px 0;line-height:1.4}.vibe-player.minimized{width:auto;padding:10px 13px}.vibe-player.minimized .vibe-content{display:none}.vibe-player.minimized .vibe-head{margin:0}.vibe-player.minimized .vibe-kicker{display:none}
     @media(max-width:520px){.vibe-player{left:12px;bottom:12px;width:min(370px,calc(100vw - 24px));padding:12px}.vibe-player.minimized{width:auto}.vibe-volume input{width:62px}}
 
+  
+    /* Expanded portfolio: research notebook, album and working approach */
+    .notebook-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+    .notebook-card{position:relative;overflow:hidden;min-height:240px;padding:24px;border:1px solid var(--line);border-radius:22px;background:linear-gradient(145deg,#ffffff12,#ffffff04)}
+    .notebook-card:after{content:"";position:absolute;width:170px;height:170px;border:1px solid #ffffff12;border-radius:50%;right:-75px;bottom:-85px;box-shadow:0 0 0 18px #ffffff05,0 0 0 38px #ffffff03}
+    .notebook-kicker{font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:var(--pink);font-weight:700}
+    .notebook-card h3{font-family:'Playfair Display',serif;font-size:1.45rem;line-height:1.2;margin:13px 0 10px}
+    .notebook-card p{color:var(--muted);font-size:.9rem;margin:0}
+    .notebook-card .tag{margin-top:16px}
+    .album-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+    .album-card{min-width:0;border:1px solid var(--line);border-radius:20px;overflow:hidden;background:#ffffff08;transition:.25s}
+    .album-card:hover{transform:translateY(-5px);border-color:#d8b9ee80}
+    .album-card summary{list-style:none;cursor:pointer}
+    .album-card summary::-webkit-details-marker{display:none}
+    .album-cover{height:225px;position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between;padding:18px}
+    .album-cover:before,.album-cover:after{content:"";position:absolute;pointer-events:none}
+    .album-cover:before{width:190px;height:190px;border:1px solid #ffffff55;border-radius:50%;right:-55px;top:30px;box-shadow:0 0 0 18px #ffffff12,0 0 0 38px #ffffff0b}
+    .album-cover:after{width:145px;height:190px;border:1px solid #ffffff45;border-radius:48% 52% 35% 65%;left:25px;bottom:-100px;transform:rotate(32deg);background:#ffffff12}
+    .album-cover.music{background:linear-gradient(145deg,#5b3b70,#c17a9d 55%,#f0c4d8)}
+    .album-cover.art{background:linear-gradient(145deg,#263b55,#8874b8 48%,#e5a7bc)}
+    .album-cover.nature{background:linear-gradient(145deg,#233f3c,#688f7b 52%,#d6c89a)}
+    .album-cover.making{background:linear-gradient(145deg,#27243e,#5c6c9b 52%,#a9c5dc)}
+    .album-number{font-size:.72rem;letter-spacing:.16em;font-weight:700;color:#fff;position:relative;z-index:1}
+    .album-icon{font-size:3.4rem;position:relative;z-index:1;filter:drop-shadow(0 8px 15px #17132655)}
+    .album-cover-title{font-family:'Playfair Display',serif;font-size:1.45rem;line-height:1.05;color:#fff;position:relative;z-index:1;max-width:190px;text-shadow:0 2px 12px #17132655}
+    .album-meta{padding:16px 17px 18px}
+    .album-meta strong{display:block;font-size:.95rem}
+    .album-meta span{color:var(--muted);font-size:.78rem}
+    .album-detail{padding:0 17px 18px;color:var(--muted);font-size:.86rem}
+    .album-detail p{margin:0 0 8px}
+    .album-open-hint{color:var(--pink)!important;font-weight:700;font-size:.75rem!important;margin-top:9px!important}
+    .album-note{margin-top:18px;padding:15px 18px;border-left:2px solid var(--pink);background:#ffffff08;border-radius:0 13px 13px 0;color:var(--muted);font-size:.85rem}
+    .approach-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;counter-reset:approach}
+    .approach-step{counter-increment:approach;padding:20px;border:1px solid var(--line);border-radius:17px;background:#ffffff08}
+    .approach-step:before{content:"0" counter(approach);display:block;color:var(--pink);font-size:.75rem;font-weight:700;letter-spacing:.16em;margin-bottom:14px}
+    .approach-step h3{margin:0 0 7px;font-size:1rem}
+    .approach-step p{margin:0;color:var(--muted);font-size:.86rem}
+    .practice-map{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:18px}
+    .practice-item{padding:17px;border-radius:15px;background:linear-gradient(145deg,#ffffff0d,#ffffff04);border:1px solid var(--line)}
+    .practice-item .symbol{font-size:1.45rem}
+    .practice-item h3{font-size:.94rem;margin:7px 0 5px}
+    .practice-item p{font-size:.8rem;color:var(--muted);margin:0}
+    @media(max-width:900px){.album-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.approach-grid,.practice-map{grid-template-columns:repeat(2,minmax(0,1fr))}}
+    @media(max-width:760px){.notebook-grid{grid-template-columns:1fr}.album-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+    @media(max-width:430px){.album-grid{grid-template-columns:1fr}.album-cover{height:190px}.approach-grid,.practice-map{grid-template-columns:1fr}}
+
   </style>
 </head>
 <body>
@@ -96,7 +142,7 @@
     <div class="side-title">Profile details</div><div class="side-card"><label class="side-label" for="editName">Display name</label><input class="side-input" id="editName" value="Sudha Mondal" maxlength="60"><label class="side-label" for="editRole">Role / headline</label><input class="side-input" id="editRole" value="Biomedical Engineering Student · Research & Technology" maxlength="100"><label class="side-label" for="editIntro">Short introduction</label><textarea class="side-input" id="editIntro" rows="4" maxlength="260" style="resize:vertical">I am a Biomedical Engineering student at Adamas University, exploring the space where medical science, engineering, research and creative technology meet.</textarea><label class="side-label" for="editAccent">Accent colour</label><select class="side-select" id="editAccent"><option value="lavender">Lavender & rose</option><option value="blue">Icy blue</option><option value="mint">Soft mint</option><option value="gold">Warm champagne</option></select><button class="side-btn primary" id="saveProfile" type="button">Save profile changes</button><button class="side-btn" id="resetProfile" type="button">Reset profile details</button><div class="side-note" id="saveMessage" role="status" aria-live="polite">Your text and colour settings are saved in this browser.</div></div>
     <div class="side-title">Quick navigation</div><div class="side-card"><a class="side-label" href="#about">↗ About</a><a class="side-label" href="#research">↗ Research interests</a><a class="side-label" href="#projects">↗ Projects</a><a class="side-label" href="#contact">↗ Contact</a></div>
   </aside><div class="wrap">
-    <nav class="nav" aria-label="Main navigation"><a class="brand" href="#top">SUDHA<span>.</span></a><div class="navlinks"><a href="#about">About</a><a href="#education">Education</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#learning">Learning & affiliations</a><a href="#contact">Contact</a></div></nav>
+    <nav class="nav" aria-label="Main navigation"><a class="brand" href="#top">SUDHA<span>.</span></a><div class="navlinks"><a href="#about">About</a><a href="#education">Education</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#notebook">Research notebook</a><a href="#album">Album</a><a href="#learning">Learning & affiliations</a><a href="#contact">Contact</a></div></nav>
     <main id="top">
       <header class="hero">
         <div><div class="profile-display-name" id="heroProfileName">Sudha Mondal</div><div class="eyebrow" id="heroRole">Biomedical Engineering Student · Research & Technology</div><h1>Curious about<br><em>life, systems</em><br>& possibility.</h1><p class="lead" id="heroIntro">I am Sudha Mondal — a biomedical engineering student drawn to the meeting point of human biology, engineering precision and imaginative design.</p><div class="actions"><a class="btn primary" href="#projects">Explore my work ↗</a><a class="btn" href="https://github.com/SudhaMondal">GitHub profile</a></div></div>
@@ -123,6 +169,15 @@
         <article class="card"><div class="symbol">🫀</div><h3>Cardiovascular Biomechanics</h3><p>Soft- and hard-tissue biomechanics, computational modelling and fluid–structure interaction in prosthetic heart valves.</p></article>
         <article class="card"><div class="symbol">🔬</div><h3>Biomedical R&D</h3><p>Interdisciplinary research that translates engineering methods into accessible, practical biomedical technologies.</p></article>
       </div></section>
+
+      <section id="notebook">
+        <div class="section-head"><div><div class="eyebrow">Questions worth exploring</div><h2>Research notebook</h2></div><p>A closer look at the scientific directions that keep drawing my attention — questions to investigate, not claims of completed research.</p></div>
+        <div class="notebook-grid">
+          <article class="notebook-card"><div class="notebook-kicker">01 · Cardiovascular systems</div><h3>Can engineering make circulation more resilient?</h3><p>Exploring total artificial heart systems, mechanical circulatory support, prosthetic heart valves, blood flow and the biomechanics of the cardiovascular system.</p><div class="tags"><span class="tag">Artificial hearts</span><span class="tag">Cardiac biomechanics</span><span class="tag">Circulatory support</span></div></article>
+          <article class="notebook-card"><div class="notebook-kicker">02 · Brain & behaviour</div><h3>How does biological activity become cognition?</h3><p>Following questions in cognitive neuroscience, neural engineering and the relationship between neural systems, information processing and human experience.</p><div class="tags"><span class="tag">Cognitive neuroscience</span><span class="tag">Neural engineering</span></div></article>
+          <article class="notebook-card"><div class="notebook-kicker">03 · Accessible bioinnovation</div><h3>How can useful diagnostics become more accessible?</h3><p>Interested in biomaterials, biosensors, regenerative medicine and paper microfluidic platforms that connect thoughtful design with practical biomedical applications.</p><div class="tags"><span class="tag">Paper microfluidics</span><span class="tag">Biomaterials</span><span class="tag">Biosensors</span></div></article>
+        </div>
+      </section>
       <section id="experience"><div class="section-head"><div><div class="eyebrow">Work, service & communication</div><h2>Experience</h2></div><p>Early professional experiences across business, human resources, media and public communication.</p></div><div class="timeline">
         <article class="timeline-item"><div class="timeline-date">June 2026 — July 2026 · 2 months</div><div><h3>Student Intern</h3><div class="timeline-org"><a href="https://www.linkedin.com/company/3095552/" target="_blank" rel="noopener noreferrer">BD TRADE INFO [bdtradeinfo.com] ↗</a></div><p>Internship · Dhaka, Bangladesh · Hybrid</p></div></article>
         <article class="timeline-item"><div class="timeline-date">January 2025 — March 2025 · 3 months</div><div><h3>Student Volunteer</h3><div class="timeline-org"><a href="https://www.linkedin.com/company/101884767/" target="_blank" rel="noopener noreferrer">BASTOB – Initiative for People's Self Development ↗</a></div><p>Internship · Dhaka, Bangladesh · On-site</p><p>Contributed across volunteer engagement, human resources, policy analysis, gender policy analysis and safeguarding policy analysis. Additional areas included computer graphics design, Canva, photography, case studies, English-to-Bangla translation, and work relating to the Microcredit Regulatory Authority.</p><div class="tags"><span class="tag">Volunteer engagement</span><span class="tag">Human resources</span><span class="tag">Policy analysis</span><span class="tag">Gender policy</span><span class="tag">Safeguarding policy</span><span class="tag">Computer graphics</span><span class="tag">Canva</span><span class="tag">Photography</span><span class="tag">Case studies</span><span class="tag">English–Bangla translation</span><span class="tag">Microcredit Regulatory Authority</span><span class="tag">Generalist profile</span></div></div></article>
@@ -151,6 +206,17 @@
       </div></section>
       <section id="publication"><div class="section-head"><div><div class="eyebrow">Writing & media</div><h2>Publication</h2></div><p>Communication and storytelling as part of an interdisciplinary practice.</p></div><article class="card"><div class="symbol">📰</div><h3>Published article · Somoy TV</h3><p>Independently authored and published an article under my own byline during my journalism internship at Somoy TV.</p></article></section>
       <section id="beyond"><div class="section-head"><div><div class="eyebrow">Outside the lab</div><h2>Creative life & pursuits</h2></div><p>Creative disciplines and physical pursuits that shape how I observe, practise and make things.</p></div><div class="tags"><span class="tag">🎻 Violin</span><span class="tag">🩰 Bharatanatyam</span><span class="tag">🎨 Abstract acrylic painting</span><span class="tag">✍️ Short fiction & poetry</span><span class="tag">📚 Literary quiz design</span><span class="tag">🌿 Nature journaling</span><span class="tag">🥋 Taekwondo · Yellow Belt</span><span class="tag">🎯 Rifle shooting sports</span></div></section>
+
+      <section id="album">
+        <div class="section-head"><div><div class="eyebrow">A visual diary</div><h2>Albums & little moments</h2></div><p>Four collections for the things that make a life beyond a résumé: music, movement, art, nature and the joy of making.</p></div>
+        <div class="album-grid">
+          <details class="album-card"><summary><div class="album-cover music"><span class="album-number">COLLECTION 01</span><span class="album-icon">🎻</span><span class="album-cover-title">Rhythm & Riyaaz</span></div><div class="album-meta"><strong>Music & movement</strong><span>Violin · Bharatanatyam · practice</span><p class="album-open-hint">Open collection +</p></div></summary><div class="album-detail"><p>A space for violin practice, musical learning, dance, rehearsals and the discipline of returning to an art over time.</p><p>Connected to Sanjit Karmakar Academy, Murchana Sangit Biddayatan and Arthy Ahmed Dance Academy.</p></div></details>
+          <details class="album-card"><summary><div class="album-cover art"><span class="album-number">COLLECTION 02</span><span class="album-icon">🎨</span><span class="album-cover-title">The Art Room</span></div><div class="album-meta"><strong>Art & imagination</strong><span>Abstract acrylic · writing · design</span><p class="album-open-hint">Open collection +</p></div></summary><div class="album-detail"><p>Abstract acrylic painting, visual experiments, graphic design, short fiction, poetry and small ideas taking shape.</p></div></details>
+          <details class="album-card"><summary><div class="album-cover nature"><span class="album-number">COLLECTION 03</span><span class="album-icon">🌿</span><span class="album-cover-title">Field Notes</span></div><div class="album-meta"><strong>Nature & observation</strong><span>Photography · journaling · details</span><p class="album-open-hint">Open collection +</p></div></summary><div class="album-detail"><p>Nature journaling and photography — noticing patterns, textures, light and the details that are easy to overlook.</p></div></details>
+          <details class="album-card"><summary><div class="album-cover making"><span class="album-number">COLLECTION 04</span><span class="album-icon">✦</span><span class="album-cover-title">Making Things</span></div><div class="album-meta"><strong>Projects & experiments</strong><span>Code · prototypes · creative builds</span><p class="album-open-hint">Open collection +</p></div></summary><div class="album-detail"><p>A visual log for digital projects, small experiments, interface ideas, prototypes and works-in-progress — from practical tools to playful worlds.</p></div></details>
+        </div>
+        <div class="album-note">These are original album-cover designs and collection descriptions, not photographs of you. Your own photos, artwork, performance pictures and project screenshots can be added to turn this into a full photo gallery.</div>
+      </section>
       <section id="learning"><div class="section-head"><div><div class="eyebrow">Practice, discipline & community</div><h2>Learning journey & affiliations</h2></div><p>Institutions and academies connected to my musical, dance and sporting pursuits.</p></div><div class="grid cards">
         <article class="card"><div class="symbol">🎻</div><h3>Sanjit Karmakar Academy</h3><p>Violinist</p><span class="project-status">November 2025 – Present</span></article>
         <article class="card"><div class="symbol">🎼</div><h3>Murchana Sangit Biddayatan</h3><p>Violinist</p><span class="project-status">November 2019 – Present</span></article>
@@ -158,6 +224,22 @@
         <article class="card"><div class="symbol">🩰</div><h3>Arthy Ahmed Dance Academy</h3><p>Bharatanatyam dancer</p><span class="project-status">Dates not specified</span></article>
       </div></section>
       <section id="languages"><div class="section-head"><div><div class="eyebrow">Communication</div><h2>Languages</h2></div><p>Language learning and communication across cultures.</p></div><div class="language-row"><div class="language-pill"><strong>Bengali</strong><br><span style="color:var(--muted)">Native or bilingual proficiency</span></div><div class="language-pill"><strong>English</strong><br><span style="color:var(--muted)">Professional working proficiency</span></div><div class="language-pill"><strong>French</strong><br><span style="color:var(--muted)">Elementary proficiency</span></div><div class="language-pill"><strong>Russian</strong><br><span style="color:var(--muted)">Elementary proficiency</span></div></div></section>
+
+      <section id="approach">
+        <div class="section-head"><div><div class="eyebrow">A way of working</div><h2>From curiosity to something tangible.</h2></div><p>The thread connecting biomedical study, software projects, communication and creative practice.</p></div>
+        <div class="approach-grid">
+          <article class="approach-step"><h3>Ask better questions</h3><p>Start with observation, curiosity and a clear understanding of the problem.</p></article>
+          <article class="approach-step"><h3>Study the evidence</h3><p>Read, compare, analyse and build a foundation before jumping to conclusions.</p></article>
+          <article class="approach-step"><h3>Make and experiment</h3><p>Turn ideas into prototypes, code, circuits, visual concepts or practical tools.</p></article>
+          <article class="approach-step"><h3>Document & share</h3><p>Communicate clearly, reflect on what worked and keep improving the result.</p></article>
+        </div>
+        <div class="practice-map">
+          <article class="practice-item"><div class="symbol">🧬</div><h3>Science</h3><p>Biomedical systems, lab methods, literature and research questions.</p></article>
+          <article class="practice-item"><div class="symbol">💻</div><h3>Technology</h3><p>Programming, digital tools, interface design and hands-on builds.</p></article>
+          <article class="practice-item"><div class="symbol">🗞️</div><h3>Communication</h3><p>Journalism, fact-checking, translation, documentation and policy work.</p></article>
+          <article class="practice-item"><div class="symbol">🎨</div><h3>Creative practice</h3><p>Music, dance, painting, photography, writing and visual storytelling.</p></article>
+        </div>
+      </section>
       <section id="contact"><div class="section-head"><div><div class="eyebrow">Say hello</div><h2>Let's connect.</h2></div><p>Open to meaningful conversations around biomedical engineering, research, MedTech, creative technology and interdisciplinary collaboration.</p></div><div class="actions"><a class="btn primary" href="https://linkedin.com/in/i-am-sudha-mondal">LinkedIn ↗</a><a class="btn" href="https://github.com/SudhaMondal">GitHub ↗</a><a class="btn" href="https://orcid.org/0009-0006-2752-1684">ORCID ↗</a><a class="btn" href="https://x.com/__SudhaMondal__">X ↗</a></div></section>
     </main>
     <footer><span>© <span id="year">2026</span> Sudha Mondal · Made with curiosity ✿</span><div class="socials"><a href="https://github.com/SudhaMondal">GitHub</a><a href="https://linkedin.com/in/i-am-sudha-mondal">LinkedIn</a><a href="https://orcid.org/0009-0006-2752-1684">ORCID</a></div></footer>
