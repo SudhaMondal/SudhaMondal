@@ -68,8 +68,8 @@ B.Tech Biomedical Engineering student at Adamas University, driven by two questi
 
 <div align="center">
 
-<img height="180" src="https://github-readme-stats.vercel.app/api?username=SudhaMondal&show_icons=true&hide_border=true&bg_color=0f0c29,302b63,24243e&title_color=ff8fb1&icon_color=4cc9f0&text_color=ffd6e4&border_radius=16&bg_color_type=gradient&count_private=true" />
-<img height="180" src="https://github-readme-stats.vercel.app/api/top-langs/?username=SudhaMondal&layout=compact&hide_border=true&bg_color=0f0c29,302b63,24243e&title_color=ff8fb1&text_color=ffd6e4&border_radius=16" />
+<img height="180" src="https://github-readme-stats.vercel.app/api?username=SudhaMondal&show_icons=true&hide_border=true&bg_color=0f0c29,302b63,24243e&title_color=ff8fb1&icon_color=4cc9f0&text_color=ffd6e4&border_radius=16&bg_color_type=gradient&count_private=true&cache_seconds=1800" />
+<img height="180" src="https://github-readme-stats.vercel.app/api/top-langs/?username=SudhaMondal&layout=compact&hide_border=true&bg_color=0f0c29,302b63,24243e&title_color=ff8fb1&text_color=ffd6e4&border_radius=16&cache_seconds=1800" />
 
 <img src="https://streak-stats.demolab.com?user=SudhaMondal&hide_border=true&background=0f0c29&ring=ff8fb1&fire=ffd166&currStreakLabel=ffd6e4&sideLabels=9ad7ff&currStreakNum=ffffff&sideNums=ffffff&dates=c9b6ff" />
 
