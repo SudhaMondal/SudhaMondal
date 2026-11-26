@@ -80,7 +80,21 @@ When I'm not in the lab or buried in MATLAB simulations, I'm usually playing the
 
 <img src="https://raw.githubusercontent.com/SudhaMondal/SudhaMondal/main/assets/divider.svg?v=flowing-sakura-20261126" alt="" width="100%"/>
 
-## 📊 GitHub Activity & Live Stats
+## 📊 GitHub Activity
+
+<div align="center">
+
+### 🌸 Recent Contributions · Last 31 Days
+
+<a href="https://github.com/SudhaMondal?tab=overview">
+  <img src="https://github-readme-activity-graph.ashutosh-dwivedi0710.workers.dev/graph?username=SudhaMondal&bg_color=17132b&color=e9d8ff&line=ff8fb1&point=ffd166&area=true&hide_border=true&custom_title=Sudha's%20Recent%20GitHub%20Activity" alt="GitHub contribution activity graph for the last 31 days" width="100%"/>
+</a>
+
+[View the complete GitHub activity timeline →](https://github.com/SudhaMondal?tab=overview)
+
+</div>
+
+## 📈 Live Stats
 
 <div align="center">
 
@@ -90,14 +104,6 @@ When I'm not in the lab or buried in MATLAB simulations, I'm usually playing the
 <a href="https://github.com/SudhaMondal">
   <img src="https://ghstats.dev/api/langs?username=SudhaMondal&theme=tokyonight&bg=17132b&text=e9d8ff&title_color=ffb7c5&border_color=765d8d&layout=compact&max_langs=8" alt="Most-used programming languages across public repositories" height="180"/>
 </a>
-
-### 🌸 Recent Contributions · Last 31 Days
-
-<a href="https://github.com/SudhaMondal?tab=overview">
-  <img src="https://github-readme-activity-graph.ashutosh-dwivedi0710.workers.dev/graph?username=SudhaMondal&bg_color=17132b&color=e9d8ff&line=ff8fb1&point=ffd166&area=true&hide_border=true&custom_title=Sudha's%20Recent%20GitHub%20Activity" alt="GitHub contribution activity graph for the last 31 days" width="100%"/>
-</a>
-
-[View the complete GitHub activity timeline →](https://github.com/SudhaMondal?tab=overview)
 
 </div>
 
