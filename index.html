@@ -267,6 +267,25 @@
       .card:hover,.timeline-item:hover,.notebook-card:hover,.practice-item:hover,.approach-step:hover{transform:none}
     }
 
+  
+    /* Personal photo albums — IndexedDB-backed gallery */
+    .album-photo-tools{position:relative;z-index:2;margin-top:18px;padding:15px;border:1px dashed #d9b9e8;border-radius:18px;background:linear-gradient(145deg,#fff9ff,#f8f2ff)}
+    .album-photo-tools h4{margin:0 0 5px;color:#604b76;font:700 .92rem 'Fredoka',sans-serif}
+    .album-photo-tools>p{margin:0 0 12px;color:#897797;font-size:.76rem}
+    .album-photo-actions{display:flex;align-items:center;gap:9px;flex-wrap:wrap}
+    .album-upload-label,.album-clear-btn{display:inline-flex;align-items:center;justify-content:center;gap:7px;border:1px solid #d9c5ed;border-radius:999px;padding:9px 14px;background:#fff;color:#68527e;font:800 .76rem 'Nunito',sans-serif;cursor:pointer;box-shadow:0 4px 0 #eadcf5;transition:.18s}
+    .album-upload-label{background:linear-gradient(135deg,#f8d9ec,#e8ddff)}
+    .album-upload-label:hover,.album-clear-btn:hover{transform:translateY(-2px);box-shadow:0 6px 0 #eadcf5}
+    .album-upload-input{position:absolute!important;width:1px!important;height:1px!important;opacity:0!important;overflow:hidden!important}
+    .album-photo-count{font-size:.72rem;color:#897797;font-weight:800}
+    .album-photo-status{min-height:1.2em;margin:10px 0 0!important;color:#806b91;font-size:.72rem!important}
+    .album-photo-gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px;margin-top:13px}
+    .album-photo-tile{position:relative;min-width:0;aspect-ratio:1;border-radius:13px;overflow:hidden;background:#f1e8f8;box-shadow:0 4px 12px #806b9122}
+    .album-photo-tile img{width:100%;height:100%;display:block;object-fit:cover}
+    .album-photo-delete{position:absolute;top:5px;right:5px;width:27px;height:27px;border:1px solid #fff9;border-radius:50%;background:#fff0f0ed;color:#8d4560;font-size:16px;font-weight:900;cursor:pointer;box-shadow:0 2px 8px #0002}
+    .album-photo-empty{grid-column:1/-1;padding:13px;border-radius:12px;background:#fff9;color:#927fa0;text-align:center;font-size:.73rem}
+    @media(max-width:430px){.album-photo-gallery{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
   </style>
 </head>
 <body>
@@ -434,6 +453,74 @@
     $("vibeMute").addEventListener("click",()=>{vibeMuted=!vibeMuted;if(vibeIndex>=0)vibeCommand(vibeMuted?"mute":"unMute");$("vibeMute").textContent=vibeMuted?"Unmute":"Mute";});
     $("musicLauncher").addEventListener("click",()=>{const open=!vibePlayer.classList.contains("open");vibePlayer.classList.toggle("open",open);$("musicLauncher").setAttribute("aria-expanded",String(open));if(open&&vibeIndex<0)vibeSetTrack(0,false);});
     $("vibeCollapse").addEventListener("click",()=>{vibePlayer.classList.remove("open");$("musicLauncher").setAttribute("aria-expanded","false");});
+
+  
+    // Personal albums: photos are saved privately in this browser using IndexedDB.
+    (function initPersonalAlbums(){
+      const cards=[...document.querySelectorAll("#album .album-card")];
+      if(!cards.length)return;
+      const DB_NAME="sudha-personal-albums",STORE="photos";
+      let db=null;
+      const urls=new Map();
+      const openDB=()=>new Promise((resolve,reject)=>{
+        if(!("indexedDB" in window)){reject(new Error("This browser does not support local photo storage."));return;}
+        const req=indexedDB.open(DB_NAME,1);
+        req.onupgradeneeded=()=>{const d=req.result;if(!d.objectStoreNames.contains(STORE))d.createObjectStore(STORE,{keyPath:"id"});};
+        req.onsuccess=()=>resolve(req.result);req.onerror=()=>reject(req.error||new Error("Could not open photo storage."));
+      });
+      const allPhotos=()=>new Promise((resolve,reject)=>{const req=db.transaction(STORE,"readonly").objectStore(STORE).getAll();req.onsuccess=()=>resolve(req.result||[]);req.onerror=()=>reject(req.error);});
+      const savePhoto=photo=>new Promise((resolve,reject)=>{const tx=db.transaction(STORE,"readwrite");tx.objectStore(STORE).put(photo);tx.oncomplete=resolve;tx.onerror=()=>reject(tx.error);});
+      const deletePhoto=id=>new Promise((resolve,reject)=>{const tx=db.transaction(STORE,"readwrite");tx.objectStore(STORE).delete(id);tx.oncomplete=resolve;tx.onerror=()=>reject(tx.error);});
+      function revoke(id){if(urls.has(id)){URL.revokeObjectURL(urls.get(id));urls.delete(id);}}
+      async function render(){
+        const photos=await allPhotos();
+        cards.forEach((card,index)=>{
+          const album=String(index+1),gallery=card.querySelector(".album-photo-gallery"),count=card.querySelector(".album-photo-count");
+          const items=photos.filter(p=>p.album===album).sort((a,b)=>b.createdAt-a.createdAt);
+          count.textContent=items.length+" saved";
+          gallery.replaceChildren();
+          if(!items.length){const empty=document.createElement("div");empty.className="album-photo-empty";empty.textContent="Your little memories will appear here ♡";gallery.append(empty);return;}
+          items.forEach(photo=>{
+            const tile=document.createElement("div");tile.className="album-photo-tile";
+            const img=document.createElement("img");img.alt=photo.title||"Album photo";img.loading="lazy";
+            const url=URL.createObjectURL(photo.blob);urls.set(photo.id,url);img.src=url;
+            const del=document.createElement("button");del.type="button";del.className="album-photo-delete";del.textContent="×";del.title="Remove photo";del.setAttribute("aria-label","Remove "+(photo.title||"photo"));
+            del.addEventListener("click",async()=>{del.disabled=true;try{await deletePhoto(photo.id);revoke(photo.id);await render();}catch(e){del.disabled=false;alert("Could not remove this photo. Please try again.");}});
+            tile.append(img,del);gallery.append(tile);
+          });
+        });
+      }
+      cards.forEach((card,index)=>{
+        const detail=card.querySelector(".album-detail");if(!detail)return;
+        const album=String(index+1),panel=document.createElement("div");panel.className="album-photo-tools";
+        const heading=document.createElement("h4");heading.textContent="♡ Add your photos";
+        const help=document.createElement("p");help.textContent="Choose one or more pictures. They save automatically in this album.";
+        const actions=document.createElement("div");actions.className="album-photo-actions";
+        const label=document.createElement("label");label.className="album-upload-label";label.textContent="＋ Add photos";
+        const input=document.createElement("input");input.className="album-upload-input";input.type="file";input.accept="image/*";input.multiple=true;input.setAttribute("aria-label","Choose photos for "+heading.textContent);
+        label.append(input);
+        const count=document.createElement("span");count.className="album-photo-count";count.textContent="Loading…";
+        const status=document.createElement("p");status.className="album-photo-status";status.setAttribute("role","status");
+        const gallery=document.createElement("div");gallery.className="album-photo-gallery";
+        input.addEventListener("change",async()=>{
+          const files=[...input.files];input.value="";if(!files.length)return;
+          const invalid=files.filter(f=>!f.type.startsWith("image/")||f.size>12*1024*1024);
+          if(invalid.length){status.textContent="Please use image files smaller than 12 MB each.";return;}
+          label.style.opacity=".6";input.disabled=true;status.textContent="Saving your photos…";
+          try{
+            for(const file of files){await savePhoto({id:(crypto.randomUUID?crypto.randomUUID():Date.now()+"-"+Math.random()),album,title:file.name,createdAt:Date.now(),blob:file});}
+            status.textContent=files.length+" photo"+(files.length===1?"":"s")+" saved in this browser ♡";await render();
+          }catch(e){status.textContent="Storage is full or unavailable. Try fewer or smaller photos.";console.error(e);}
+          finally{input.disabled=false;label.style.opacity="1";}
+        });
+        actions.append(label,count);panel.append(heading,help,actions,status,gallery);detail.append(panel);
+      });
+      openDB().then(async opened=>{db=opened;await render();}).catch(error=>{
+        cards.forEach(card=>{const status=card.querySelector(".album-photo-status");if(status)status.textContent="Photo storage is unavailable in this browser.";});
+        console.error(error);
+      });
+      window.addEventListener("pagehide",()=>{urls.forEach(url=>URL.revokeObjectURL(url));urls.clear();});
+    })();
 
   </script>
 </body>
