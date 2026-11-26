@@ -77,6 +77,11 @@ B.Tech Biomedical Engineering student at Adamas University, driven by two questi
 
 ### 📰 Recent GitHub Activity
 <!--START_SECTION:activity-->
+1. 🛠️ Added the [scheduled GitHub activity updater](https://github.com/SudhaMondal/SudhaMondal/commit/8fdce345b83dbd83d34750980fd553412048296a) — 26 Nov 2026
+2. 📁 Added files via upload — [commit](https://github.com/SudhaMondal/SudhaMondal/commit/3d81b9c55c768bed489f2d28f83cb9dddfd20e16) — 25 Nov 2026
+3. 📁 Added files via upload — [commit](https://github.com/SudhaMondal/SudhaMondal/commit/0a4ce691035c289eedeab61cc78638ff1bb03ffb) — 25 Nov 2026
+4. ✍️ Updated the profile README — [commit](https://github.com/SudhaMondal/SudhaMondal/commit/7994a7292efceb4ed9d0a07699c95ab58f10c5ff) — 22 Nov 2026
+5. ✍️ Updated the profile README — [commit](https://github.com/SudhaMondal/SudhaMondal/commit/682def6c756d0a1c5b3034926a4fb7246be8c98c) — 22 Nov 2026
 <!--END_SECTION:activity-->
 
 <img src="https://raw.githubusercontent.com/SudhaMondal/SudhaMondal/main/assets/divider.svg" width="100%"/>
