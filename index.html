@@ -8,7 +8,7 @@
   <title>Sudha Mondal | Biomedical Engineering Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <style>
     :root{color-scheme:dark;--bg:#12101d;--panel:#1d192b;--muted:#b9afc9;--text:#f8f3ff;--pink:#f3b7d2;--lav:#cbb8f3;--line:#ffffff18}
 
@@ -117,6 +117,155 @@
     @media(max-width:900px){.album-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.approach-grid,.practice-map{grid-template-columns:repeat(2,minmax(0,1fr))}}
     @media(max-width:760px){.notebook-grid{grid-template-columns:1fr}.album-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
     @media(max-width:430px){.album-grid{grid-template-columns:1fr}.album-cover{height:190px}.approach-grid,.practice-map{grid-template-columns:1fr}}
+
+  
+    /* Kawaii cloudcore refresh — playful, soft 3D, lively pastel */
+    :root{
+      color-scheme:light;
+      --bg:#fff8fd;--panel:#fffafd;--muted:#806f91;--text:#514064;
+      --pink:#f29bc5;--lav:#bba5f4;--line:#e9d8f2;
+      --butter:#ffe5a8;--mint:#c9f1df;--sky:#cceaff;
+    }
+    html{scroll-padding-top:24px}
+    body{
+      background:
+        radial-gradient(ellipse at 9% 4%,#f8d9ec 0,transparent 31rem),
+        radial-gradient(ellipse at 91% 18%,#e3dcff 0,transparent 34rem),
+        radial-gradient(ellipse at 55% 75%,#e3f7f1 0,transparent 35rem),
+        linear-gradient(180deg,#fff8fd 0%,#fbf8ff 48%,#fff9f2 100%);
+      color:var(--text);font-family:'Nunito',sans-serif;
+      overflow-x:hidden;
+    }
+    body:before,body:after{content:"";position:fixed;z-index:0;pointer-events:none;opacity:.42;filter:drop-shadow(0 5px 8px #bba5f455)}
+    body:before{content:"✦";font-size:34px;color:#d5b8ff;top:17%;left:2%;animation:kawaiiDrift 7s ease-in-out infinite}
+    body:after{content:"♡";font-size:42px;color:#f5a9cd;right:3%;bottom:18%;animation:kawaiiDrift 8s ease-in-out -3s infinite}
+    .wrap{position:relative;z-index:1}
+    .nav{border:1px solid #eadcf2;background:#ffffffb8;backdrop-filter:blur(18px);border-radius:0 0 24px 24px;padding:16px 22px;box-shadow:0 8px 25px #bba5f41b}
+    .brand{font-family:'Fredoka',sans-serif;font-size:1.35rem;color:#70578d;letter-spacing:.04em}
+    .brand span{color:#ee8fbd}
+    .navlinks{font-weight:800;color:#806e94}
+    .navlinks a{padding:7px 10px;border-radius:999px;transition:background .2s,transform .2s}
+    .navlinks a:hover{background:#fce4f0;color:#9b5b8a;transform:translateY(-2px)}
+    .hero{min-height:620px;position:relative;padding-top:75px;padding-bottom:90px}
+    .hero:before{content:"୨୧";position:absolute;top:45px;left:46%;font-size:2rem;color:#e9a7cc;transform:rotate(-12deg);animation:kawaiiDrift 6s ease-in-out infinite}
+    .hero:after{content:"✧";position:absolute;right:3%;top:90px;font-size:2.6rem;color:#bba5f4;animation:kawaiiSpin 12s linear infinite}
+    .eyebrow{color:#b16eaa;font-family:'Fredoka',sans-serif;font-size:.82rem;letter-spacing:.13em}
+    .profile-display-name{font-family:'Fredoka',sans-serif!important;color:#8c6bb0;font-size:1.3rem}
+    .hero h1,.section-head h2,.about h2,.quote,.notebook-card h3,.album-cover-title{font-family:'Fredoka',sans-serif!important;letter-spacing:-.025em}
+    .hero h1{color:#624b7c;font-weight:600;line-height:1.05}
+    .hero h1 em{background:linear-gradient(100deg,#ef91bf,#a990ed 52%,#77c9c4);background-clip:text}
+    .lead{color:#766587;font-weight:700;line-height:1.8}
+    .btn{border:1px solid #e7cde9;background:#fffdfd;color:#795d91;box-shadow:0 5px 0 #ead9f0,0 9px 18px #bba5f422;transition:transform .22s,box-shadow .22s}
+    .btn.primary{background:linear-gradient(135deg,#f7b6d5,#d8c4ff 58%,#c6e9ef);color:#654d7d;box-shadow:0 5px 0 #d8c2ed,0 10px 22px #d5b8ef55}
+    .btn:hover{transform:translateY(-4px) rotate(-1deg);box-shadow:0 8px 0 #ead9f0,0 15px 25px #bba5f444}
+    .portrait{perspective:900px}
+    .orb{width:min(345px,75vw);background:radial-gradient(circle at 33% 24%,#fff 0 5%,#ffe3f0 23%,#d8c9ff 57%,#a9d9e6 100%);border:9px solid #fff;outline:2px dashed #d6b7eb;outline-offset:7px;border-radius:43% 57% 51% 49%/48% 42% 58% 52%;box-shadow:inset -15px -18px 28px #9c7bc333,inset 12px 13px 22px #ffffffb8,0 14px 0 #d7c3eb,0 28px 45px #a98bc944;animation:cloudBob 6s ease-in-out infinite}
+    .orb:before,.orb:after{opacity:.55}
+    .monogram{font-family:'Fredoka',sans-serif;color:#9275b1;text-shadow:2px 4px 0 #fff;font-size:7.5rem}
+    .profile-photo{border-radius:inherit}
+    .float{border:2px solid #fff;background:linear-gradient(145deg,#fff,#fff0f7);color:#8a659c;border-radius:22px 22px 22px 9px;font-family:'Nunito',sans-serif;font-weight:900;box-shadow:0 6px 0 #e8d6ef,0 13px 24px #9c7bc333;backdrop-filter:blur(12px)}
+    .float.two{background:linear-gradient(145deg,#fff,#f1edff);border-radius:22px 22px 9px 22px}
+    section{border-top:2px dashed #eadcf2;padding:76px 0}
+    .section-head{align-items:center}
+    .section-head h2{color:#6b5485;font-size:clamp(2.2rem,4vw,3.25rem);font-weight:600}
+    .section-head p{color:#837293;font-weight:700}
+    .grid{gap:20px}
+    .card,.timeline-item,.skill-group,.credential,.notebook-card,.approach-step,.practice-item,.album-card{
+      background:linear-gradient(145deg,#fff 0%,#fffafd 62%,#f8f1ff 100%);
+      border:1px solid #eadcf4;border-radius:25px;
+      box-shadow:0 5px 0 #eadcf3,0 12px 25px #b99bd51c,inset 0 2px 0 #fff;
+      color:#5e4a73;
+    }
+    .card{position:relative;overflow:hidden;transition:transform .28s cubic-bezier(.2,.8,.2,1),box-shadow .28s,border-color .28s}
+    .card:before,.timeline-item:before,.notebook-card:before{content:"";position:absolute;inset:7px;border-radius:19px;border:1px solid #fff;pointer-events:none}
+    .card:hover,.timeline-item:hover,.notebook-card:hover,.practice-item:hover,.approach-step:hover{
+      transform:translateY(-7px) rotateX(2deg) rotateY(-1deg);
+      box-shadow:0 8px 0 #dfc9ef,0 21px 34px #a88acb38,inset 0 2px 0 #fff;
+      border-color:#d4b9ef;
+    }
+    .card h3,.timeline-item h3,.skill-group h3,.credential strong,.practice-item h3,.approach-step h3{font-family:'Fredoka',sans-serif;color:#71568e;font-weight:600}
+    .card p,.timeline-item p,.skill-group p,.notebook-card p,.approach-step p,.practice-item p{color:#837293}
+    .card .symbol{display:inline-grid;place-items:center;width:48px;height:48px;border-radius:17px;background:linear-gradient(145deg,#fff0f7,#eee8ff);box-shadow:0 4px 0 #e1d2f0;font-size:1.6rem}
+    .tag,.language-pill{background:linear-gradient(145deg,#fff,#fff2f8);border:1px solid #edd6eb;color:#886b9d;border-radius:999px;box-shadow:0 3px 0 #eedcf0;font-weight:800}
+    .timeline{gap:18px}
+    .timeline-item{position:relative;padding:25px}
+    .timeline-date{color:#c16eaa;font-family:'Fredoka',sans-serif;font-size:.9rem}
+    .timeline-org{color:#9678aa}
+    .skill-group{padding:23px}
+    .credential{border-radius:19px}
+    .credential a.credential-link{color:#9a6ab1}
+    .feature-note{border-left:4px solid #eea9cd;color:#856b98;background:#fff5fa;border-radius:0 16px 16px 0;padding:13px 16px;font-weight:800}
+    .quote{color:#8766a1;border-left:4px solid #d9baf0;background:#f7f0ff;padding:18px 20px;border-radius:0 20px 20px 0}
+    .notebook-grid{gap:20px}
+    .notebook-card{background:linear-gradient(145deg,#fff,#fff1f8 55%,#f1edff);box-shadow:0 6px 0 #e5d2ef,0 15px 30px #ad91c526}
+    .notebook-kicker{color:#bd76a8;font-family:'Fredoka',sans-serif}
+    .album-grid{gap:20px}
+    .album-card{border-radius:27px;box-shadow:0 6px 0 #e7d5f1,0 15px 28px #b99bd52a}
+    .album-cover{margin:8px;border-radius:21px;height:240px;box-shadow:inset 0 2px 0 #ffffff80,inset 0 -12px 20px #3c285522}
+    .album-cover.music{background:radial-gradient(circle at 24% 20%,#ffeaf4,#e9b6e0 46%,#b6a3f4)}
+    .album-cover.art{background:radial-gradient(circle at 75% 15%,#fff0cf,#f6b6d5 42%,#a99de9)}
+    .album-cover.nature{background:radial-gradient(circle at 28% 18%,#efffe9,#b7e5d1 48%,#92c9c6)}
+    .album-cover.making{background:radial-gradient(circle at 75% 18%,#f1edff,#c3c5f6 50%,#a6d7e8)}
+    .album-number{font-family:'Fredoka',sans-serif;color:#fff;text-shadow:0 2px 8px #775a8c55}
+    .album-cover-title{font-size:1.65rem;text-shadow:0 3px 0 #9c76b277,0 5px 12px #76598c55}
+    .album-icon{filter:drop-shadow(0 7px 4px #775a8c55);animation:cloudBob 4s ease-in-out infinite}
+    .album-meta strong{font-family:'Fredoka',sans-serif;color:#765a91;font-size:1.05rem}
+    .album-meta span{color:#947da4}
+    .album-detail{color:#816d92}
+    .album-open-hint{color:#bd76a8!important}
+    .album-note{border:1px dashed #ddbde9;border-left:4px solid #e9a7cc;background:#fff6fb;color:#856f96;border-radius:18px;font-weight:700}
+    .approach-step,.practice-item{transition:transform .25s,box-shadow .25s}
+    .approach-step:before{font-family:'Fredoka',sans-serif;color:#c37bab}
+    .practice-item{background:linear-gradient(145deg,#fff,#f7f1ff);padding:20px;border-radius:22px}
+    .practice-item .symbol{display:inline-grid;place-items:center;width:46px;height:46px;border-radius:16px;background:#fff0f7;box-shadow:0 4px 0 #ead7ef}
+    .about p{color:#7f6c90}
+    footer{color:#8d7a9d}
+    .socials a{padding:8px 13px;border-radius:999px;background:#fff;border:1px solid #eadcf2;box-shadow:0 3px 0 #eadcf2;font-weight:800}
+    .editor-sidebar{
+      background:linear-gradient(155deg,#fffafd 0%,#f7f0ff 65%,#fff4f9 100%);
+      border-left:2px solid #e8d4f1;box-shadow:-12px 0 45px #9e80b72e;color:#5e4a73;
+    }
+    .side-brand{font-family:'Fredoka',sans-serif;color:#76598f;font-size:1.2rem}
+    .side-title{color:#a36eaa;font-family:'Fredoka',sans-serif}
+    .side-card{border:1px solid #eadcf2;background:#ffffffc9;border-radius:19px;box-shadow:0 4px 0 #eadcf2}
+    .side-name{color:#71568e;font-family:'Fredoka',sans-serif}
+    .side-sub,.side-note{color:#897694}
+    .side-label{color:#806c91;font-weight:800}
+    .side-input,.side-select{background:#fff;color:#5e4a73;border:1px solid #e4d2ed;border-radius:13px;font-family:'Nunito',sans-serif}
+    .side-input:focus,.side-select:focus{border-color:#c6a8ed;box-shadow:0 0 0 3px #e9dcff}
+    .side-btn{background:#fff;color:#806794;border:1px solid #e4d2ed;border-radius:14px;box-shadow:0 3px 0 #eadcf2}
+    .side-btn.primary{background:linear-gradient(120deg,#f8bfdc,#d8c7ff);color:#654d7d;box-shadow:0 4px 0 #d8c3ed}
+    .sidebar-toggle{background:linear-gradient(120deg,#fff,#fbe5f1);border:1px solid #e7cce9;color:#795c91;box-shadow:0 5px 0 #e6d4ef,0 10px 22px #a98acb33;font-family:'Fredoka',sans-serif;font-size:.95rem}
+    .sidebar-toggle:hover{background:linear-gradient(120deg,#ffe8f2,#eee6ff);border-color:#d2b5ed}
+    .music-launcher{background:linear-gradient(120deg,#ffd2e6,#dfd1ff);border:1px solid #fff;color:#76578f;box-shadow:0 5px 0 #e5d1ef,0 12px 25px #ac8fcf44;font-family:'Fredoka',sans-serif}
+    .vibe-player{background:linear-gradient(145deg,#fffafd,#f2edff);border:1px solid #e5d4ef;box-shadow:0 8px 0 #e7d8f1,0 18px 38px #9f84bb44;color:#5e4a73}
+    .vibe-brand{font-family:'Fredoka',sans-serif;color:#75598f}
+    .vibe-kicker,.vibe-artist,.vibe-note{color:#8d7b9d}
+    .vibe-art{background:linear-gradient(135deg,#f8c5df,#d9caff);color:#76598f;box-shadow:0 4px 0 #e5d4ef}
+    .vibe-btn{background:#fff;color:#806794;border:1px solid #e6d7ee;box-shadow:0 3px 0 #eadcf2}
+    .vibe-btn.play{background:linear-gradient(120deg,#f8bfdc,#d8c7ff);color:#654d7d}
+    .vibe-song{color:#68547c;background:#fff;border:1px solid #eee1f4}
+    .vibe-song small{color:#9683a5}
+    .vibe-song:hover,.vibe-song.active{background:#fceaf4;border-color:#e7c5e5}
+    .vibe-collapse{background:#fff;color:#806794;border:1px solid #eadcf2}
+    .side-avatar-fallback{color:#76598f}
+    @keyframes kawaiiDrift{0%,100%{transform:translateY(0) rotate(-8deg)}50%{transform:translateY(-13px) rotate(9deg)}}
+    @keyframes kawaiiSpin{to{transform:rotate(360deg)}}
+    @keyframes cloudBob{0%,100%{transform:translateY(0) rotate(-1deg)}50%{transform:translateY(-9px) rotate(1deg)}}
+    @media(max-width:760px){
+      .hero{padding-top:55px}
+      .hero:before{left:auto;right:35%;top:22px}
+      .hero:after{right:5%;top:35px}
+      .nav{padding:14px;border-radius:0 0 18px 18px}
+      .navlinks{color:#806e94}
+      .float{font-size:.78rem;padding:8px 11px}
+      section{padding:58px 0}
+      .album-cover{height:205px}
+    }
+    @media(prefers-reduced-motion:reduce){
+      body:before,body:after,.hero:before,.hero:after,.orb,.album-icon{animation:none!important}
+      .card:hover,.timeline-item:hover,.notebook-card:hover,.practice-item:hover,.approach-step:hover{transform:none}
+    }
 
   </style>
 </head>
