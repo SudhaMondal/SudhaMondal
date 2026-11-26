@@ -310,20 +310,30 @@
     .album-carousel-dot.is-active{width:25px;background:#9d7db8}
     .album-carousel-count{font-size:.82rem;color:#826d92;font-variant-numeric:tabular-nums;white-space:nowrap}
     @media(max-width:600px){#personal-photo-album .album-photo-tools{padding:10px;border-radius:18px}.album-carousel-stage{height:clamp(260px,90vw,500px);min-height:250px;border-radius:15px}.album-carousel-arrow{width:40px;height:40px;font-size:30px}.album-carousel-prev{left:9px}.album-carousel-next{right:9px}.album-carousel-remove{top:9px;right:9px}}
-\n    .bookshelf-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(155px,1fr));gap:18px;margin-top:24px}
-    .book-card{min-width:0;padding:13px;border:1px solid rgba(185,151,213,.25);border-radius:20px;background:rgba(255,255,255,.58);box-shadow:0 8px 22px rgba(105,76,130,.07);transition:transform .22s ease,box-shadow .22s ease}
-    .book-card:hover{transform:translateY(-5px) rotate(-.4deg);box-shadow:0 14px 28px rgba(105,76,130,.13)}
-    .book-cover{aspect-ratio:3/4;border-radius:12px;display:flex;align-items:center;justify-content:center;padding:18px;text-align:center;overflow:hidden;box-shadow:inset 0 0 0 1px rgba(255,255,255,.38),0 5px 12px rgba(50,30,60,.12)}
-    .book-cover span{font-family:Georgia,serif;font-weight:700;letter-spacing:.09em;line-height:1.55;font-size:clamp(.72rem,1.2vw,.95rem);color:inherit;text-shadow:0 1px 1px rgba(255,255,255,.2)}
-    .cover-gothic{background:radial-gradient(circle at 50% 35%,#8c748f,#342d49 72%);color:#fff0d9}
-    .cover-bengal{background:linear-gradient(145deg,#f1d8b9,#c68f78 55%,#765b55);color:#452f35}
-    .cover-fantasy{background:linear-gradient(145deg,#b7a8d8,#655b91 55%,#302c4c);color:#fff4df}
-    .cover-classic{background:linear-gradient(145deg,#e8d7a9,#b58c61 55%,#74604d);color:#3f3027}
-    .cover-myth{background:linear-gradient(145deg,#f0b9a9,#bd7185 55%,#704d77);color:#fff5ec}
-    .book-card h3{font-size:1rem;line-height:1.35;margin:12px 2px 4px}
-    .book-card p{font-size:.86rem;line-height:1.45;margin:0 2px 3px;opacity:.78}
-    @media(max-width:520px){.bookshelf-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.book-card{padding:10px}}
-\n  </style>
+\n
+    .real-bookshelf{display:block;width:100%;margin:28px auto 10px;padding:18px 22px 0;border:0;border-radius:20px 20px 9px 9px;background:linear-gradient(180deg,#f7e9d5,#e7c9a5 68%,#c18d61);box-shadow:0 18px 34px rgba(91,58,36,.19),inset 0 2px 0 #fff9;cursor:pointer;text-align:left;transition:transform .25s ease,box-shadow .25s ease}
+    .real-bookshelf:hover{transform:translateY(-4px);box-shadow:0 23px 40px rgba(91,58,36,.24),inset 0 2px 0 #fff9}
+    .shelf-top{display:flex;justify-content:space-between;align-items:center;gap:12px;color:#76513c;font-family:Georgia,serif;font-size:clamp(.9rem,2vw,1.15rem);padding:0 3px 14px}
+    .shelf-hint{font:600 .78rem inherit;color:#8a6750}
+    .shelf-books{display:flex;align-items:flex-end;justify-content:center;gap:clamp(3px,.7vw,9px);height:clamp(150px,24vw,235px);padding:0 4px;overflow:hidden}
+    .spine{display:flex;align-items:center;justify-content:center;writing-mode:vertical-rl;transform:rotate(180deg);height:var(--h,82%);width:clamp(19px,5.3vw,54px);max-width:7.2%;border-radius:5px 5px 0 0;border:1px solid #ffffff55;color:#fff7e9;font:700 clamp(.47rem,.8vw,.68rem) Georgia,serif;letter-spacing:.07em;text-align:center;padding:8px 2px;box-shadow:inset 3px 0 5px #ffffff26,inset -3px 0 6px #0002,2px 0 4px #0002;overflow:hidden}
+    .spine-1{--h:90%;background:linear-gradient(90deg,#382d48,#796080,#34283e)}.spine-2{--h:84%;background:linear-gradient(90deg,#512c37,#9d5360,#482531)}.spine-3{--h:79%;background:linear-gradient(90deg,#79533c,#c28d62,#70472f)}.spine-4{--h:88%;background:linear-gradient(90deg,#3e594a,#779779,#344b3d)}.spine-5{--h:74%;background:linear-gradient(90deg,#75453c,#bd7967,#6d3b35)}.spine-6{--h:83%;background:linear-gradient(90deg,#8b6434,#d1a45c,#785329)}.spine-7{--h:96%;background:linear-gradient(90deg,#39375f,#7772a8,#343052)}.spine-8{--h:86%;background:linear-gradient(90deg,#4a5035,#92945a,#3e452d)}.spine-9{--h:77%;background:linear-gradient(90deg,#795c35,#c4a16a,#6e512f)}.spine-10{--h:88%;background:linear-gradient(90deg,#9b5e42,#d89b70,#88513b)}.spine-11{--h:80%;background:linear-gradient(90deg,#3d6858,#79a28a,#345849)}.spine-12{--h:92%;background:linear-gradient(90deg,#77434e,#c17c8b,#6b3745)}.spine-13{--h:75%;background:linear-gradient(90deg,#55456f,#9c7eaf,#49395f)}
+    .shelf-plank{display:block;height:19px;margin:0 -22px;background:linear-gradient(180deg,#d6a477,#a96f48 48%,#815034);border-radius:2px 2px 8px 8px;box-shadow:0 7px 9px #57351f40,inset 0 2px 2px #fff5}
+    .shelf-legs{display:flex;justify-content:space-between;padding:0 12px}.shelf-legs i{display:block;width:13px;height:24px;background:linear-gradient(90deg,#87583a,#bd895f,#74472f);border-radius:0 0 4px 4px}
+    .library-overlay{position:fixed;inset:0;z-index:10050;background:rgba(35,25,45,.72);backdrop-filter:blur(9px);display:grid;place-items:center;padding:clamp(8px,2vw,24px)}
+    .library-overlay[hidden]{display:none}
+    .library-window{position:relative;width:min(1120px,100%);max-height:min(92vh,950px);overflow:auto;border-radius:24px;padding:clamp(18px,3vw,34px);background:linear-gradient(145deg,#fffdfb,#f7effb);box-shadow:0 28px 90px #130d1c70}
+    .library-heading{display:flex;justify-content:space-between;align-items:flex-start;gap:20px}.library-heading h2{margin:3px 0 5px}.library-heading p{margin:0;color:var(--muted)}
+    .library-close{flex:0 0 42px;width:42px;height:42px;border:0;border-radius:50%;background:#eee2f4;color:#735486;font-size:30px;line-height:1;cursor:pointer}
+    .library-status{color:#89769a;font-size:.88rem;margin:18px 0}
+    .library-books{display:grid;grid-template-columns:repeat(auto-fill,minmax(155px,1fr));gap:22px}
+    .library-book{min-width:0;padding:12px;border-radius:16px;background:#fff;box-shadow:0 8px 22px #604b7112;border:1px solid #eadff0}
+    .library-book-link{display:block;text-decoration:none;color:inherit}
+    .library-book-cover{width:100%;aspect-ratio:3/4;object-fit:contain;display:block;border-radius:8px;background:linear-gradient(145deg,#f5eff8,#fff);box-shadow:0 5px 13px #30223b20}
+    .library-book-fallback{width:100%;aspect-ratio:3/4;display:grid;place-items:center;text-align:center;padding:14px;background:linear-gradient(145deg,#eee2f4,#dfd0e9);color:#6f557f;border-radius:8px;font:700 1rem Georgia,serif}
+    .library-book h3{font-size:.94rem;line-height:1.35;margin:12px 0 5px}.library-book p{font-size:.8rem;line-height:1.4;margin:0;color:#786b80}
+    @media(max-width:600px){.real-bookshelf{padding:14px 12px 0}.shelf-books{height:160px;gap:3px}.shelf-plank{margin:0 -12px}.spine{font-size:.42rem;letter-spacing:0}.shelf-top{font-size:.88rem}.library-books{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.library-book{padding:9px}.library-window{border-radius:17px}}
+n  </style>
 </head>
 <body>
 
@@ -409,21 +419,20 @@
       <section id="beyond"><div class="section-head"><div><div class="eyebrow">Outside the lab</div><h2>Creative life & pursuits</h2></div><p>Creative disciplines and physical pursuits that shape how I observe, practise and make things.</p></div><div class="tags"><span class="tag">🎻 Violin</span><span class="tag">🩰 Bharatanatyam</span><span class="tag">🎨 Abstract acrylic painting</span><span class="tag">✍️ Short fiction & poetry</span><span class="tag">📚 Literary quiz design</span><span class="tag">🌿 Nature journaling</span><span class="tag">🥋 Taekwondo · Yellow Belt</span><span class="tag">🎯 Rifle shooting sports</span></div></section>
 
       <section id="bookshelf">
-        <div class="section-head"><div><div class="eyebrow">Stories between the pages</div><h2>My Little Bookshelf</h2></div><p>A shelf of novels and series from different worlds, eras and literary traditions.</p></div>
-        <div class="bookshelf-grid">
-          <article class="book-card"><div class="book-cover cover-gothic"><span>FRANKENSTEIN</span></div><h3>Frankenstein</h3><p>Mary Shelley</p></article>
-          <article class="book-card"><div class="book-cover cover-gothic"><span>DRACULA</span></div><h3>Dracula</h3><p>Bram Stoker</p></article>
-          <article class="book-card"><div class="book-cover cover-bengal"><span>PATHER PANCHALI</span></div><h3>Pather Panchali</h3><p>Bibhutibhushan Bandyopadhyay</p></article>
-          <article class="book-card"><div class="book-cover cover-bengal"><span>KAPALKUNDALA</span></div><h3>Kapalkundala</h3><p>Bankim Chandra Chatterjee</p></article>
-          <article class="book-card"><div class="book-cover cover-bengal"><span>DEVDAS</span></div><h3>Devdas</h3><p>Sarat Chandra Chattopadhyay</p></article>
-          <article class="book-card"><div class="book-cover cover-bengal"><span>CHOKHER BALI</span></div><h3>Chokher Bali</h3><p>Rabindranath Tagore</p></article>
-          <article class="book-card"><div class="book-cover cover-fantasy"><span>THE MORTAL INSTRUMENTS</span></div><h3>The Mortal Instruments</h3><p>Cassandra Clare · Series</p></article>
-          <article class="book-card"><div class="book-cover cover-fantasy"><span>THE WITCHER</span></div><h3>The Witcher</h3><p>Andrzej Sapkowski · Series</p></article>
-          <article class="book-card"><div class="book-cover cover-classic"><span>DON QUIXOTE</span></div><h3>Don Quixote</h3><p>Miguel de Cervantes</p></article>
-          <article class="book-card"><div class="book-cover cover-classic"><span>THE ALCHEMIST</span></div><h3>The Alchemist</h3><p>Paulo Coelho</p></article>
-          <article class="book-card"><div class="book-cover cover-classic"><span>ONE HUNDRED YEARS OF SOLITUDE</span></div><h3>One Hundred Years of Solitude</h3><p>Gabriel García Márquez</p></article>
-          <article class="book-card"><div class="book-cover cover-myth"><span>THE SHIVA TRILOGY</span></div><h3>The Shiva Trilogy</h3><p>Amish Tripathi · Trilogy</p></article>
-          <article class="book-card"><div class="book-cover cover-myth"><span>MOHINI</span></div><h3>Mohini</h3><p>Anuja Chandramouli</p></article>
+        <div class="section-head"><div><div class="eyebrow">Stories between the pages</div><h2>My Little Bookshelf</h2></div><p>A little wooden shelf of stories. Pick a book to step inside.</p></div>
+        <button class="real-bookshelf" id="openLibrary" type="button" aria-haspopup="dialog" aria-controls="bookLibrary">
+          <span class="shelf-top"><span>♡ Sue's story corner ♡</span><span class="shelf-hint">Click to explore →</span></span>
+          <span class="shelf-books" aria-hidden="true">
+            <i class="spine spine-1">FRANKENSTEIN</i><i class="spine spine-2">DRACULA</i><i class="spine spine-3">PATHER PANCHALI</i><i class="spine spine-4">KAPALKUNDALA</i><i class="spine spine-5">DEVDAS</i><i class="spine spine-6">CHOKHER BALI</i><i class="spine spine-7">MORTAL INSTRUMENTS</i><i class="spine spine-8">THE WITCHER</i><i class="spine spine-9">DON QUIXOTE</i><i class="spine spine-10">THE ALCHEMIST</i><i class="spine spine-11">100 YEARS OF SOLITUDE</i><i class="spine spine-12">SHIVA TRILOGY</i><i class="spine spine-13">MOHINI</i>
+          </span>
+          <span class="shelf-plank"></span><span class="shelf-legs"><i></i><i></i></span>
+        </button>
+        <div class="library-overlay" id="bookLibrary" role="dialog" aria-modal="true" aria-labelledby="libraryTitle" hidden>
+          <div class="library-window">
+            <div class="library-heading"><div><div class="eyebrow">A little room full of stories</div><h2 id="libraryTitle">The Library</h2><p>Explore the books on this shelf.</p></div><button class="library-close" id="closeLibrary" type="button" aria-label="Close library">×</button></div>
+            <p class="library-status" id="libraryStatus" role="status">Finding original book covers…</p>
+            <div class="library-books" id="libraryBooks"></div>
+          </div>
         </div>
       </section>
 
@@ -568,5 +577,45 @@
     })();
 
 </script>
+
+  <script>
+    (function initBookLibrary(){
+      const open=document.getElementById("openLibrary"),overlay=document.getElementById("bookLibrary"),close=document.getElementById("closeLibrary"),grid=document.getElementById("libraryBooks"),status=document.getElementById("libraryStatus");
+      if(!open||!overlay||!grid)return;
+      const books=[
+        ["Frankenstein","Mary Shelley"],["Dracula","Bram Stoker"],["Pather Panchali","Bibhutibhushan Bandyopadhyay"],["Kapalkundala","Bankim Chandra Chatterjee"],["Devdas","Sarat Chandra Chattopadhyay"],["Chokher Bali","Rabindranath Tagore"],["The Mortal Instruments","Cassandra Clare"],["The Witcher","Andrzej Sapkowski"],["Don Quixote","Miguel de Cervantes"],["The Alchemist","Paulo Coelho"],["One Hundred Years of Solitude","Gabriel García Márquez"],["The Shiva Trilogy","Amish Tripathi"],["Mohini","Anuja Chandramouli"]
+      ];
+      let loaded=false,previousFocus=null;
+      const esc=s=>String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+      async function findCover(title,author){
+        const q='intitle:"'+title+'" inauthor:"'+author+'"';
+        try{const response=await fetch("https://www.googleapis.com/books/v1/volumes?q="+encodeURIComponent(q)+"&maxResults=8&printType=books");if(!response.ok)throw new Error("Books API unavailable");const data=await response.json();const items=data.items||[];
+          const norm=v=>String(v||"").toLowerCase().replace(/[^a-z0-9\u0980-\u09ff]+/g," ").trim();
+          const exact=items.find(item=>{const v=item.volumeInfo||{};return norm(v.title).includes(norm(title))&&(v.authors||[]).some(a=>norm(a).includes(norm(author))||norm(author).includes(norm(a)));});
+          const chosen=exact||items.find(item=>item.volumeInfo&&item.volumeInfo.imageLinks)||items[0];if(!chosen)return null;
+          const v=chosen.volumeInfo||{},links=v.imageLinks||{};return {cover:(links.extraLarge||links.large||links.medium||links.thumbnail||links.smallThumbnail||"").replace(/^http:/,"https:"),url:v.infoLink||"https://books.google.com/books?q="+encodeURIComponent(title+" "+author),title:v.title||title,authors:(v.authors||[author]).join(", ")};
+        }catch(e){return null;}
+      }
+      function card(book,result){
+        const article=document.createElement("article");article.className="library-book";
+        const link=document.createElement("a");link.className="library-book-link";link.href=result?.url||("https://books.google.com/books?q="+encodeURIComponent(book[0]+" "+book[1]));link.target="_blank";link.rel="noopener noreferrer";link.title="Open book details on Google Books";
+        if(result?.cover){const img=document.createElement("img");img.className="library-book-cover";img.loading="lazy";img.alt="Cover of "+result.title;img.src=result.cover;img.onerror=()=>{img.replaceWith(fallback(book[0]));};link.append(img);}else link.append(fallback(book[0]));
+        const h=document.createElement("h3");h.textContent=book[0];const p=document.createElement("p");p.textContent=book[1];article.append(link,h,p);return article;
+      }
+      function fallback(title){const el=document.createElement("div");el.className="library-book-fallback";el.textContent=title;return el;}
+      async function load(){
+        if(loaded)return;loaded=true;grid.replaceChildren();let completed=0;
+        const results=await Promise.all(books.map(b=>findCover(b[0],b[1])));
+        results.forEach((result,i)=>grid.append(card(books[i],result)));
+        completed=results.filter(Boolean).length;
+        status.textContent=completed+" of "+books.length+" book records found. Select a cover to view its Google Books page.";
+      }
+      function show(){previousFocus=document.activeElement;overlay.hidden=false;document.body.style.overflow="hidden";close.focus();load();}
+      function hide(){overlay.hidden=true;document.body.style.overflow="";if(previousFocus)previousFocus.focus();}
+      open.addEventListener("click",show);close.addEventListener("click",hide);
+      overlay.addEventListener("click",e=>{if(e.target===overlay)hide();});
+      document.addEventListener("keydown",e=>{if(!overlay.hidden&&e.key==="Escape")hide();});
+    })();
+  </script>
 </body>
 </html>
