@@ -2,7 +2,7 @@
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=12,14,18,24,30&height=140&section=header&text=&animation=twinkling&fontColor=ffb7c5" width="100%"/>
 
-<img src="https://raw.githubusercontent.com/SudhaMondal/SudhaMondal/main/assets/hero.svg" alt="Original animated profile banner with a 3D-style waving mascot beside Sudha Mondal’s introduction" width="100%"/>
+<img src="https://raw.githubusercontent.com/SudhaMondal/SudhaMondal/main/assets/hero.svg?v=3d-mascot-20261126" alt="Animated dark purple profile banner with rainbow Sudha Mondal title, a waving 3D-style researcher mascot, a Hi speech bubble, twinkling stars and falling sakura petals" width="100%"/>
 
 <a href="https://github.com/SudhaMondal"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&duration=3200&pause=900&color=9B78B8&center=true&vCenter=true&width=760&lines=Hi!+I'm+Sudha+Mondal+%F0%9F%91%8B;B.Tech+Biomedical+Engineering+Student;%F0%9F%AB%80+Total+Artificial+Heart+Systems;%F0%9F%A7%A0+Cognitive+Neuroscience+%26+Neural+Engineering;Bridging+Engineering+%26+Biology+%F0%9F%8C%B8" alt="Typing SVG"/></a>
 
@@ -65,7 +65,6 @@ B.Tech Biomedical Engineering student at Adamas University, driven by two questi
 - 🐍 **[Python Snake Game](https://github.com/SudhaMondal/Python-Snake-Game)** — A classic arcade game in Python/Pygame and HTML5 Canvas, with solo, local multiplayer, and pathfinding AI modes. → [Play live](https://sudhamondal.github.io/Python-Snake-Game/)
 - 🌐 **[Social OS (Infinity OS)](https://github.com/SudhaMondal/Social_OS_-Infinity_OS-_-_-)** — A glassmorphic social desktop concept that brings Facebook, Instagram, and X into one interface, with a floating dock, navigation hub, and customisation options.
 - 🧪 **[ScentLab](https://github.com/SudhaMondal/ScentLab)** — A perfume-discovery and maker workbench for exploring fragrance concepts, scaling example recipes, recording experiments, bookmarking creations, and browsing a scent reference codex.
-
 
 <img src="https://raw.githubusercontent.com/SudhaMondal/SudhaMondal/main/assets/divider.svg" alt="" width="100%"/>
 
