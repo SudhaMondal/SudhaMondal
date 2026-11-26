@@ -118,8 +118,6 @@ When I'm not in the lab or buried in MATLAB simulations, I'm usually playing the
 
 </div>
 
-## 😄 Pronouns
-She/Her
 
 <div align="center">
 
