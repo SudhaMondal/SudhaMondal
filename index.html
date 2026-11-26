@@ -442,50 +442,52 @@
     }
 
 
-    /* One continuous, horizontally scrollable strip of ten larger 4:3 frames. */
+    
+    /* Seven 4:3 frames: all visible together in one non-scrolling row. */
     #personal-photo-album .album-photo-gallery{
       display:flex;
       flex-flow:row nowrap;
       align-items:center;
-      justify-content:flex-start;
-      gap:clamp(18px,2.2vw,30px);
+      justify-content:space-between;
+      gap:clamp(3px,0.7vw,12px);
       width:100%;
-      overflow-x:auto;
-      overflow-y:hidden;
-      padding:28px 18px 32px;
+      overflow:visible;
+      padding:24px 6px 28px;
       box-sizing:border-box;
-      scroll-snap-type:x proximity;
-      overscroll-behavior-x:contain;
-      scrollbar-width:thin;
-      scrollbar-color:#cbb2dc #f3eafa;
     }
     #personal-photo-album .album-photo-tile{
-      flex:0 0 clamp(280px,29vw,390px);
-      width:clamp(280px,29vw,390px);
+      flex:1 1 0;
+      width:0;
+      min-width:0;
       max-width:none;
       aspect-ratio:4 / 3;
       height:auto;
       margin:0;
-      scroll-snap-align:center;
     }
-    #personal-photo-album .album-photo-tile:nth-child(odd){transform:translateY(-10px)}
-    #personal-photo-album .album-photo-tile:nth-child(even){transform:translateY(10px)}
-    #personal-photo-album .album-photo-gallery::-webkit-scrollbar{height:9px}
-    #personal-photo-album .album-photo-gallery::-webkit-scrollbar-track{background:#f3eafa;border-radius:20px}
-    #personal-photo-album .album-photo-gallery::-webkit-scrollbar-thumb{background:#cbb2dc;border-radius:20px}
+    #personal-photo-album .album-photo-tile:nth-child(odd){transform:translateY(-8px)}
+    #personal-photo-album .album-photo-tile:nth-child(even){transform:translateY(8px)}
+    #personal-photo-album .album-photo-gallery::-webkit-scrollbar{display:none}
     @media(max-width:760px){
       #personal-photo-album .album-photo-gallery{
-        gap:16px;
-        padding:22px 12px 28px;
+        gap:3px;
+        padding:20px 2px 24px;
       }
       #personal-photo-album .album-photo-tile{
-        flex-basis:78vw;
-        width:78vw;
+        padding:2px;
+        border-width:2px;
+        border-radius:7px;
       }
-      #personal-photo-album .album-photo-tile:nth-child(odd){transform:translateY(-7px)}
-      #personal-photo-album .album-photo-tile:nth-child(even){transform:translateY(7px)}
+      #personal-photo-album .album-photo-image{border-radius:4px}
+      #personal-photo-album .album-photo-delete{
+        top:2px;
+        right:2px;
+        width:16px;
+        height:16px;
+        font-size:11px;
+      }
+      #personal-photo-album .album-photo-tile:nth-child(odd){transform:translateY(-5px)}
+      #personal-photo-album .album-photo-tile:nth-child(even){transform:translateY(5px)}
     }
-
 </style>
 </head>
 <body>
@@ -684,16 +686,16 @@
       const panel=document.createElement("div");panel.className="album-photo-tools";
       const actions=document.createElement("div");actions.className="album-photo-actions";
       const label=document.createElement("label");label.className="album-upload-label";label.textContent="＋ Add album photo";
-      const input=document.createElement("input");input.className="album-upload-input";input.type="file";input.accept="image/*";input.multiple=true;input.setAttribute("aria-label","Add photos to the 10 photo album slots");label.append(input);
+      const input=document.createElement("input");input.className="album-upload-input";input.type="file";input.accept="image/*";input.multiple=true;input.setAttribute("aria-label","Add photos to the 7 photo album slots");label.append(input);
       const status=document.createElement("p");status.className="album-photo-status";status.setAttribute("role","status");
       const gallery=document.createElement("div");gallery.className="album-photo-gallery";gallery.setAttribute("aria-label","Photo album");
       const empty=document.createElement("div");empty.className="album-gallery-empty";empty.textContent="Your first photo album will appear here ♡";
       actions.append(label);panel.append(actions,status,gallery,empty);host.append(panel);
       async function render(){
-        const photos=(await allPhotos()).sort((a,b)=>(a.createdAt||0)-(b.createdAt||0)).slice(0,10);
+        const photos=(await allPhotos()).sort((a,b)=>(a.createdAt||0)-(b.createdAt||0)).slice(0,7);
         const keep=new Set(photos.map(p=>p.id));for(const [id,url] of urls){if(!keep.has(id)){URL.revokeObjectURL(url);urls.delete(id);}}
         gallery.replaceChildren();empty.hidden=true;
-        for(let index=0;index<10;index++){
+        for(let index=0;index<7;index++){
           const photo=photos[index];
           const tile=document.createElement("figure");tile.className="album-photo-tile";
           if(photo){
@@ -707,16 +709,16 @@
           }
           gallery.append(tile);
         }
-        const remaining=10-photos.length;
+        const remaining=7-photos.length;
         label.style.opacity=remaining?"1":".5";input.disabled=remaining===0;
-        label.title=remaining?remaining+" photo slot"+(remaining===1?"":"s")+" available":"All 10 photo slots are full";
-        status.textContent=photos.length+" / 10 photo slots filled";
+        label.title=remaining?remaining+" photo slot"+(remaining===1?"":"s")+" available":"All 7 photo slots are full";
+        status.textContent=photos.length+" / 7 photo slots filled";
       }
       input.addEventListener("change",async()=>{
         const files=[...input.files];input.value="";if(!files.length)return;
         const existing=(await allPhotos()).length;
         if(files.some(f=>!f.type.startsWith("image/")||f.size>12*1024*1024)){status.textContent="Each file must be an image smaller than 12 MB.";return;}
-        if(existing+files.length>10){status.textContent="Only "+(10-existing)+" more photo slot"+(10-existing===1?"":"s")+" available. Select no more than 10 photos in total.";return;}
+        if(existing+files.length>7){status.textContent="Only "+(7-existing)+" more photo slot"+(10-existing===1?"":"s")+" available. Select no more than 7 photos in total.";return;}
         input.disabled=true;label.style.opacity=".6";status.textContent="Saving photos…";
         try{for(const file of files)await savePhoto({id:(crypto.randomUUID?crypto.randomUUID():Date.now()+"-"+Math.random()),createdAt:Date.now(),blob:file});await render();}
         catch(e){status.textContent="Storage is full or unavailable. Try smaller photos.";console.error(e);}
