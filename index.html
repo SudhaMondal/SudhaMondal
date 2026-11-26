@@ -58,6 +58,13 @@
     @media(max-width:430px){.wrap{width:min(100% - 28px,1100px)}.nav{align-items:flex-start}.navlinks{gap:9px;flex-wrap:wrap;justify-content:flex-end}.hero h1{font-size:3.35rem}.lead{font-size:1rem}}
     @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
   
+
+    .music-launcher{position:fixed;z-index:40;top:18px;left:20px;border:1px solid #f0c8e977;border-radius:999px;padding:11px 17px;background:linear-gradient(110deg,#d8b9ee,#f0b8d0);color:#241a30;font:800 .84rem 'DM Sans',sans-serif;cursor:pointer;box-shadow:0 8px 26px #0005;display:flex;align-items:center;gap:8px}
+    .music-launcher:hover{filter:brightness(1.08);transform:translateY(-1px)}
+    .vibe-player{display:none;top:68px;bottom:auto;left:20px;width:min(370px,calc(100vw - 32px))}
+    .vibe-player.open{display:block}
+    @media(max-width:520px){.music-launcher{top:12px;left:12px}.vibe-player{top:60px;left:12px;bottom:auto;width:min(370px,calc(100vw - 24px))}}
+
     /* SUDHA vibing to — floating music player */
     .vibe-player{position:fixed;z-index:18;left:20px;bottom:20px;width:min(370px,calc(100vw - 32px));padding:15px;border:1px solid #e6c8f355;border-radius:20px;background:linear-gradient(145deg,#211a31f5,#171321f5);backdrop-filter:blur(18px);box-shadow:0 16px 48px #0008;color:var(--text)}
     .vibe-head{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:11px}.vibe-brand{font-weight:800;letter-spacing:.02em;font-size:.98rem}.vibe-brand span{color:var(--pink)}.vibe-kicker{font-size:.63rem;color:var(--muted);letter-spacing:.14em;text-transform:uppercase}.vibe-collapse{border:1px solid #ffffff30;background:#ffffff0c;color:var(--text);border-radius:50%;width:30px;height:30px;cursor:pointer}
@@ -67,6 +74,18 @@
   </style>
 </head>
 <body>
+
+  <button class="music-launcher" id="musicLauncher" type="button" aria-controls="vibePlayer" aria-expanded="false">♫ <span>Music</span></button>
+  <section class="vibe-player" id="vibePlayer" aria-label="SUDHA vibing to music player">
+    <div class="vibe-head"><div><div class="vibe-brand">SUDHA <span>vibing to</span> ♪</div><div class="vibe-kicker">Your background soundtrack</div></div><button class="vibe-collapse" id="vibeCollapse" type="button" aria-label="Close music player">×</button></div>
+    <div class="vibe-content">
+      <div class="vibe-now"><div class="vibe-art">♫</div><div><div class="vibe-track" id="vibeTrack">Choose a song</div><div class="vibe-artist" id="vibeArtist">International hits</div></div></div>
+      <div class="vibe-controls"><button class="vibe-btn" id="vibePrev" type="button" disabled>◀</button><button class="vibe-btn play" id="vibePlay" type="button">▶ Play</button><button class="vibe-btn" id="vibeNext" type="button" disabled>▶|</button><div class="vibe-volume"><span>Vol</span><input id="vibeVolume" type="range" min="0" max="100" value="75" aria-label="Volume"></div><button class="vibe-btn" id="vibeMute" type="button">Mute</button></div>
+      <div class="vibe-list" id="vibeList" aria-label="Song playlist"></div>
+      <p class="vibe-note">Audio-only playback via YouTube. Press Play once to start; your browser may block automatic sound.</p>
+    </div>
+    <iframe class="vibe-frame" id="vibeFrame" title="Background music audio player" allow="autoplay; encrypted-media; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+  </section>
 
   <button class="sidebar-toggle" id="sidebarToggle" aria-controls="editorSidebar" aria-expanded="false">⚙ Profile editor</button><div class="sidebar-scrim" id="sidebarScrim"></div>
   <aside class="editor-sidebar" id="editorSidebar" aria-label="Profile and page editor">
@@ -170,7 +189,8 @@
     $("vibeNext").addEventListener("click",()=>{if(vibeIndex<vibeSongs.length-1)vibeSetTrack(vibeIndex+1,true);});
     $("vibeVolume").addEventListener("input",e=>{vibeVolume=Number(e.target.value);if(vibeIndex>=0)vibeCommand("setVolume",[vibeVolume]);if(vibeVolume>0&&vibeMuted){vibeMuted=false;vibeCommand("unMute");$("vibeMute").textContent="Mute";}});
     $("vibeMute").addEventListener("click",()=>{vibeMuted=!vibeMuted;if(vibeIndex>=0)vibeCommand(vibeMuted?"mute":"unMute");$("vibeMute").textContent=vibeMuted?"Unmute":"Mute";});
-    $("vibeCollapse").addEventListener("click",()=>{const minimized=vibePlayer.classList.toggle("minimized");$("vibeCollapse").textContent=minimized?"+":"−";$("vibeCollapse").setAttribute("aria-label",minimized?"Expand music player":"Minimize music player");});
+    $("musicLauncher").addEventListener("click",()=>{const open=!vibePlayer.classList.contains("open");vibePlayer.classList.toggle("open",open);$("musicLauncher").setAttribute("aria-expanded",String(open));if(open&&vibeIndex<0)vibeSetTrack(0,false);});
+    $("vibeCollapse").addEventListener("click",()=>{vibePlayer.classList.remove("open");$("musicLauncher").setAttribute("aria-expanded","false");});
 
   </script>
 </body>
