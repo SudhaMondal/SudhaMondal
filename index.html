@@ -291,6 +291,20 @@
     #personal-photo-album .album-photo-tools{margin-top:0}
     #personal-photo-album .album-photo-gallery{grid-template-columns:repeat(3,minmax(0,1fr))}
     @media(max-width:430px){#personal-photo-album .album-photo-gallery{grid-template-columns:repeat(2,minmax(0,1fr))}}
+\n  
+    .bookshelf-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(155px,1fr));gap:18px;margin-top:24px}
+    .book-card{min-width:0;padding:13px;border:1px solid rgba(185,151,213,.25);border-radius:20px;background:rgba(255,255,255,.58);box-shadow:0 8px 22px rgba(105,76,130,.07);transition:transform .22s ease,box-shadow .22s ease}
+    .book-card:hover{transform:translateY(-5px) rotate(-.4deg);box-shadow:0 14px 28px rgba(105,76,130,.13)}
+    .book-cover{aspect-ratio:3/4;border-radius:12px;display:flex;align-items:center;justify-content:center;padding:18px;text-align:center;overflow:hidden;box-shadow:inset 0 0 0 1px rgba(255,255,255,.38),0 5px 12px rgba(50,30,60,.12)}
+    .book-cover span{font-family:Georgia,serif;font-weight:700;letter-spacing:.09em;line-height:1.55;font-size:clamp(.72rem,1.2vw,.95rem);color:inherit;text-shadow:0 1px 1px rgba(255,255,255,.2)}
+    .cover-gothic{background:radial-gradient(circle at 50% 35%,#8c748f,#342d49 72%);color:#fff0d9}
+    .cover-bengal{background:linear-gradient(145deg,#f1d8b9,#c68f78 55%,#765b55);color:#452f35}
+    .cover-fantasy{background:linear-gradient(145deg,#b7a8d8,#655b91 55%,#302c4c);color:#fff4df}
+    .cover-classic{background:linear-gradient(145deg,#e8d7a9,#b58c61 55%,#74604d);color:#3f3027}
+    .cover-myth{background:linear-gradient(145deg,#f0b9a9,#bd7185 55%,#704d77);color:#fff5ec}
+    .book-card h3{font-size:1rem;line-height:1.35;margin:12px 2px 4px}
+    .book-card p{font-size:.86rem;line-height:1.45;margin:0 2px 3px;opacity:.78}
+    @media(max-width:520px){.bookshelf-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.book-card{padding:10px}}
 \n  </style>
 </head>
 <body>
@@ -375,6 +389,25 @@
       </div></section>
       <section id="publication"><div class="section-head"><div><div class="eyebrow">Writing & media</div><h2>Publication</h2></div><p>Communication and storytelling as part of an interdisciplinary practice.</p></div><article class="card"><div class="symbol">📰</div><h3>Published article · Somoy TV</h3><p>Independently authored and published an article under my own byline during my journalism internship at Somoy TV.</p></article></section>
       <section id="beyond"><div class="section-head"><div><div class="eyebrow">Outside the lab</div><h2>Creative life & pursuits</h2></div><p>Creative disciplines and physical pursuits that shape how I observe, practise and make things.</p></div><div class="tags"><span class="tag">🎻 Violin</span><span class="tag">🩰 Bharatanatyam</span><span class="tag">🎨 Abstract acrylic painting</span><span class="tag">✍️ Short fiction & poetry</span><span class="tag">📚 Literary quiz design</span><span class="tag">🌿 Nature journaling</span><span class="tag">🥋 Taekwondo · Yellow Belt</span><span class="tag">🎯 Rifle shooting sports</span></div></section>
+
+      <section id="bookshelf">
+        <div class="section-head"><div><div class="eyebrow">Stories between the pages</div><h2>My Little Bookshelf</h2></div><p>A shelf of novels and series from different worlds, eras and literary traditions.</p></div>
+        <div class="bookshelf-grid">
+          <article class="book-card"><div class="book-cover cover-gothic"><span>FRANKENSTEIN</span></div><h3>Frankenstein</h3><p>Mary Shelley</p></article>
+          <article class="book-card"><div class="book-cover cover-gothic"><span>DRACULA</span></div><h3>Dracula</h3><p>Bram Stoker</p></article>
+          <article class="book-card"><div class="book-cover cover-bengal"><span>PATHER PANCHALI</span></div><h3>Pather Panchali</h3><p>Bibhutibhushan Bandyopadhyay</p></article>
+          <article class="book-card"><div class="book-cover cover-bengal"><span>KAPALKUNDALA</span></div><h3>Kapalkundala</h3><p>Bankim Chandra Chatterjee</p></article>
+          <article class="book-card"><div class="book-cover cover-bengal"><span>DEVDAS</span></div><h3>Devdas</h3><p>Sarat Chandra Chattopadhyay</p></article>
+          <article class="book-card"><div class="book-cover cover-bengal"><span>CHOKHER BALI</span></div><h3>Chokher Bali</h3><p>Rabindranath Tagore</p></article>
+          <article class="book-card"><div class="book-cover cover-fantasy"><span>THE MORTAL INSTRUMENTS</span></div><h3>The Mortal Instruments</h3><p>Cassandra Clare · Series</p></article>
+          <article class="book-card"><div class="book-cover cover-fantasy"><span>THE WITCHER</span></div><h3>The Witcher</h3><p>Andrzej Sapkowski · Series</p></article>
+          <article class="book-card"><div class="book-cover cover-classic"><span>DON QUIXOTE</span></div><h3>Don Quixote</h3><p>Miguel de Cervantes</p></article>
+          <article class="book-card"><div class="book-cover cover-classic"><span>THE ALCHEMIST</span></div><h3>The Alchemist</h3><p>Paulo Coelho</p></article>
+          <article class="book-card"><div class="book-cover cover-classic"><span>ONE HUNDRED YEARS OF SOLITUDE</span></div><h3>One Hundred Years of Solitude</h3><p>Gabriel García Márquez</p></article>
+          <article class="book-card"><div class="book-cover cover-myth"><span>THE SHIVA TRILOGY</span></div><h3>The Shiva Trilogy</h3><p>Amish Tripathi · Trilogy</p></article>
+          <article class="book-card"><div class="book-cover cover-myth"><span>MOHINI</span></div><h3>Mohini</h3><p>Anuja Chandramouli</p></article>
+        </div>
+      </section>
 
       <section id="album">
         <div class="section-head"><div><div class="eyebrow">A visual diary</div><h2>Photo Album</h2></div></div>
