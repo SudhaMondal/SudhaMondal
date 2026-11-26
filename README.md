@@ -59,30 +59,13 @@ B.Tech Biomedical Engineering student at Adamas University, driven by two questi
 
 ## 📌 Featured Projects
 
-- 🖨️ **[LabReady A4](https://github.com/SudhaMondal/LabReady-A4)** — Drop in lab photos, plots, or sketches and it arranges them on a true-to-scale, print-ready A4 sheet. No install, fully offline. Built to fix a problem I actually have as a biomedical engineering student. → [Live demo](https://sudhamondal.github.io/LabReady-A4/)
-- 🐍 **[Python Snake Game](https://github.com/SudhaMondal/Python-Snake-Game)** — The classic, rebuilt twice: a Python/Pygame desktop version and an HTML5 Canvas browser port, both with a BFS-pathfinding AI opponent, local 2-player mode, and procedurally generated sound. → [Play it](https://sudhamondal.github.io/Python-Snake-Game/)
-- 🌐 **[Social OS (Infinity OS)](https://github.com/SudhaMondal/Social_OS_-Infinity_OS-_-_-)** — A glassmorphic "operating system" concept that wraps Facebook, Instagram, and X into one unified desktop, designed to cut the cognitive cost of app-switching.
-- 🌿 **[Bloomcraft Garden](https://github.com/SudhaMondal/Bloomcraft_Garden)** — Not just a garden, but a *garden*. ❤️
+- ♟️ **[Glacier & Magma — Elemental Chess](https://github.com/SudhaMondal/Glacier-Magma)** — A theatrical 3D chess experience with glacial-frost and volcanic-magma visuals, full FIDE rules, online multiplayer, spectators, rooms, AI opponents, and procedural adaptive audio.
+- 🌸 **[BloomCraft: World Explorer](https://github.com/SudhaMondal/Bloomcraft_Garden)** — A 3D voxel gardening and exploration sandbox featuring four garden biomes, crafting and survival, botanical discoveries, collectible flora cards, and group garden sharing. → [Play live](https://sudhamondal.github.io/Bloomcraft_Garden/)
+- 🖨️ **[LabReady A4](https://github.com/SudhaMondal/LabReady-A4)** — An offline, browser-based tool that arranges lab photos, plots, and sketches on true-to-scale A4 sheets for printing or PDF export. → [Open the app](https://sudhamondal.github.io/LabReady-A4/)
+- 🐍 **[Python Snake Game](https://github.com/SudhaMondal/Python-Snake-Game)** — A classic arcade game in Python/Pygame and HTML5 Canvas, with solo, local multiplayer, and pathfinding AI modes. → [Play live](https://sudhamondal.github.io/Python-Snake-Game/)
+- 🌐 **[Social OS (Infinity OS)](https://github.com/SudhaMondal/Social_OS_-Infinity_OS-_-_-)** — A glassmorphic social desktop concept that brings Facebook, Instagram, and X into one interface, with a floating dock, navigation hub, and customisation options.
+- 🧪 **[ScentLab](https://github.com/SudhaMondal/ScentLab)** — A perfume-discovery and maker workbench for exploring fragrance concepts, scaling example recipes, recording experiments, bookmarking creations, and browsing a scent reference codex.
 
-## 📊 GitHub Stats
-
-<div align="center">
-
-<img height="180" src="https://github-readme-stats.vercel.app/api?username=SudhaMondal&show_icons=true&hide_border=true&bg_color=0f0c29,302b63,24243e&title_color=ff8fb1&icon_color=4cc9f0&text_color=ffd6e4&border_radius=16&bg_color_type=gradient&count_private=true&cache_seconds=1800" />
-<img height="180" src="https://github-readme-stats.vercel.app/api/top-langs/?username=SudhaMondal&layout=compact&hide_border=true&bg_color=0f0c29,302b63,24243e&title_color=ff8fb1&text_color=ffd6e4&border_radius=16&cache_seconds=1800" />
-
-<img src="https://streak-stats.demolab.com?user=SudhaMondal&hide_border=true&background=0f0c29&ring=ff8fb1&fire=ffd166&currStreakLabel=ffd6e4&sideLabels=9ad7ff&currStreakNum=ffffff&sideNums=ffffff&dates=c9b6ff" />
-
-</div>
-
-### 📰 Recent GitHub Activity
-<!--START_SECTION:activity-->
-1. 🛠️ Added the [scheduled GitHub activity updater](https://github.com/SudhaMondal/SudhaMondal/commit/8fdce345b83dbd83d34750980fd553412048296a) — 26 Nov 2026
-2. 📁 Added files via upload — [commit](https://github.com/SudhaMondal/SudhaMondal/commit/3d81b9c55c768bed489f2d28f83cb9dddfd20e16) — 25 Nov 2026
-3. 📁 Added files via upload — [commit](https://github.com/SudhaMondal/SudhaMondal/commit/0a4ce691035c289eedeab61cc78638ff1bb03ffb) — 25 Nov 2026
-4. ✍️ Updated the profile README — [commit](https://github.com/SudhaMondal/SudhaMondal/commit/7994a7292efceb4ed9d0a07699c95ab58f10c5ff) — 22 Nov 2026
-5. ✍️ Updated the profile README — [commit](https://github.com/SudhaMondal/SudhaMondal/commit/682def6c756d0a1c5b3034926a4fb7246be8c98c) — 22 Nov 2026
-<!--END_SECTION:activity-->
 
 <img src="https://raw.githubusercontent.com/SudhaMondal/SudhaMondal/main/assets/divider.svg" width="100%"/>
 
