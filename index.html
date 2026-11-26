@@ -743,3 +743,12 @@
       #personal-photo-album .album-photo-image{border-radius:7px}
       #personal-photo-album .album-photo-delete{top:8px;right:8px;width:28px;height:28px}
     }
+
+
+    /* Gentle alternating lift for a subtle zig-zag photo arrangement. */
+    #personal-photo-album .album-photo-tile:nth-child(odd){transform:translateY(-5px)}
+    #personal-photo-album .album-photo-tile:nth-child(even){transform:translateY(5px)}
+    @media(max-width:760px){
+      #personal-photo-album .album-photo-tile:nth-child(odd){transform:translateY(-4px)}
+      #personal-photo-album .album-photo-tile:nth-child(even){transform:translateY(4px)}
+    }
