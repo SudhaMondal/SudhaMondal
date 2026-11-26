@@ -58,13 +58,26 @@
     <path d="M230 58 L233 51 L237 57 L245 57 L239 62 L241 69 L234 65 L228 69 L229 62 L223 58Z"><animateTransform attributeName="transform" type="rotate" values="0 234 60;12 234 60;0 234 60" dur="7s" repeatCount="indefinite"/></path>
     <path d="M672 60 L675 53 L679 59 L687 59 L681 64 L683 71 L676 67 L670 71 L671 64 L665 60Z"><animateTransform attributeName="transform" type="rotate" values="0 676 62;-10 676 62;0 676 62" dur="8s" repeatCount="indefinite"/></path>
   </g>
-  <!-- Tiny seahorse with curled tail -->
-  <g transform="translate(748 49)" stroke="#d59bbd" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M2 15 Q-3 12 0 8 Q4 4 1 0 Q-2 -5 3 -9 Q8 -12 11 -7 Q14 -2 10 2 Q7 5 9 9 Q11 13 7 15 Q4 17 2 14 Q0 11 4 10" fill="#f3c4d8"/>
-    <path d="M3 -9 Q1 -13 5 -15 L9 -12 L11 -8" fill="#e6c7ef"/>
-    <circle cx="8" cy="-7" r="1" fill="#6e597f" stroke="none"/>
-    <path d="M10 -4 L15 -2 L10 0" fill="none"/>
-    <animateTransform attributeName="transform" type="translate" values="748 49;748 46;748 49" dur="4s" repeatCount="indefinite"/>
+  <!-- More natural seahorse: horse-like head, arched neck, ridged back and curled prehensile tail -->
+  <g transform="translate(748 46)" stroke="#bd8eae" stroke-width=".85" stroke-linecap="round" stroke-linejoin="round">
+    <!-- curled tail -->
+    <path d="M-1 8 C-7 13 -8 19 -3 21 C2 23 7 19 5 15 C4 12 0 13 -1 16" fill="none" stroke="#d59bbd" stroke-width="3.2"/>
+    <!-- body and long curved neck -->
+    <path d="M-2 11 C-7 7 -7 1 -3 -3 C0 -6 1 -10 0 -14 C-1 -18 2 -21 7 -20 C12 -19 14 -15 12 -12 C11 -10 8 -9 6 -10 C7 -7 10 -5 11 -1 C14 5 9 12 3 14 C1 14 0 13 -2 11Z" fill="#f3c4d8"/>
+    <!-- horse muzzle and snout -->
+    <path d="M8 -17 C12 -19 16 -18 18 -16 L17 -13 C14 -12 11 -13 9 -12" fill="#f6d6e6"/>
+    <path d="M15 -16 L19 -16" fill="none" stroke="#a97c9f" stroke-width=".7"/>
+    <circle cx="10" cy="-17" r="1.05" fill="#594c70" stroke="none"/>
+    <!-- crown-like coronet -->
+    <path d="M2 -20 L1 -23 L5 -21 L8 -24 L9 -20" fill="#e7c9ef"/>
+    <!-- dorsal fin and delicate fin rays -->
+    <path d="M-3 -4 Q-10 -7 -13 -3 Q-10 1 -5 2" fill="#d9c4f2"/>
+    <path d="M-11 -4 L-7 -2 M-10 -1 L-6 0 M-8 2 L-5 2" fill="none" stroke="#b58fc9" stroke-width=".65"/>
+    <!-- small pectoral fin -->
+    <path d="M4 1 Q-1 0 -2 5 Q2 7 5 4Z" fill="#e6c7ef"/>
+    <!-- segmented belly plates -->
+    <path d="M-2 3 Q2 5 10 2 M-2 7 Q2 9 8 7 M0 11 Q3 12 5 11" fill="none" stroke="#d7a9c6" stroke-width=".65"/>
+    <animateTransform attributeName="transform" type="translate" values="748 46;748 43;748 46" dur="4.8s" repeatCount="indefinite"/>
   </g>
   <!-- Open oyster shells with a pearl -->
   <g transform="translate(455 61)" stroke="#c4a8d7" stroke-width=".8">
