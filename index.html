@@ -752,3 +752,23 @@
       #personal-photo-album .album-photo-tile:nth-child(odd){transform:translateY(-4px)}
       #personal-photo-album .album-photo-tile:nth-child(even){transform:translateY(4px)}
     }
+
+    /* Larger 4:3 frames with a clear side-by-side alternating zig-zag. */
+    #personal-photo-album .album-photo-gallery{
+      grid-template-columns:repeat(4,minmax(0,1fr));
+      column-gap:20px;
+      row-gap:30px;
+      padding-top:14px;
+      padding-bottom:24px;
+    }
+    #personal-photo-album .album-photo-tile:nth-child(odd){transform:translateY(-9px)}
+    #personal-photo-album .album-photo-tile:nth-child(even){transform:translateY(9px)}
+    @media(max-width:760px){
+      #personal-photo-album .album-photo-gallery{
+        grid-template-columns:repeat(2,minmax(0,1fr));
+        column-gap:14px;
+        row-gap:24px;
+      }
+      #personal-photo-album .album-photo-tile:nth-child(odd){transform:translateY(-6px)}
+      #personal-photo-album .album-photo-tile:nth-child(even){transform:translateY(6px)}
+    }
