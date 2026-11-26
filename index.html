@@ -335,7 +335,17 @@
     .library-book-fallback{width:100%;aspect-ratio:3/4;display:grid;place-items:center;text-align:center;padding:14px;background:linear-gradient(145deg,#eee2f4,#dfd0e9);color:#6f557f;border-radius:8px;font:700 1rem Georgia,serif}
     .library-book h3{font-size:.94rem;line-height:1.35;margin:12px 0 5px}.library-book p{font-size:.8rem;line-height:1.4;margin:0;color:#786b80}
     @media(max-width:600px){.real-bookshelf{padding:14px 12px 0}.shelf-books{height:160px;gap:3px}.shelf-plank{margin:0 -12px}.spine{font-size:.42rem;letter-spacing:0}.shelf-top{font-size:.88rem}.library-books{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.library-book{padding:9px}.library-window{border-radius:17px}}
-n  </style>
+n      /* Photo album: square-by-square gallery, no slideshow */
+    #personal-photo-album .album-photo-tools{width:100%;box-sizing:border-box}
+    #personal-photo-album .album-photo-gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,210px),1fr));gap:clamp(8px,1.4vw,18px);width:100%}
+    #personal-photo-album .album-photo-tile{position:relative;aspect-ratio:1/1;min-width:0;margin:0;overflow:hidden;border-radius:clamp(10px,1.2vw,18px);background:#f0e8f7;box-shadow:0 8px 24px rgba(86,61,107,.12)}
+    #personal-photo-album .album-photo-image{display:block;width:100%;height:100%;object-fit:cover;transition:transform .35s ease}
+    #personal-photo-album .album-photo-tile:hover .album-photo-image{transform:scale(1.035)}
+    #personal-photo-album .album-photo-delete{position:absolute;top:9px;right:9px;width:34px;height:34px;border:1px solid #fff9;border-radius:50%;background:rgba(255,244,249,.94);color:#92516e;font-size:23px;line-height:1;cursor:pointer;box-shadow:0 3px 12px #38264a22;opacity:0;transition:opacity .18s ease}
+    #personal-photo-album .album-photo-tile:hover .album-photo-delete,#personal-photo-album .album-photo-delete:focus-visible{opacity:1}
+    #personal-photo-album .album-gallery-empty{padding:54px 18px;border:2px dashed #d8c4e7;border-radius:18px;color:#9b83ad;text-align:center}
+    @media(max-width:600px){#personal-photo-album .album-photo-gallery{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}#personal-photo-album .album-photo-delete{opacity:1;width:30px;height:30px}}
+</style>
 </head>
 <body>
 
@@ -516,10 +526,10 @@ n  </style>
     $("vibeCollapse").addEventListener("click",()=>{vibePlayer.classList.remove("open");$("musicLauncher").setAttribute("aria-expanded","false");});
 
   
-    // Photo-only album carousel. Images stay in this browser via IndexedDB.
+    // Photo-only album grid. Images stay in this browser via IndexedDB.
     (function initPersonalAlbums(){
       const host=document.querySelector("#personal-photo-album");if(!host)return;
-      const DB_NAME="sudha-personal-albums",STORE="photos";let db=null,activeIndex=0;const urls=new Map();
+      const DB_NAME="sudha-personal-albums",STORE="photos";let db=null;const urls=new Map();
       const openDB=()=>new Promise((resolve,reject)=>{
         if(!("indexedDB" in window)){reject(new Error("Photo storage is unavailable."));return;}
         const req=indexedDB.open(DB_NAME,1);
@@ -535,45 +545,29 @@ n  </style>
       const label=document.createElement("label");label.className="album-upload-label";label.textContent="＋ Add photos";
       const input=document.createElement("input");input.className="album-upload-input";input.type="file";input.accept="image/*";input.multiple=true;input.setAttribute("aria-label","Add photos to album");label.append(input);
       const status=document.createElement("p");status.className="album-photo-status";status.setAttribute("role","status");
-      const carousel=document.createElement("div");carousel.className="album-carousel";carousel.setAttribute("aria-label","Photo album slideshow");
-      const stage=document.createElement("div");stage.className="album-carousel-stage";
-      const image=document.createElement("img");image.className="album-carousel-image";image.alt="";image.draggable=false;
-      const empty=document.createElement("div");empty.className="album-carousel-empty";empty.textContent="Your photos will appear here ♡";
-      const prev=document.createElement("button");prev.type="button";prev.className="album-carousel-arrow album-carousel-prev";prev.textContent="‹";prev.setAttribute("aria-label","Previous photo");
-      const next=document.createElement("button");next.type="button";next.className="album-carousel-arrow album-carousel-next";next.textContent="›";next.setAttribute("aria-label","Next photo");
-      const remove=document.createElement("button");remove.type="button";remove.className="album-carousel-remove";remove.textContent="×";remove.title="Remove this photo";remove.setAttribute("aria-label","Remove current photo");
-      stage.append(image,empty,prev,next,remove);
-      const footer=document.createElement("div");footer.className="album-carousel-footer";
-      const dots=document.createElement("div");dots.className="album-carousel-dots";
-      const count=document.createElement("span");count.className="album-carousel-count";
-      footer.append(dots,count);carousel.append(stage,footer);
-      actions.append(label);panel.append(actions,status,carousel);host.append(panel);
-      let currentPhotos=[];
-      function goTo(index){if(!currentPhotos.length)return;activeIndex=(index+currentPhotos.length)%currentPhotos.length;renderSlides();}
-      function renderSlides(){
-        const has=currentPhotos.length>0;image.hidden=!has;empty.hidden=has;prev.hidden=!has;next.hidden=!has;remove.hidden=!has;
-        if(!has){stage.style.removeProperty("--album-photo-bg");count.textContent="0 photos";dots.replaceChildren();return;}
-        const photo=currentPhotos[activeIndex];image.src=photoUrl(photo);stage.style.setProperty("--album-photo-bg",'url("'+photoUrl(photo)+'")');image.alt="";count.textContent=(activeIndex+1)+" / "+currentPhotos.length;
-        dots.replaceChildren();
-        currentPhotos.forEach((item,index)=>{const dot=document.createElement("button");dot.type="button";dot.className="album-carousel-dot"+(index===activeIndex?" is-active":"");dot.setAttribute("aria-label","Show photo "+(index+1));dot.setAttribute("aria-current",index===activeIndex?"true":"false");dot.addEventListener("click",()=>goTo(index));dots.append(dot);});
-      }
+      const gallery=document.createElement("div");gallery.className="album-photo-gallery";gallery.setAttribute("aria-label","Photo album");
+      const empty=document.createElement("div");empty.className="album-gallery-empty";empty.textContent="Your photos will appear here ♡";
+      actions.append(label);panel.append(actions,status,gallery,empty);host.append(panel);
       async function render(){
-        currentPhotos=(await allPhotos()).sort((a,b)=>(b.createdAt||0)-(a.createdAt||0));
-        const keep=new Set(currentPhotos.map(p=>p.id));for(const [id,url] of urls){if(!keep.has(id)){URL.revokeObjectURL(url);urls.delete(id);}}
-        if(activeIndex>=currentPhotos.length)activeIndex=Math.max(0,currentPhotos.length-1);
-        renderSlides();
+        const photos=(await allPhotos()).sort((a,b)=>(a.createdAt||0)-(b.createdAt||0));
+        const keep=new Set(photos.map(p=>p.id));for(const [id,url] of urls){if(!keep.has(id)){URL.revokeObjectURL(url);urls.delete(id);}}
+        gallery.replaceChildren();empty.hidden=photos.length>0;
+        photos.forEach(photo=>{
+          const tile=document.createElement("figure");tile.className="album-photo-tile";
+          const img=document.createElement("img");img.className="album-photo-image";img.src=photoUrl(photo);img.alt="";img.loading="lazy";img.draggable=false;
+          const remove=document.createElement("button");remove.type="button";remove.className="album-photo-delete";remove.textContent="×";remove.title="Remove photo";remove.setAttribute("aria-label","Remove photo");
+          remove.addEventListener("click",async()=>{remove.disabled=true;try{await deletePhoto(photo.id);if(urls.has(photo.id)){URL.revokeObjectURL(urls.get(photo.id));urls.delete(photo.id);}await render();}catch(e){status.textContent="Could not remove photo. Please try again.";remove.disabled=false;}});
+          tile.append(img,remove);gallery.append(tile);
+        });
       }
-      prev.addEventListener("click",()=>goTo(activeIndex-1));next.addEventListener("click",()=>goTo(activeIndex+1));
-      remove.addEventListener("click",async()=>{if(!currentPhotos.length)return;remove.disabled=true;try{const id=currentPhotos[activeIndex].id;await deletePhoto(id);if(urls.has(id)){URL.revokeObjectURL(urls.get(id));urls.delete(id);}await render();}catch(e){status.textContent="Could not remove photo. Please try again.";}finally{remove.disabled=false;}});
       input.addEventListener("change",async()=>{
         const files=[...input.files];input.value="";if(!files.length)return;
         if(files.some(f=>!f.type.startsWith("image/")||f.size>12*1024*1024)){status.textContent="Choose image files smaller than 12 MB each.";return;}
         input.disabled=true;label.style.opacity=".6";status.textContent="Saving…";
-        try{for(const file of files)await savePhoto({id:(crypto.randomUUID?crypto.randomUUID():Date.now()+"-"+Math.random()),createdAt:Date.now(),blob:file});activeIndex=0;status.textContent="";await render();}
+        try{for(const file of files)await savePhoto({id:(crypto.randomUUID?crypto.randomUUID():Date.now()+"-"+Math.random()),createdAt:Date.now(),blob:file});status.textContent="";await render();}
         catch(e){status.textContent="Storage is full or unavailable. Try smaller photos.";console.error(e);}
         finally{input.disabled=false;label.style.opacity="1";}
       });
-      stage.addEventListener("keydown",e=>{if(e.key==="ArrowLeft")goTo(activeIndex-1);if(e.key==="ArrowRight")goTo(activeIndex+1);});
       openDB().then(async opened=>{db=opened;await render();}).catch(e=>{status.textContent="Photo storage is unavailable in this browser.";console.error(e);});
       window.addEventListener("pagehide",()=>{urls.forEach(url=>URL.revokeObjectURL(url));urls.clear();});
     })();
