@@ -449,10 +449,11 @@
       flex-flow:row nowrap;
       align-items:center;
       justify-content:space-between;
-      gap:clamp(3px,0.7vw,12px);
-      width:100%;
+      gap:clamp(2px,0.55vw,9px);
+      width:calc(100% + 36px);
+      margin-left:-18px;
       overflow:visible;
-      padding:24px 6px 28px;
+      padding:24px 0 28px;
       box-sizing:border-box;
     }
     #personal-photo-album .album-photo-tile{
@@ -469,6 +470,8 @@
     #personal-photo-album .album-photo-gallery::-webkit-scrollbar{display:none}
     @media(max-width:760px){
       #personal-photo-album .album-photo-gallery{
+        width:100%;
+        margin-left:0;
         gap:3px;
         padding:20px 2px 24px;
       }
