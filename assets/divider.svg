@@ -8,7 +8,19 @@
     <g id="gemshape"><path d="M0 -6 L5 -2 L3 5 L-3 5 L-5 -2Z" fill="url(#gem)" stroke="#cba9df" stroke-width=".7"/><path d="M0 -6 L0 5 M-5 -2 L5 -2 M-5 -2 L0 1 L5 -2" fill="none" stroke="#fff8ff" stroke-width=".65" opacity=".9"/></g>
     <g id="sparkle"><path d="M0 -6 Q1 -1 6 0 Q1 1 0 6 Q-1 1 -6 0 Q-1 -1 0 -6Z" fill="#fff4c9" stroke="#e6c8ed" stroke-width=".55"/><circle cx="0" cy="0" r="1.1" fill="#fff"/></g>
     <linearGradient id="whale" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#e8d8fb"/><stop offset="1" stop-color="#b9a4dc"/></linearGradient>
-    <g id="whalebody"><path d="M-20 0 C-18 -9 -7 -13 5 -10 C13 -8 17 -3 19 1 C13 0 10 3 8 7 C1 10 -10 8 -16 4Z" fill="url(#whale)" stroke="#a88dc9" stroke-width=".8"/><path d="M-18 0 Q-27 -8 -29 -5 Q-27 1 -22 3 Q-28 8 -25 11 Q-17 9 -14 4Z" fill="#cbb7ec" stroke="#a88dc9" stroke-width=".7"/><path d="M-1 6 Q4 12 10 9 Q7 5 4 4Z" fill="#d9c4f2" stroke="#a88dc9" stroke-width=".6"/><circle cx="12" cy="-2" r="1.2" fill="#725b91"/><path d="M8 2 Q12 4 15 2" fill="none" stroke="#fff7ff" stroke-width=".7" stroke-linecap="round"/><path d="M-2 -10 Q-4 -15 0 -17 Q2 -13 1 -10" fill="none" stroke="#e8c5df" stroke-width="1" stroke-linecap="round"/></g>
+    <g id="whalebody">
+      <!-- rounded humpback body, broad flukes and recognisable pectoral fin -->
+      <path d="M-21 0 C-19 -8 -11 -12 -1 -12 C9 -12 17 -7 20 -1 C17 5 10 9 0 9 C-10 9 -18 6 -21 0Z" fill="url(#whale)" stroke="#a88dc9" stroke-width=".9"/>
+      <path d="M-18 -1 Q-27 -10 -31 -8 Q-29 -2 -23 1 Q-29 6 -27 10 Q-20 8 -17 3Z" fill="#cbb7ec" stroke="#a88dc9" stroke-width=".8"/>
+      <path d="M-4 7 Q-1 13 7 14 Q11 12 8 7 Q2 9 -4 7Z" fill="#d9c4f2" stroke="#a88dc9" stroke-width=".8"/>
+      <path d="M-2 -8 Q-8 -17 -14 -15 Q-12 -7 -5 -3Z" fill="#e8d8fb" stroke="#a88dc9" stroke-width=".7"/>
+      <path d="M-13 4 Q-4 8 7 5" fill="none" stroke="#f8efff" stroke-width="1" opacity=".8"/>
+      <path d="M-12 6 Q-8 8 -4 8 M-10 4 Q-6 7 -2 7" fill="none" stroke="#b89bd4" stroke-width=".55"/>
+      <circle cx="13" cy="-3" r="1.25" fill="#594c70"/>
+      <path d="M16 1 Q19 2 20 0" fill="none" stroke="#8e76ad" stroke-width=".7"/>
+      <path d="M-1 -11 Q-2 -16 1 -18 Q4 -16 3 -12" fill="none" stroke="#e8c5df" stroke-width="1.1" stroke-linecap="round"/>
+      <path d="M0 -18 Q-3 -22 -1 -24 M2 -18 Q5 -22 4 -24" fill="none" stroke="#d9c4f2" stroke-width=".8" stroke-linecap="round"/>
+    </g>
   </defs>
   <path d="M24 36 C180 8 300 64 450 36 S720 8 876 36" fill="none" stroke="#f9dceb" stroke-width="12" filter="url(#soft)" opacity=".8"><animate attributeName="d" dur="9s" repeatCount="indefinite" values="M24 36 C180 8 300 64 450 36 S720 8 876 36;M24 36 C180 62 300 8 450 36 S720 64 876 36;M24 36 C180 8 300 64 450 36 S720 8 876 36"/></path>
   <path d="M24 36 C180 8 300 64 450 36 S720 8 876 36" fill="none" stroke="url(#silk)" stroke-width="2.6" stroke-linecap="round"><animate attributeName="d" dur="9s" repeatCount="indefinite" values="M24 36 C180 8 300 64 450 36 S720 8 876 36;M24 36 C180 62 300 8 450 36 S720 64 876 36;M24 36 C180 8 300 64 450 36 S720 8 876 36"/></path>
@@ -79,14 +91,17 @@
     <path d="M-2 3 Q2 5 10 2 M-2 7 Q2 9 8 7 M0 11 Q3 12 5 11" fill="none" stroke="#d7a9c6" stroke-width=".65"/>
     <animateTransform attributeName="transform" type="translate" values="748 46;748 43;748 46" dur="4.8s" repeatCount="indefinite"/>
   </g>
-  <!-- Open oyster shells with a pearl -->
-  <g transform="translate(455 61)" stroke="#c4a8d7" stroke-width=".8">
-    <path d="M-17 4 Q-14 -7 0 -9 Q14 -7 17 4 Q0 10 -17 4Z" fill="#e7d8ef"/>
-    <path d="M-17 4 Q-12 -3 0 -3 Q12 -3 17 4 Q0 14 -17 4Z" fill="#f5d6e4"/>
-    <path d="M-12 3 Q-5 -2 0 -2 Q7 -2 12 3" fill="none" stroke="#fff8ff" stroke-width="1.2"/>
-    <circle cx="0" cy="0" r="3.1" fill="#fff8f0" stroke="#d8c4e5"/>
-    <circle cx="-1" cy="-1" r=".9" fill="#fff"/>
-    <animateTransform attributeName="transform" type="translate" values="455 61;455 59;455 61" dur="5.5s" repeatCount="indefinite"/>
+  <!-- Realistic open oyster: irregular layered valves, ridged shell, nacre and pearl -->
+  <g transform="translate(455 60)" stroke-linejoin="round">
+    <path d="M-19 5 C-21 -2 -14 -10 -7 -12 C1 -16 12 -11 18 -4 C22 1 18 7 12 9 C2 13 -12 11 -19 5Z" fill="#d9c9e8" stroke="#a992bd" stroke-width="1"/>
+    <path d="M-17 4 C-18 -2 -11 -8 -5 -9 C3 -12 11 -8 16 -3 C19 1 15 6 10 7 C1 10 -11 9 -17 4Z" fill="#f5e4ef" stroke="#c6a9d0" stroke-width=".8"/>
+    <path d="M-18 4 Q-12 -2 -5 -8 M-13 8 Q-10 0 -2 -8 M-7 10 Q-5 1 2 -9 M0 10 Q1 2 7 -7 M7 9 Q8 2 12 -4 M13 7 Q14 2 17 0" fill="none" stroke="#d2b8d9" stroke-width=".75"/>
+    <path d="M-18 5 C-12 0 -6 -2 0 -2 C8 -2 14 1 18 5 C11 12 -10 13 -18 5Z" fill="#f2d4e5" stroke="#c4a8d7" stroke-width=".9"/>
+    <path d="M-14 5 Q-5 0 1 1 Q9 1 14 5" fill="none" stroke="#fff8ff" stroke-width="1.2" opacity=".9"/>
+    <circle cx="1" cy="2" r="3.2" fill="#fff9ef" stroke="#cdb9d9" stroke-width=".7"/>
+    <circle cx="-.1" cy=".8" r="1.1" fill="#fff" stroke="none"/>
+    <path d="M-18 5 Q0 15 18 5" fill="none" stroke="#b99fc9" stroke-width="1"/>
+    <animateTransform attributeName="transform" type="translate" values="455 60;455 58;455 60" dur="5.5s" repeatCount="indefinite"/>
   </g>
   <g fill="none" stroke="#cbb7ec" stroke-width=".9" opacity=".7"><circle cx="145" cy="14" r="1.5"><animate attributeName="cy" values="14;10;14" dur="3s" repeatCount="indefinite"/></circle><circle cx="148" cy="10" r="1"><animate attributeName="cy" values="10;7;10" dur="3.5s" repeatCount="indefinite"/></circle><circle cx="756" cy="42" r="1.2"><animate attributeName="cy" values="42;38;42" dur="3.2s" repeatCount="indefinite"/></circle></g>
 </svg>
