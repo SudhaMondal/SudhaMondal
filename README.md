@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=12,14,18,24,30&height=140&section=header&text=&animation=twinkling&fontColor=ffb7c5" width="100%"/>
+<img src="https://raw.githubusercontent.com/SudhaMondal/SudhaMondal/main/assets/ocean-wave.svg?v=underwater-20261127" alt="Animated pastel underwater wave with whales, seahorses, seaweed, pearl oysters, phytoplankton, stars, red crabs and shrimps" width="100%"/>
 
 <img src="https://raw.githubusercontent.com/SudhaMondal/SudhaMondal/main/assets/hero.svg?v=sakura-mascot-20261126" alt="Animated 900 by 400 profile banner: rainbow Sudha Mondal heading, biomedical engineering student subtitle, floating waving lab-coat mascot, animated Hi speech bubble, twinkling stars and falling sakura petals" width="100%"/>
 
@@ -127,6 +127,6 @@ When I'm not in the lab or buried in MATLAB simulations, I'm usually playing the
 
 ⭐ **If any of this resonates with you - research, MedTech, or just the mascot above - say hi!**
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=12,14,18,24,30&height=120&section=footer&animation=twinkling" width="100%"/>
+<img src="https://raw.githubusercontent.com/SudhaMondal/SudhaMondal/main/assets/ocean-wave.svg?v=underwater-20261127" alt="Animated pastel underwater wave with whales, seahorses, seaweed, pearl oysters, phytoplankton, stars, red crabs and shrimps" width="100%"/>
 
 </div>
