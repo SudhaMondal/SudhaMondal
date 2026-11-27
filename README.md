@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/SudhaMondal/SudhaMondal/main/assets/ocean-wave.svg?v=lifelike-underwater-20261127" alt="Animated pastel underwater wave with whales, seahorses, seaweed, pearl oysters, phytoplankton, stars, red crabs and shrimps" width="100%"/>
+<img src="https://raw.githubusercontent.com/SudhaMondal/SudhaMondal/main/assets/ocean-wave.svg?v=naturalistic-ocean-20261127" alt="Animated naturalistic underwater scene with whales, seahorses, kelp, oysters, crabs, shrimp, starfish and sunlit water" width="100%"/>
 
 <img src="https://raw.githubusercontent.com/SudhaMondal/SudhaMondal/main/assets/hero.svg?v=sakura-mascot-20261126" alt="Animated 900 by 400 profile banner: rainbow Sudha Mondal heading, biomedical engineering student subtitle, floating waving lab-coat mascot, animated Hi speech bubble, twinkling stars and falling sakura petals" width="100%"/>
 
@@ -127,6 +127,6 @@ When I'm not in the lab or buried in MATLAB simulations, I'm usually playing the
 
 ⭐ **If any of this resonates with you - research, MedTech, or just the mascot above - say hi!**
 
-<img src="https://raw.githubusercontent.com/SudhaMondal/SudhaMondal/main/assets/ocean-wave.svg?v=lifelike-underwater-20261127" alt="Animated pastel underwater wave with whales, seahorses, seaweed, pearl oysters, phytoplankton, stars, red crabs and shrimps" width="100%"/>
+<img src="https://raw.githubusercontent.com/SudhaMondal/SudhaMondal/main/assets/ocean-wave.svg?v=naturalistic-ocean-20261127" alt="Animated naturalistic underwater scene with whales, seahorses, kelp, oysters, crabs, shrimp, starfish and sunlit water" width="100%"/>
 
 </div>
